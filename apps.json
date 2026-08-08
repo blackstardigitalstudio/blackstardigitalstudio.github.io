@@ -1,0 +1,29 @@
+{
+  "updated": "2026-08-08",
+  "apps": [
+    {
+      "name": "Accadde Oggi",
+      "package": "app.accaddeoggi.mobile",
+      "hook": "Cos'è successo oggi negli anni? Scoprilo ogni giorno.",
+      "icon": "https://rawcdn.githack.com/blackstardigitalstudio/blackstardigitalstudio.github.io/main/icons/accadde.png",
+      "playUrl": "https://play.google.com/store/apps/details?id=app.accaddeoggi.mobile",
+      "kidsSafe": false
+    },
+    {
+      "name": "Lo Sapevi che?",
+      "package": "com.losapevi.app",
+      "hook": "Una curiosità nuova ogni giorno: stupisci tutti.",
+      "icon": "https://rawcdn.githack.com/blackstardigitalstudio/blackstardigitalstudio.github.io/main/icons/lo-sapevi.png",
+      "playUrl": "https://play.google.com/store/apps/details?id=com.losapevi.app",
+      "kidsSafe": false
+    },
+    {
+      "name": "Il Ricettario di Casa",
+      "package": "studio.blackstardigital.ilricettario",
+      "hook": "Le tue ricette sempre in ordine, dritte in tasca.",
+      "icon": "https://rawcdn.githack.com/blackstardigitalstudio/blackstardigitalstudio.github.io/main/icons/ricettario.png",
+      "playUrl": "https://play.google.com/store/apps/details?id=studio.blackstardigital.ilricettario",
+      "kidsSafe": false
+    }
+  ]
+}

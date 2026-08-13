@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le mie app. Tutte gratis. — Matteo Blackstar</title>
+<meta name="description" content="App piccole e utili, fatte da una persona sola a Las Palmas. Tutte gratis, senza pubblicità e senza registrarti.">
+<meta name="theme-color" content="#FBF7F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14120E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⭐</text></svg>">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le mie app. Tutte gratis.">
+<meta property="og:description" content="Cose piccole che servono davvero. Senza pubblicità, senza registrarti, senza fregature.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+
+<style>
+  :root{
+    --carta:#FBF7F0;
+    --carta-2:#F3EDE2;
+    --inchiostro:#17150F;
+    --inchiostro-2:#5A5346;
+    --bordo:#E2D9C9;
+    --accento:#B4530A;
+    --ombra:0 1px 2px rgba(23,21,15,.06), 0 8px 24px -12px rgba(23,21,15,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --carta:#14120E;
+      --carta-2:#1D1A15;
+      --inchiostro:#F5F0E6;
+      --inchiostro-2:#A79E8C;
+      --bordo:#2E2921;
+      --accento:#E8913F;
+      --ombra:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--carta);
+    color:var(--inchiostro);
+    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:660px;margin:0 auto;padding:0 20px}
+
+  /* ---------- lingua ---------- */
+  .lingua{
+    display:flex;justify-content:flex-end;gap:6px;
+    padding:16px 0 0;
+  }
+  .lingua button{
+    font:inherit;font-size:14px;font-weight:600;
+    padding:8px 14px;min-height:40px;
+    border:1px solid var(--bordo);border-radius:999px;
+    background:transparent;color:var(--inchiostro-2);
+    cursor:pointer;
+  }
+  .lingua button[aria-pressed="true"]{
+    background:var(--inchiostro);color:var(--carta);border-color:var(--inchiostro);
+  }
+
+  /* ---------- testata ---------- */
+  header{padding:36px 0 8px}
+  h1{
+    font-size:clamp(34px,9vw,52px);
+    line-height:1.05;
+    letter-spacing:-.025em;
+    margin:0 0 18px;
+    font-weight:800;
+  }
+  h1 em{font-style:normal;color:var(--accento)}
+  .sottotitolo{
+    font-size:clamp(17px,4.4vw,20px);
+    color:var(--inchiostro-2);
+    margin:0 0 6px;
+    max-width:34ch;
+  }
+
+  /* ---------- tessere app ---------- */
+  .sezione-titolo{
+    font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--inchiostro-2);
+    margin:44px 0 14px;
+  }
+  .griglia{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+  .tessera{
+    display:flex;align-items:center;gap:15px;
+    background:var(--carta-2);
+    border:1px solid var(--bordo);
+    border-radius:18px;
+    padding:15px;
+    min-height:88px;
+    text-decoration:none;color:inherit;
+    box-shadow:var(--ombra);
+    transition:transform .16s ease, border-color .16s ease;
+  }
+  .tessera:active{transform:scale(.985)}
+  @media (hover:hover){ .tessera:hover{border-color:var(--accento)} }
+  .tessera img{
+    width:60px;height:60px;flex:0 0 60px;
+    border-radius:14px;object-fit:cover;
+    background:var(--bordo);
+  }
+  .tessera .testo{min-width:0;flex:1}
+  .tessera .nome{font-weight:700;font-size:17px;display:block;margin-bottom:2px}
+  .tessera .amo{font-size:15px;color:var(--inchiostro-2);display:block}
+  .tessera .freccia{flex:0 0 auto;color:var(--inchiostro-2);font-size:22px;line-height:1}
+
+  .caricamento,.errore{
+    color:var(--inchiostro-2);font-size:15px;padding:18px 2px;
+  }
+
+  /* ---------- perché gratis ---------- */
+  .nota{
+    margin:44px 0 0;
+    padding:24px;
+    border:1px solid var(--bordo);
+    border-radius:18px;
+    background:transparent;
+  }
+  .nota h2{font-size:21px;margin:0 0 12px;letter-spacing:-.01em}
+  .nota p{margin:0 0 12px;color:var(--inchiostro-2)}
+  .nota p:last-child{margin-bottom:0}
+  .nota strong{color:var(--inchiostro);font-weight:650}
+
+  /* ---------- bottega ---------- */
+  .bottega{
+    margin:36px 0 0;padding:26px 24px;
+    border-radius:18px;
+    background:var(--carta-2);
+    border:1px solid var(--bordo);
+  }
+  .bottega h2{font-size:21px;margin:0 0 10px;letter-spacing:-.01em}
+  .bottega p{margin:0 0 18px;color:var(--inchiostro-2)}
+  .bottone{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:52px;padding:14px 24px;
+    background:var(--inchiostro);color:var(--carta);
+    font-weight:650;font-size:16px;
+    border-radius:999px;text-decoration:none;
+    transition:opacity .16s ease;
+  }
+  .bottone:active{opacity:.85}
+  .bottone svg{width:19px;height:19px;fill:currentColor}
+
+  /* ---------- piede ---------- */
+  footer{
+    margin:52px 0 0;padding:26px 0 40px;
+    border-top:1px solid var(--bordo);
+    color:var(--inchiostro-2);font-size:14px;
+  }
+  footer p{margin:0 0 5px}
+  footer a{color:var(--inchiostro-2)}
+
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="lingua" aria-label="Lingua / Idioma">
+    <button type="button" data-lingua="it" aria-pressed="true">Italiano</button>
+    <button type="button" data-lingua="es" aria-pressed="false">Español</button>
+  </nav>
+
+  <header>
+    <h1>
+      <span data-t="h1"></span>
+    </h1>
+    <p class="sottotitolo" data-t="sottotitolo"></p>
+  </header>
+
+  <main>
+    <h2 class="sezione-titolo" data-t="titoloApp"></h2>
+
+    <div id="stato" class="caricamento" data-t="caricamento"></div>
+    <ul class="griglia" id="griglia"></ul>
+
+    <section class="nota">
+      <h2 data-t="graTitolo"></h2>
+      <p data-t="graP1"></p>
+      <p data-t="graP2"></p>
+      <p><strong data-t="graP3"></strong></p>
+    </section>
+
+    <section class="bottega">
+      <h2 data-t="botTitolo"></h2>
+      <p data-t="botP"></p>
+      <a class="bottone" id="whatsapp" href="https://wa.me/34644332485" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23Zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.79.97-.14.16-.29.19-.54.06-.25-.12-1.05-.38-1.99-1.23-.74-.65-1.24-1.46-1.38-1.71-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.42.06-.64.31-.22.25-.84.82-.84 2.01s.86 2.33.98 2.49c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.39 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        <span data-t="botBottone"></span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p data-t="piede1"></p>
+    <p data-t="piede2"></p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var T = {
+    it:{
+      h1:"Le mie app.<br>Tutte <em>gratis</em>.",
+      sottotitolo:"Le faccio io, da solo, la sera. Cose piccole che servono davvero.",
+      titoloApp:"Prendile, sono tue",
+      caricamento:"Sto tirando fuori le app…",
+      errore:"Non riesco a caricare l'elenco adesso. Riprova fra poco.",
+      graTitolo:"Perché gratis?",
+      graP1:"Perché le ho fatte prima di tutto per me. Una volta fatte, tenerle in un cassetto non aveva senso.",
+      graP2:"Non c'è una versione a pagamento, non c'è un abbonamento che parte dopo un mese, non ti chiedo l'email e non ti chiedo di registrarti.",
+      graP3:"Se ti servono, sono tue.",
+      botTitolo:"Ti serve una cosa che non esiste?",
+      botP:"Faccio app e siti su misura. Se hai un'idea in testa da un po', scrivimi: ne parliamo anche solo per capire se ha senso farla.",
+      botBottone:"Scrivimi su WhatsApp",
+      piede1:"Matteo Stella · Blackstar Digital Studio · Las Palmas de Gran Canaria",
+      piede2:"Made in Italy 🇮🇹",
+      apri:"Apri"
+    },
+    es:{
+      h1:"Mis apps.<br>Todas <em>gratis</em>.",
+      sottotitolo:"Las hago yo, solo, por las noches. Cosas pequeñas que sirven de verdad.",
+      titoloApp:"Cógelas, son tuyas",
+      caricamento:"Sacando las apps…",
+      errore:"Ahora no consigo cargar la lista. Inténtalo dentro de un rato.",
+      graTitolo:"¿Por qué gratis?",
+      graP1:"Porque las hice primero para mí. Y una vez hechas, dejarlas en un cajón no tenía sentido.",
+      graP2:"No hay versión de pago, no hay una suscripción que empieza al mes, no te pido el correo y no tienes que registrarte.",
+      graP3:"Si te sirven, son tuyas.",
+      botTitolo:"¿Necesitas algo que no existe?",
+      botP:"Hago apps y webs a medida. Si llevas tiempo con una idea en la cabeza, escríbeme: lo hablamos aunque sea solo para ver si merece la pena.",
+      botBottone:"Escríbeme por WhatsApp",
+      piede1:"Matteo Stella · Blackstar Digital Studio · Las Palmas de Gran Canaria",
+      piede2:"Hecho en Italia 🇮🇹",
+      apri:"Abrir"
+    }
+  };
+
+  // Se apps.json non risponde, la pagina non resta mai vuota.
+  var RISERVA = [
+    {name:"Accadde Oggi", hook:"Cos'è successo oggi negli anni? Scoprilo ogni giorno.",
+     hookEs:"¿Qué pasó hoy a lo largo de los años? Descúbrelo cada día.",
+     icon:"https://raw.githubusercontent.com/blackstardigitalstudio/blackstardigitalstudio.github.io/main/icons/accadde.png",
+     playUrl:"https://play.google.com/store/apps/details?id=app.accaddeoggi.mobile"},
+    {name:"Lo Sapevi che?", hook:"Una curiosità nuova ogni giorno: stupisci tutti.",
+     hookEs:"Una curiosidad nueva cada día: deja a todos con la boca abierta.",
+     icon:"https://raw.githubusercontent.com/blackstardigitalstudio/blackstardigitalstudio.github.io/main/icons/lo-sapevi.png",
+     playUrl:"https://play.google.com/store/apps/details?id=com.losapevi.app"},
+    {name:"Il Ricettario di Casa", hook:"Le tue ricette sempre in ordine, dritte in tasca.",
+     hookEs:"Tus recetas siempre ordenadas, directas al bolsillo.",
+     icon:"https://raw.githubusercontent.com/blackstardigitalstudio/blackstardigitalstudio.github.io/main/icons/ricettario.png",
+     playUrl:"https://play.google.com/store/apps/details?id=studio.blackstardigital.ilricettario"}
+  ];
+
+  var lingua = (navigator.language || "it").toLowerCase().indexOf("es") === 0 ? "es" : "it";
+  var app = RISERVA;
+
+  function testi(){
+    var t = T[lingua];
+    document.documentElement.lang = lingua;
+    document.querySelectorAll("[data-t]").forEach(function(el){
+      var k = el.getAttribute("data-t");
+      if(!t[k]) return;
+      if(k === "h1") el.innerHTML = t[k]; else el.textContent = t[k];
+    });
+    document.querySelectorAll(".lingua button").forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.lingua === lingua));
+    });
+    document.title = (lingua === "es" ? "Mis apps. Todas gratis." : "Le mie app. Tutte gratis.") + " — Matteo Blackstar";
+  }
+
+  function disegna(){
+    var g = document.getElementById("griglia");
+    var stato = document.getElementById("stato");
+    g.innerHTML = "";
+    app.forEach(function(a){
+      var amo = (lingua === "es" && a.hookEs) ? a.hookEs : a.hook;
+      var li = document.createElement("li");
+      var link = document.createElement("a");
+      link.className = "tessera";
+      link.href = a.playUrl;
+      link.rel = "noopener";
+      link.setAttribute("aria-label", T[lingua].apri + " " + a.name);
+      link.innerHTML =
+        '<img src="' + a.icon + '" alt="" loading="lazy" width="60" height="60">' +
+        '<span class="testo"><span class="nome"></span><span class="amo"></span></span>' +
+        '<span class="freccia" aria-hidden="true">›</span>';
+      link.querySelector(".nome").textContent = a.name;
+      link.querySelector(".amo").textContent = amo || "";
+      li.appendChild(link);
+      g.appendChild(li);
+    });
+    stato.hidden = app.length > 0;
+  }
+
+  fetch("../apps.json", {cache:"no-cache"})
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+    .then(function(d){
+      if(d && Array.isArray(d.apps) && d.apps.length) app = d.apps;
+    })
+    .catch(function(){ /* si resta sulla riserva */ })
+    .finally(function(){ disegna(); });
+
+  document.querySelectorAll(".lingua button").forEach(function(b){
+    b.addEventListener("click", function(){
+      lingua = b.dataset.lingua;
+      testi(); disegna();
+    });
+  });
+
+  testi();
+  disegna();
+})();
+</script>
+</body>
+</html>

@@ -87,7 +87,16 @@
   .sezione-titolo{
     font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
     color:var(--inchiostro-2);
-    margin:44px 0 14px;
+    margin:44px 0 6px;
+  }
+  .nota-sezione{
+    font-size:15px;color:var(--inchiostro-2);margin:0 0 14px;
+  }
+  .tessera .emoji{
+    width:60px;height:60px;flex:0 0 60px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:32px;line-height:1;
+    border-radius:14px;background:rgba(180,83,10,.10);
   }
   .griglia{display:grid;gap:12px;margin:0;padding:0;list-style:none}
   .tessera{
@@ -179,7 +188,12 @@
   </header>
 
   <main>
+    <h2 class="sezione-titolo" data-t="titoloWeb"></h2>
+    <p class="nota-sezione" data-t="notaWeb"></p>
+    <ul class="griglia" id="griglia-web"></ul>
+
     <h2 class="sezione-titolo" data-t="titoloApp"></h2>
+    <p class="nota-sezione" data-t="notaApp"></p>
 
     <div id="stato" class="caricamento" data-t="caricamento"></div>
     <ul class="griglia" id="griglia"></ul>
@@ -216,7 +230,10 @@
     it:{
       h1:"Le mie app.<br>Tutte <em>gratis</em>.",
       sottotitolo:"Le faccio io, da solo, la sera. Cose piccole che servono davvero.",
-      titoloApp:"Prendile, sono tue",
+      titoloWeb:"Si aprono e basta",
+      notaWeb:"Niente da installare, niente registrazione. Tocchi e ci sei.",
+      titoloApp:"Da tenere nel telefono",
+      notaApp:"Queste stanno su Google Play. Gratis anche loro.",
       caricamento:"Sto tirando fuori le app…",
       errore:"Non riesco a caricare l'elenco adesso. Riprova fra poco.",
       graTitolo:"Perché gratis?",
@@ -233,7 +250,10 @@
     es:{
       h1:"Mis apps.<br>Todas <em>gratis</em>.",
       sottotitolo:"Las hago yo, solo, por las noches. Cosas pequeñas que sirven de verdad.",
-      titoloApp:"Cógelas, son tuyas",
+      titoloWeb:"Se abren y ya está",
+      notaWeb:"Nada que instalar, sin registrarte. Tocas y estás dentro.",
+      titoloApp:"Para tener en el móvil",
+      notaApp:"Estas están en Google Play. Gratis también.",
       caricamento:"Sacando las apps…",
       errore:"Ahora no consigo cargar la lista. Inténtalo dentro de un rato.",
       graTitolo:"¿Por qué gratis?",
@@ -265,8 +285,32 @@
      playUrl:"https://play.google.com/store/apps/details?id=studio.blackstardigital.ilricettario"}
   ];
 
+  var RISERVA_WEB = [
+    {name:"Cosa Guardo", emoji:"🍿",
+     hook:"Tre domande e ti dice cosa guardare stasera. Un titolo solo.",
+     hookEs:"Tres preguntas y te dice qué ver esta noche. Un solo título.",
+     url:"https://www.blackstardigitalstudio.com/cosa-guardo"},
+    {name:"Paga Carta", emoji:"💳",
+     hook:"Dove si paga con la carta qui vicino, prima di entrare.",
+     hookEs:"Dónde se paga con tarjeta cerca de ti, antes de entrar.",
+     url:"https://www.blackstardigitalstudio.com/paga-carta"},
+    {name:"Attività con i bambini", emoji:"🧸",
+     hook:"131 idee da fare insieme quando piove e non sai più cosa inventarti.",
+     hookEs:"131 ideas para hacer juntos cuando llueve y ya no sabes qué inventarte.",
+     url:"https://www.blackstardigitalstudio.com/attivita-bimbi"},
+    {name:"TimeTracker", emoji:"⏱️",
+     hook:"Conta le ore che lavori, senza pensarci.",
+     hookEs:"Cuenta las horas que trabajas, sin pensar en ello.",
+     url:"https://www.blackstardigitalstudio.com/time-tracker"},
+    {name:"Blackstar Clicker", emoji:"🖱️",
+     hook:"Clicca al posto tuo quando non ci sei.",
+     hookEs:"Hace clic por ti cuando no estás.",
+     url:"https://www.blackstardigitalstudio.com/clicker"}
+  ];
+
   var lingua = (navigator.language || "it").toLowerCase().indexOf("es") === 0 ? "es" : "it";
   var app = RISERVA;
+  var web = RISERVA_WEB;
 
   function testi(){
     var t = T[lingua];
@@ -282,7 +326,31 @@
     document.title = (lingua === "es" ? "Mis apps. Todas gratis." : "Le mie app. Tutte gratis.") + " — Matteo Blackstar";
   }
 
+  function disegnaWeb(){
+    var g = document.getElementById("griglia-web");
+    g.innerHTML = "";
+    web.forEach(function(a){
+      var amo = (lingua === "es" && a.hookEs) ? a.hookEs : a.hook;
+      var li = document.createElement("li");
+      var link = document.createElement("a");
+      link.className = "tessera";
+      link.href = a.url;
+      link.rel = "noopener";
+      link.setAttribute("aria-label", T[lingua].apri + " " + a.name);
+      link.innerHTML =
+        '<span class="emoji" aria-hidden="true"></span>' +
+        '<span class="testo"><span class="nome"></span><span class="amo"></span></span>' +
+        '<span class="freccia" aria-hidden="true">›</span>';
+      link.querySelector(".emoji").textContent = a.emoji || "•";
+      link.querySelector(".nome").textContent = a.name;
+      link.querySelector(".amo").textContent = amo || "";
+      li.appendChild(link);
+      g.appendChild(li);
+    });
+  }
+
   function disegna(){
+    disegnaWeb();
     var g = document.getElementById("griglia");
     var stato = document.getElementById("stato");
     g.innerHTML = "";
@@ -310,6 +378,7 @@
     .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
     .then(function(d){
       if(d && Array.isArray(d.apps) && d.apps.length) app = d.apps;
+      if(d && Array.isArray(d.web) && d.web.length) web = d.web;
     })
     .catch(function(){ /* si resta sulla riserva */ })
     .finally(function(){ disegna(); });

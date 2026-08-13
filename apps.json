@@ -1,5 +1,42 @@
 {
   "updated": "2026-08-13",
+  "web": [
+    {
+      "name": "Cosa Guardo",
+      "hook": "Tre domande e ti dice cosa guardare stasera. Un titolo solo.",
+      "hookEs": "Tres preguntas y te dice qué ver esta noche. Un solo título.",
+      "emoji": "🍿",
+      "url": "https://www.blackstardigitalstudio.com/cosa-guardo"
+    },
+    {
+      "name": "Paga Carta",
+      "hook": "Dove si paga con la carta qui vicino, prima di entrare.",
+      "hookEs": "Dónde se paga con tarjeta cerca de ti, antes de entrar.",
+      "emoji": "💳",
+      "url": "https://www.blackstardigitalstudio.com/paga-carta"
+    },
+    {
+      "name": "Attività con i bambini",
+      "hook": "131 idee da fare insieme quando piove e non sai più cosa inventarti.",
+      "hookEs": "131 ideas para hacer juntos cuando llueve y ya no sabes qué inventarte.",
+      "emoji": "🧸",
+      "url": "https://www.blackstardigitalstudio.com/attivita-bimbi"
+    },
+    {
+      "name": "TimeTracker",
+      "hook": "Conta le ore che lavori, senza pensarci.",
+      "hookEs": "Cuenta las horas que trabajas, sin pensar en ello.",
+      "emoji": "⏱️",
+      "url": "https://www.blackstardigitalstudio.com/time-tracker"
+    },
+    {
+      "name": "Blackstar Clicker",
+      "hook": "Clicca al posto tuo quando non ci sei.",
+      "hookEs": "Hace clic por ti cuando no estás.",
+      "emoji": "🖱️",
+      "url": "https://www.blackstardigitalstudio.com/clicker"
+    }
+  ],
   "apps": [
     {
       "name": "Accadde Oggi",

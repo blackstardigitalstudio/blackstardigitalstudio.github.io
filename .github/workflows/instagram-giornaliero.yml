@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: '0 19 * * *'
   workflow_dispatch:        # per lanciarlo a mano quando serve
+    inputs:
+      prova:
+        description: 'Solo prova (controlla tutto ma NON pubblica)'
+        type: boolean
+        default: true
 
 concurrency:
   group: instagram-giornaliero
@@ -37,7 +42,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: python pubblica.py
+        run: python pubblica.py ${{ inputs.prova && '--prova' || '' }}
 
       - name: Segna cosa e' uscito
         run: |

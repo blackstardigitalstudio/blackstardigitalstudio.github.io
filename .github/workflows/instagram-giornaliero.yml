@@ -1,0 +1,53 @@
+name: Instagram - un post al giorno
+
+# Gira nel cloud di GitHub: il computer di Matteo puo' restare spento.
+# 19:00 UTC = 20:00 a Las Palmas, 21:00 in Italia e Spagna (l'ora in cui la gente scorre).
+on:
+  schedule:
+    - cron: '0 19 * * *'
+  workflow_dispatch:        # per lanciarlo a mano quando serve
+
+concurrency:
+  group: instagram-giornaliero
+  cancel-in-progress: false
+
+permissions:
+  contents: write           # per salvare l'immagine e il registro nel repo
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installa il necessario
+        run: pip install --quiet pillow
+
+      - name: Prepara il contenuto del giorno
+        working-directory: automazione
+        run: python genera.py 1
+
+      - name: Pubblica su Instagram
+        working-directory: automazione
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: python pubblica.py
+
+      - name: Segna cosa e' uscito
+        run: |
+          git config user.name "blackstar-bot"
+          git config user.email "blackstardigitalstudio@gmail.com"
+          git add automazione/storico.json automazione/registro-pubblicazioni.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Niente da salvare."
+          else
+            git commit -m "post del giorno [skip ci]"
+            git pull --rebase --autostash -q
+            git push
+          fi

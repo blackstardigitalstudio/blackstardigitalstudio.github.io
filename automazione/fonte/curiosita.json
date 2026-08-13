@@ -1,0 +1,909 @@
+{
+  "totale": 113,
+  "curiosita": [
+    {
+      "slug": "0-999-e-esattamente-uguale-a-1",
+      "titolo": "0,999... è esattamente uguale a 1",
+      "categoria": "🔢 Matematica",
+      "lead": "Non 'quasi' 1. Sono matematicamente identici. La dimostrazione: se x = 0,999..., allora 10x = 9,999..., quindi 10x - x = 9, da cui x = 1.",
+      "deep": "Questo fatto sconvolge chiunque ma è elementare. Dimostrazione alternativa: 1/3 = 0,333... Moltiplicando per 3: 3/3 = 0,999... ma 3/3 = 1. Quindi 0,999... = 1. I numeri reali hanno rappresentazioni decimali multiple: 1 = 1,000... = 0,999... L'errore intuitivo deriva dal pensare al decimale come 'si avvicina a 1' invece che ESSERE 1. In teoria dei numeri, questo illustra che i decimali sono notazione, non l'essenza del numero. Nella analisi, limite e valore coincidono.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/0-999-e-esattamente-uguale-a-1"
+    },
+    {
+      "slug": "agatha-christie-scrisse-66-gialli-solo-shakespeare-vende-di-piu",
+      "titolo": "Agatha Christie scrisse 66 gialli; solo Shakespeare vende di più",
+      "categoria": "📖 Letteratura",
+      "lead": "Le sue 66 detective novels hanno venduto 2 miliardi di copie. È seconda solo a Shakespeare e alla Bibbia come autrice più letta.",
+      "deep": "Hercule Poirot apparve in 33 romanzi, Miss Marple in 12. Christie è anche autrice della più longeva opera teatrale al mondo: 'The Mousetrap' è in scena a Londra ininterrottamente dal 1952 (con pausa COVID). Ha scritto sotto pseudonimo (Mary Westmacott) e usato la sua conoscenza di farmacologia per creare 83 veleni nelle storie. Nel 1926 scomparve misteriosamente per 11 giorni, tornò senza mai spiegarlo (probabile amnesia dissociativa).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/agatha-christie-scrisse-66-gialli-solo-shakespeare-vende-di-piu"
+    },
+    {
+      "slug": "bluetooth-prende-il-nome-da-un-re-vichingo",
+      "titolo": "Bluetooth prende il nome da un re vichingo",
+      "categoria": "💻 Tecnologia",
+      "lead": "Harald Blåtand 'Dente Blu' unì Danimarca e Norvegia nel 958. Il logo Bluetooth è il monogramma delle sue rune ᚼ e ᛒ.",
+      "deep": "Gli ingegneri Intel, Ericsson e Nokia cercavano un nome temporaneo per la loro tecnologia di unificazione wireless nel 1997. Harald unificò popoli; loro volevano unificare dispositivi. Il logo combina le rune H (ᚼ, Hagall) e B (ᛒ, Bjarkan). Il 'Dente Blu' del re? Probabilmente un dente morto (scuro), non letteralmente blu. Bluetooth Low Energy (2010) ha reso possibile l'IoT moderno: oggi oltre 4 miliardi di dispositivi all'anno.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/bluetooth-prende-il-nome-da-un-re-vichingo"
+    },
+    {
+      "slug": "c-e-un-numero-primo-piu-grande-di-tutti-gli-altri",
+      "titolo": "C'è un numero primo più grande di tutti gli altri",
+      "categoria": "🔢 Matematica",
+      "lead": "No! Euclide dimostrò 2300 anni fa che i primi sono infiniti. La dimostrazione è elegante e ancora insegnata oggi.",
+      "deep": "Euclide, negli 'Elementi' (libro IX, proposizione 20, ~300 a.C.): assumiamo che esista un numero primo più grande, chiamiamolo P. Moltiplica tutti i primi fino a P e aggiungi 1: (2×3×5×7×...×P)+1. Questo numero N non è divisibile per nessun primo fino a P (resto sempre 1). Quindi o N è primo, oppure è divisibile per un primo maggiore di P. Contraddizione. I primi sono infiniti. Il più grande attualmente conosciuto (2024) è 2^136279841-1, con oltre 41 milioni di cifre. Scoperto nell'ottobre 2024 dal GIMPS project.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/c-e-un-numero-primo-piu-grande-di-tutti-gli-altri"
+    },
+    {
+      "slug": "cleopatra-visse-piu-vicino-al-primo-iphone-che-alla-piramide-di-giza",
+      "titolo": "Cleopatra visse più vicino al primo iPhone che alla piramide di Giza",
+      "categoria": "📜 Storia",
+      "lead": "Tra Cleopatra (69 a.C.) e il primo iPhone (2007) passano ~2076 anni. Tra Cleopatra e la Grande Piramide (~2560 a.C.) ne passano 2491.",
+      "deep": "Questa prospettiva temporale sconvolge perché mostra quanto sia antica la civiltà egizia. Cleopatra era affascinata dalle piramidi come reliquie di un passato già remoto. Al suo tempo esisteva già una 'turismo archeologico' egiziano, con guide e iscrizioni graffite lasciate da visitatori greci e romani. Parlava nove lingue e fu l'ultima faraona d'Egitto, governante abile più che seduttrice come la racconta la propaganda romana di Augusto.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/cleopatra-visse-piu-vicino-al-primo-iphone-che-alla-piramide-di-giza"
+    },
+    {
+      "slug": "dante-invento-l-italiano-moderno",
+      "titolo": "Dante inventò l'italiano moderno",
+      "categoria": "📖 Letteratura",
+      "lead": "Prima della Divina Commedia (1321) si parlavano solo dialetti regionali. Il 'volgare illustre' di Dante divenne la base dell'italiano standard.",
+      "deep": "Dante scelse di scrivere in volgare toscano invece che in latino per raggiungere il popolo. Aggiunse oltre 1200 neologismi ancora in uso: 'quisquilia', 'fulgore', 'trasumanar', 'inurbarsi'. Nel 'De Vulgari Eloquentia' teorizzò l'italiano come lingua letteraria. L'italiano moderno è il più vicino al latino tra le lingue romanze e ancora oggi il 90% delle parole italiane è riconducibile al toscano trecentesco. La prima grammatica italiana (Pietro Bembo, 1525) prese Dante come modello canonico.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/dante-invento-l-italiano-moderno"
+    },
+    {
+      "slug": "diogene-viveva-in-una-botte-e-sputava-in-faccia-ai-ricchi",
+      "titolo": "Diogene viveva in una botte e sputava in faccia ai ricchi",
+      "categoria": "💭 Filosofia",
+      "lead": "Filosofo cinico, Diogene rifiutò tutte le convenzioni. Ad Alessandro Magno chiese solo di 'spostarsi perché gli toglieva il sole'.",
+      "deep": "Diogene di Sinope (V-IV sec a.C.) disprezzava ricchezza, fama, potere. Viveva per strada in una giara (non proprio una botte) con un mantello e una ciotola (che buttò quando vide un bambino bere con le mani). Si masturbava in pubblico, affermando di desiderare di 'placare la fame con lo stesso gesto'. Diceva di 'cercare un uomo onesto' con una lanterna in pieno giorno. Alessandro Magno, stupito dall'uomo che nulla voleva, disse: 'Se non fossi Alessandro, vorrei essere Diogene'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/diogene-viveva-in-una-botte-e-sputava-in-faccia-ai-ricchi"
+    },
+    {
+      "slug": "ducati-ha-vinto-la-motogp-con-piloti-italiani-dopo-16-anni",
+      "titolo": "Ducati ha vinto la MotoGP con piloti italiani dopo 16 anni",
+      "categoria": "🏍️ Moto",
+      "lead": "Francesco Bagnaia ha conquistato il titolo 2022: primo italiano campione con Ducati da Gilera/Agostini degli anni '60.",
+      "deep": "Fondata a Bologna nel 1926 dai fratelli Ducati come società per condensatori radiofonici, divenne produttrice di moto nel 1946 con il 'Cucciolo' (motorino per bicicletta). La prima moto vera fu la 98 Sport del 1948. Il motore desmodromico (valvole controllate meccanicamente senza molle) inventato da Fabio Taglioni nel 1956 è ancora distintivo Ducati. Oggi è del Gruppo Audi/VW. Nel 2023 Ducati è stato vice-campione dominante in MotoGP con Bagnaia (bis) e Martin. Il nuovo motore V4 Granturismo ha performance superiori ai rivali giapponesi.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/ducati-ha-vinto-la-motogp-con-piloti-italiani-dopo-16-anni"
+    },
+    {
+      "slug": "einstein-rifiuto-la-presidenza-di-israele",
+      "titolo": "Einstein rifiutò la presidenza di Israele",
+      "categoria": "📜 Storia",
+      "lead": "Nel 1952 David Ben-Gurion offrì a Einstein la presidenza dello Stato d'Israele. Lui rifiutò per mancanza di esperienza politica.",
+      "deep": "Einstein, ebreo tedesco e sionista convinto ma pacifista critico, rispose: 'Sono profondamente commosso ma non adatto. Ho poca esperienza nel rapportarmi con le persone e svolgere funzioni ufficiali'. Aveva 73 anni e si sentiva troppo vecchio. Weizmann, primo presidente, era stato suo amico. Einstein donò tutti i suoi diritti d'autore e lettere all'Hebrew University di Gerusalemme, che oggi ne custodisce oltre 80.000 documenti.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/einstein-rifiuto-la-presidenza-di-israele"
+    },
+    {
+      "slug": "esiste-un-bottone-per-far-impazzire-i-cellulari",
+      "titolo": "Esiste un bottone per far impazzire i cellulari",
+      "categoria": "💻 Tecnologia",
+      "lead": "I numeri con troppi caratteri speciali possono crashare qualsiasi smartphone. Nel 2018 un messaggio in telugu bloccava gli iPhone.",
+      "deep": "Le 'crash bombs' sfruttano vulnerabilità di rendering dei caratteri Unicode. Il 'Telugu Bug' di iOS 11 (2018) faceva crashare qualsiasi app che mostrasse il carattere 'జ్ఞా'. Nel 2020 su Android il messaggio 'Ꙭ' (occhio di Cirillo) poteva bloccare Instagram. Gli sviluppatori usano 'fuzzing' — inondare app con input casuali — per trovare questi bug prima dei malintenzionati. Anche il WiFi ha vulnerabilità: alcuni SSID come '%n' potevano disattivare il WiFi di iPhone.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esiste-un-bottone-per-far-impazzire-i-cellulari"
+    },
+    {
+      "slug": "esiste-un-lago-dentro-un-lago-dentro-un-isola-dentro-un-lago",
+      "titolo": "Esiste un lago dentro un lago dentro un'isola dentro un lago",
+      "categoria": "🗺️ Geografia",
+      "lead": "Sulla Filippina Luzon, Vulcan Point è un'isola in un lago, su un'isola (Volcano Island), in un lago (Taal Lake), su un'isola (Luzon).",
+      "deep": "Questa matrioska geografica nasce da un cratere vulcanico riempito d'acqua. Il vulcano Taal è uno dei più attivi delle Filippine (ultima eruzione 2022) e tra i più pericolosi: 'Decade Volcano' classificato dall'ONU. L'acqua del Taal Lake era un tempo un'insenatura marina isolata da eruzioni: ancora oggi ospita l'unico squalo di acqua dolce del mondo, specie in via di estinzione. La struttura simile esiste anche in Canada (Isola di Victoria) e in Indonesia.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esiste-un-lago-dentro-un-lago-dentro-un-isola-dentro-un-lago"
+    },
+    {
+      "slug": "esiste-un-materiale-piu-nero-del-nero",
+      "titolo": "Esiste un materiale più nero del nero",
+      "categoria": "🔬 Scienza",
+      "lead": "Il Vantablack assorbe il 99,965% della luce visibile: guardarlo è come guardare un buco nel mondo.",
+      "deep": "Sviluppato nel 2014 da Surrey NanoSystems, è composto da nanotubi di carbonio verticali che 'intrappolano' i fotoni. Un oggetto 3D ricoperto di Vantablack appare come una silhouette piatta. L'artista Anish Kapoor ne ha acquisito l'esclusiva per usi artistici, scatenando polemiche. Nel 2019 il MIT ha creato un nero ancora più scuro (99,995%) da scarti di fluoro di calcio. Applicazioni: telescopi spaziali, ottica di precisione, esperimenti quantistici.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esiste-un-materiale-piu-nero-del-nero"
+    },
+    {
+      "slug": "esiste-una-medusa-immortale",
+      "titolo": "Esiste una medusa immortale",
+      "categoria": "🌿 Natura",
+      "lead": "La Turritopsis dohrnii può tornare allo stadio larvale quando è in pericolo. Teoricamente, può vivere per sempre.",
+      "deep": "Scoperta nel 1988, questa medusa mediterranea grande 4 mm inverte il suo ciclo biologico: da medusa adulta torna a polipo giovane, un processo chiamato transdifferenziazione. È l'unico organismo conosciuto capace di 'ringiovanire' biologicamente. Non è davvero immortale (può morire per predazione o malattia), ma non invecchia. Oggi è studiata intensivamente per comprendere l'invecchiamento cellulare. Lo scienziato giapponese Shin Kubota ne alleva una colonia da decenni.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esiste-una-medusa-immortale"
+    },
+    {
+      "slug": "esiste-una-nube-di-alcol-nello-spazio",
+      "titolo": "Esiste una nube di alcol nello spazio",
+      "categoria": "🚀 Spazio",
+      "lead": "Nel 2006 è stata scoperta una nube di etanolo grande miliardi di chilometri: conterrebbe abbastanza alcol per 400 quadrilioni di pinte di birra.",
+      "deep": "La nube G34.3 si trova a 10.000 anni luce dalla Terra nella costellazione dell'Aquila. Non è solo etanolo: contiene anche metanolo (tossico) e molecole organiche complesse come amminoacidi precursori. Queste 'fabbriche chimiche' interstellari rafforzano la teoria che i mattoni della vita si siano formati nello spazio e trasportati sulla Terra dalle comete. La chimica prebiotica spaziale è uno dei campi più caldi dell'astrobiologia.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esiste-una-nube-di-alcol-nello-spazio"
+    },
+    {
+      "slug": "esistono-infiniti-piu-grandi-di-altri-infiniti",
+      "titolo": "Esistono infiniti più grandi di altri infiniti",
+      "categoria": "🔢 Matematica",
+      "lead": "Georg Cantor dimostrò che ci sono 'dimensioni' di infinito: quello dei numeri naturali è minore di quello dei numeri reali.",
+      "deep": "Cantor introdusse gli 'aleph' per classificare gli infiniti: ℵ₀ (aleph-zero) è l'infinito numerabile dei naturali, ℵ₁ il successivo. Con il metodo diagonale dimostrò che i numeri reali tra 0 e 1 sono 'più infiniti' dei naturali: impossibili da mettere in corrispondenza uno a uno. La sua scoperta fece impazzire matematici contemporanei come Kronecker ('Cantor è un corruttore di gioventù') e alla fine Cantor stesso: morì in un manicomio. Oggi è considerato il padre della teoria degli insiemi.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esistono-infiniti-piu-grandi-di-altri-infiniti"
+    },
+    {
+      "slug": "esistono-pianeti-vagabondi-senza-sole",
+      "titolo": "Esistono pianeti vagabondi senza sole",
+      "categoria": "🚀 Spazio",
+      "lead": "Tra le stelle vagano miliardi di pianeti 'orfani' espulsi dai loro sistemi. Alcuni potrebbero ospitare vita con vulcani come fonte di calore.",
+      "deep": "Stimati 50-100 miliardi nella sola Via Lattea, i 'rogue planets' furono scoperti nel 2011. Senza stella, sono freddi e oscuri, ma alcuni (grandi come Giove) hanno core caldi radioattivi. Le lune sotto ghiaccio (come Europa di Giove) potrebbero avere oceani liquidi riscaldati da maree gravitazionali. Teoricamente, un pianeta vagabondo con luna in orbita potrebbe ospitare vita in oceani sotterranei. Il telescopio James Webb sta cercando 'rogue worlds' nel 2025.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esistono-pianeti-vagabondi-senza-sole"
+    },
+    {
+      "slug": "esistono-piu-anni-lunari-che-solari-in-etiopia",
+      "titolo": "Esistono più anni lunari che solari in Etiopia",
+      "categoria": "🗺️ Geografia",
+      "lead": "L'Etiopia usa un calendario proprio di 13 mesi. Oggi per loro è 7-8 anni indietro rispetto al nostro.",
+      "deep": "Il calendario etiope deriva dal calendario copto egizio. Ha 12 mesi di 30 giorni + un 13° mese di 5 o 6 giorni (Pagume). L'anno inizia l'11 settembre (12 in anni bisestili). Il Natale cade il 7 gennaio. Il capodanno etiope 2017 è iniziato l'11 settembre 2024 del nostro calendario. Altri paesi con calendari alternativi: Nepal (Vikram Samvat), Iran (Solar Hijri), Thailandia (Buddista). Lo slogan turistico etiope era '13 mesi di sole'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/esistono-piu-anni-lunari-che-solari-in-etiopia"
+    },
+    {
+      "slug": "ferrari-ha-vinto-piu-gp-di-chiunque-altro-248-in-75-anni",
+      "titolo": "Ferrari ha vinto più GP di chiunque altro: 248 in 75 anni",
+      "categoria": "🏎️ Motori",
+      "lead": "La Scuderia Ferrari detiene quasi tutti i record F1: più costruttori (16), più piloti (15), più pole position (252), più podi (817).",
+      "deep": "Fondata nel 1929 a Modena da Enzo Ferrari come Scuderia Ferrari (correva per Alfa Romeo), divenne costruttore indipendente nel 1947. Unica squadra ad aver partecipato a TUTTI i campionati F1 dal 1950. Il Cavallino Rampante fu donato da Francesca Baracca, madre dell'asso italiano morto in WWI. Le vittorie più iconiche: Lauda 1977, Schumacher 2000-2004 (5 titoli consecutivi), Leclerc 2019 Monza (prima Ferrari a Monza da 9 anni). Il budget attuale F1 è capped a 135 milioni $/anno (Ferrari spendeva 500M prima delle regole).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/ferrari-ha-vinto-piu-gp-di-chiunque-altro-248-in-75-anni"
+    },
+    {
+      "slug": "fu-a-un-passo-dalla-guerra-nucleare-3-volte",
+      "titolo": "Fu a un passo dalla guerra nucleare 3 volte",
+      "categoria": "⚔️ Guerre",
+      "lead": "Crisi di Cuba (1962), allarme falso nel 1983 (Petrov), Able Archer 83: tre momenti in cui l'estinzione fu questione di minuti.",
+      "deep": "Stanislav Petrov, ufficiale sovietico, il 26 settembre 1983 ricevette l'allarme di 5 missili intercontinentali americani in arrivo. Aveva pochi minuti per lanciare la rappresaglia. Scelse di non farlo, intuendo il falso allarme (era un riflesso solare sui satelliti). Salvò letteralmente il mondo. Durante Able Archer 83, esercitazione NATO, i sovietici la credettero preludio di un attacco reale e mobilitarono armi nucleari. Durante la Crisi di Cuba, il sottomarino sovietico B-59 stava per lanciare un siluro nucleare, fermato solo dal rifiuto del commissario Vasili Arkhipov. Petrov morì nel 2017 senza aver ricevuto riconoscimenti ufficiali in Russia.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/fu-a-un-passo-dalla-guerra-nucleare-3-volte"
+    },
+    {
+      "slug": "gli-alberi-parlano-tra-loro-attraverso-il-suolo",
+      "titolo": "Gli alberi 'parlano' tra loro attraverso il suolo",
+      "categoria": "🌿 Natura",
+      "lead": "Le foreste comunicano via funghi micorrizici: una 'wood wide web' sotterranea che scambia zuccheri e segnali chimici.",
+      "deep": "Scoperta dalla biologa Suzanne Simard, la rete micorrizica collega fino al 90% delle piante terrestri. Gli alberi più vecchi (madri) trasferiscono carbonio ai giovani, avvertono dell'arrivo di parassiti rilasciando segnali chimici, e supportano specie diverse. In una singola cucchiaiata di terreno forestale ci sono più organismi di tutti gli umani mai esistiti. Questa scoperta ha rivoluzionato la silvicoltura: tagliare 'alberi madre' destabilizza intere foreste.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/gli-alberi-parlano-tra-loro-attraverso-il-suolo"
+    },
+    {
+      "slug": "gli-alberi-piu-vecchi-del-mondo-sono-cloni",
+      "titolo": "Gli alberi più vecchi del mondo sono cloni",
+      "categoria": "🌿 Natura",
+      "lead": "Pando, un colonia di pioppi tremuli in Utah, condivide un unico sistema radicale. Ha 80.000 anni e pesa 6.000 tonnellate.",
+      "deep": "Pando ('mi diffondo' in latino) è tecnicamente UN UNICO ORGANISMO: 47.000 tronchi geneticamente identici connessi da radici comuni. Copre 43 ettari ed è considerato l'essere vivente più pesante della Terra. Purtroppo sta morendo: gli erbivori mangiano i giovani germogli prima che crescano. Gli scienziati stanno recintando aree per salvarlo. Altre piante formano organismi simili: il fungo Armillaria in Oregon copre 9 km² ed è considerato il più grande organismo terrestre.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/gli-alberi-piu-vecchi-del-mondo-sono-cloni"
+    },
+    {
+      "slug": "gli-dei-greci-erano-terribili-genitori",
+      "titolo": "Gli dei greci erano terribili genitori",
+      "categoria": "🏛️ Mitologia",
+      "lead": "Zeus inghiottì una moglie, Cronos divorava i figli, Afrodite era nata dai testicoli tagliati di Urano. Nessun culto più dark.",
+      "deep": "La genealogia greca è un horror freudiano: Urano odiava i figli e li ricacciava nel grembo di Gea. Cronos lo evirò e divorò a sua volta i figli per timore della profezia. Rea nascose Zeus e diede a Cronos una pietra avvolta da fasce. Zeus crescendo avvelenò Cronos facendogli rigettare i fratelli. Poi sposò la sorella Hera (incestuosa-consensuale) con tanti tradimenti divini. Il culto olimpico era meno morale di quelli misterici (Eleusi, Orfismo) dove si cercava purificazione. I Romani ereditarono tutto e aggiunsero crudeltà politica.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/gli-dei-greci-erano-terribili-genitori"
+    },
+    {
+      "slug": "gli-odori-sono-i-piu-potenti-innesco-di-memoria",
+      "titolo": "Gli odori sono i più potenti innesco di memoria",
+      "categoria": "🧠 Psicologia",
+      "lead": "L'olfatto è l'unico senso direttamente connesso al sistema limbico. Un profumo può trasportarti istantaneamente nell'infanzia.",
+      "deep": "Gli altri sensi (vista, udito, tatto, gusto) passano prima dal talamo, che filtra. L'olfatto va direttamente ad amigdala (emozioni) e ippocampo (memoria). Proust lo chiamò 'memoria involontaria': il famoso momento del madeleine. Le 'memorie proustiane' sono 2-4 volte più emotive e dettagliate delle memorie visive. L'anosmia (perdita dell'olfatto, comune col COVID) è associata a depressione e sensazione di 'perdere parte di sé'. Le aziende (hotel, negozi) usano 'scent branding' per creare associazioni memorabili.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/gli-odori-sono-i-piu-potenti-innesco-di-memoria"
+    },
+    {
+      "slug": "gli-stoici-si-allenavano-alla-morte-quotidianamente",
+      "titolo": "Gli stoici si allenavano alla morte quotidianamente",
+      "categoria": "💭 Filosofia",
+      "lead": "Il 'memento mori' (ricorda che morirai) era pratica stoica giornaliera. Marco Aurelio lo annotava nei suoi 'Pensieri'.",
+      "deep": "Stoicismo romano (Seneca, Epitteto, Marco Aurelio): la consapevolezza della morte libera dalle paure futili e rende ogni momento prezioso. 'Vivi come se fosse il tuo ultimo giorno' non era cliché, era pratica filosofica. Gli stoici praticavano 'praemeditatio malorum' (premeditare i mali): immaginare perdite prima che accadano per attenuarne l'impatto emotivo. Oggi la psicoterapia cognitiva applica principi stoici. Ryan Holiday e Tim Ferriss hanno rilanciato lo stoicismo come filosofia di vita moderna.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/gli-stoici-si-allenavano-alla-morte-quotidianamente"
+    },
+    {
+      "slug": "google-cancellava-i-risultati-per-il-gioco-per-ore",
+      "titolo": "Google cancellava i risultati per 'il gioco' per ore",
+      "categoria": "💻 Tecnologia",
+      "lead": "Il primo videogioco Google Doodle (Pac-Man, 2010) fece perdere al mondo 4,8 milioni di ore di produttività in un giorno.",
+      "deep": "Secondo stime di RescueTime, i 500 milioni di persone che giocarono a Pac-Man sul logo Google causarono una perdita globale stimata in 120 milioni di dollari di produttività. Google non si scoraggiò: da allora ha rilasciato decine di giochi interattivi nei Doodle. Il più longevo è 'Coding Carrots' del 2017, primo Doodle AI-powered. Il team Doodle conta circa 10 artisti stabili chiamati 'Doodlers' e produce oltre 5000 Doodle l'anno.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/google-cancellava-i-risultati-per-il-gioco-per-ore"
+    },
+    {
+      "slug": "harley-davidson-e-nata-in-una-baracca-del-giardino",
+      "titolo": "Harley-Davidson è nata in una baracca del giardino",
+      "categoria": "🏍️ Moto",
+      "lead": "William Harley e Arthur Davidson costruirono la prima moto nel 1903 in una baracca di legno 3x5 metri a Milwaukee.",
+      "deep": "Oggi un'icona americana, nacque come hobby di due giovani: Harley (21 anni) e Davidson (20). La prima moto aveva motore da 7 pollici cubi montato su una bicicletta. Nel 1907 fondarono la società. Durante la WWII produssero 90.000 moto militari (modello WLA). Negli anni '60 Harley-Davidson era quasi fallita: salvata dalla proprietà AMF nel 1969 con qualità in caduta ('the ruined era'). Ri-privatizzata nel 1981 in leveraged buyout iconico. Il rumore caratteristico del motore V-twin 45° è talmente distintivo che Harley tentò di brevettarlo nel 1994 (fallì). Il 'Potato Potato' è parte del DNA americano.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/harley-davidson-e-nata-in-una-baracca-del-giardino"
+    },
+    {
+      "slug": "i-beatles-non-sapevano-leggere-la-musica",
+      "titolo": "I Beatles non sapevano leggere la musica",
+      "categoria": "🎵 Musica",
+      "lead": "Nessuno dei Fab Four sapeva leggere la notazione musicale. Imparavano e componevano a orecchio, incluse sinfonie con orchestra.",
+      "deep": "John Lennon disse: 'Nessuno di noi sa leggere. Non sapremmo neanche scrivere una canzone in scala di C'. Paul McCartney ammise di averlo 'provato ma essere troppo pigro'. Lavoravano con il produttore George Martin (musicista classico) che trascriveva le loro idee per orchestrali come 'Yesterday' o 'Eleanor Rigby'. Musica e notazione sono abilità separate: Stevie Wonder, Michael Jackson, Jimi Hendrix e Prince erano analfabeti musicali. Sinistra come Jimi Hendrix imparò la chitarra con strumenti per destri suonati al contrario.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-beatles-non-sapevano-leggere-la-musica"
+    },
+    {
+      "slug": "i-delfini-si-chiamano-per-nome",
+      "titolo": "I delfini si chiamano per nome",
+      "categoria": "🐾 Animali",
+      "lead": "Ogni delfino ha un fischio-firma unico. Altri delfini 'invocano' un amico riproducendo il suo fischio-nome.",
+      "deep": "Studio del St Andrews University (2013): analizzando 4.000 fischi di delfini della Florida, gli scienziati identificarono nomi unici. Quando riproducono il 'nome' di un delfino familiare, questo risponde; il nome di uno sconosciuto: silenzio. Sono l'unica specie (oltre all'uomo) a usare nomi per individui specifici. I delfini madre insegnano il loro 'nome' alla prole. Si riconoscono allo specchio, risolvono problemi complessi, e in Giappone sono stati addestrati al servizio militare. Il loro cervello ha 40 miliardi di neuroni (l'umano ne ha 86).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-delfini-si-chiamano-per-nome"
+    },
+    {
+      "slug": "i-diamanti-piovono-su-nettuno",
+      "titolo": "I diamanti piovono su Nettuno",
+      "categoria": "🔬 Scienza",
+      "lead": "Sui giganti gassosi Nettuno e Urano la pressione è così elevata che il metano si trasforma letteralmente in pioggia di diamanti.",
+      "deep": "A migliaia di chilometri sotto la superficie nuvolosa, le pressioni superano i milioni di atmosfere e temperature di migliaia di gradi. Il metano (CH4) viene spezzato: l'idrogeno si libera e il carbonio si compatta fino a cristallizzare in diamanti, che poi 'piovono' verso il nucleo. Nel 2017, esperimenti al laser SLAC hanno ricreato queste condizioni e osservato la formazione di nanodiamanti in tempo reale, confermando l'ipotesi teorizzata per decenni.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-diamanti-piovono-su-nettuno"
+    },
+    {
+      "slug": "i-fulmini-producono-antimateria",
+      "titolo": "I fulmini producono antimateria",
+      "categoria": "🔬 Scienza",
+      "lead": "Durante i temporali, la Terra emette lampi di raggi gamma che contengono positroni: la controparte di antimateria degli elettroni.",
+      "deep": "Scoperto dal Fermi Space Telescope nel 2009, il fenomeno è chiamato TGF (Terrestrial Gamma-ray Flash). Ogni giorno la Terra produce migliaia di questi lampi, ciascuno contenente abbastanza antimateria da contraddire il senso comune. Gli elettroni accelerati dai campi elettrici del temporale creano coppie elettrone-positrone che si annichilano istantaneamente emettendo raggi gamma. Gli aerei che attraversano temporali sono occasionalmente esposti a queste dosi di radiazione.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-fulmini-producono-antimateria"
+    },
+    {
+      "slug": "i-fulmini-sono-5-volte-piu-caldi-del-sole",
+      "titolo": "I fulmini sono 5 volte più caldi del Sole",
+      "categoria": "🌿 Natura",
+      "lead": "Un fulmine può raggiungere 30.000°C: 5 volte la temperatura della superficie solare (~5.500°C).",
+      "deep": "L'estremo riscaldamento causa l'espansione supersonica dell'aria, generando il tuono (onda d'urto). Ogni secondo colpiscono la Terra circa 100 fulmini. Il record di fulmine più lungo mai registrato: 768 km, in Texas e Louisiana nel 2020 (WMO). La 'fulguratite' è un minerale vetrificato formatosi quando un fulmine colpisce la sabbia: ricercato dai collezionisti. La probabilità di essere colpiti è 1 su 700.000 all'anno.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-fulmini-sono-5-volte-piu-caldi-del-sole"
+    },
+    {
+      "slug": "i-gatti-hanno-32-muscoli-per-ogni-orecchio",
+      "titolo": "I gatti hanno 32 muscoli per ogni orecchio",
+      "categoria": "🔬 Scienza",
+      "lead": "Gli orecchi dei gatti possono ruotare di 180° grazie a 32 muscoli dedicati. Gli umani ne hanno 6, quasi tutti atrofizzati.",
+      "deep": "Questa capacità acustica superiore permette ai gatti di localizzare prede con precisione millimetrica anche al buio. Possono sentire frequenze fino a 64.000 Hz (gli umani arrivano a 20.000). I 'movimenti d'orecchio' sono anche un linguaggio emotivo: appiattite = paura/aggressività, dritte = attenzione, rilassate = tranquillità. Gli etologi le chiamano 'antenne satellitari viventi'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-gatti-hanno-32-muscoli-per-ogni-orecchio"
+    },
+    {
+      "slug": "i-ketchup-era-un-farmaco",
+      "titolo": "I ketchup era un farmaco",
+      "categoria": "🍳 Cucina",
+      "lead": "Nel 1834 il Dr. John Cook Bennet vendeva pillole di 'ketchup di pomodoro' per curare diarrea e indigestione.",
+      "deep": "Il ketchup originale (dal cinese 'kôe-chiap', salsa di pesce fermentato) era un condimento di acciughe. Bennett, medico dell'Ohio, sostenne che il pomodoro curasse problemi digestivi: vendeva pillole che si rivelarono un pasticcio di zucchero con laureli lassativi. Il successo commerciale di Heinz (1876) popolarizzò la versione dolce moderna. Oggi il ketchup è una delle pochissime salse usate universalmente: ogni americano ne consuma 3 bottiglie all'anno.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-ketchup-era-un-farmaco"
+    },
+    {
+      "slug": "i-koala-dormono-22-ore-al-giorno",
+      "titolo": "I koala dormono 22 ore al giorno",
+      "categoria": "🐾 Animali",
+      "lead": "Mangiano eucalipto, il cui tossico consumo di energia li costringe a 22 ore di sonno. Al cervello arriva pochissimo ossigeno.",
+      "deep": "L'eucalipto è altamente tossico e povero di nutrienti; il koala ha un sistema digestivo specializzato (caecum lunghissimo, 2 metri) con batteri che neutralizzano i tannini. Masticano lentamente, dormono tanto per risparmiare energia. Il cervello del koala è atrofizzato (0,2% del peso corporeo, rapporto più basso dei primati). Sono solitari, non sono tecnicamente 'orsi'. Le epidemie di clamidia (trasmessa sessualmente tra koala) hanno decimato la specie del 30%. Classificati 'a rischio' dal 2022.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-koala-dormono-22-ore-al-giorno"
+    },
+    {
+      "slug": "i-nazisti-crearono-il-primo-personal-computer-zuse-z3",
+      "titolo": "I nazisti crearono il primo personal computer (Zuse Z3)",
+      "categoria": "⚔️ Guerre",
+      "lead": "Nel 1941 Konrad Zuse costruì in Germania il primo computer completamente automatico e programmabile, lo Z3. Era per calcoli aeronautici militari.",
+      "deep": "Lo Z3 usava relè elettromeccanici (2.600 pezzi), calcolava in binario e sapeva eseguire sottoprogrammi. Fu distrutto dai bombardamenti alleati nel 1943. Zuse sviluppò anche Plankalkül, considerato il primo linguaggio di programmazione ad alto livello. Le autorità naziste non capirono l'importanza strategica: finanziarono solo timidamente il progetto. Parallelamente in Inghilterra, Turing e il team di Bletchley Park costruirono Colossus per decrittare Enigma. Il primo computer americano, ENIAC, arrivò solo nel 1945.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-nazisti-crearono-il-primo-personal-computer-zuse-z3"
+    },
+    {
+      "slug": "i-pinguini-imperatori-fanno-fila-per-centinaia-di-km",
+      "titolo": "I pinguini imperatori fanno fila per centinaia di km",
+      "categoria": "🐾 Animali",
+      "lead": "Ogni anno i maschi camminano 120 km nell'Antartide (-60°C) per incubare l'uovo. Non mangiano per 65 giorni.",
+      "deep": "Il pinguino imperatore riproduce durante l'inverno antartico. La femmina depone un uovo e lo consegna al maschio che lo 'cova' sui piedi sotto una plica di pelle. Lei torna all'oceano a pescare per 65 giorni. Senza cibo e a temperature letali, i maschi si stringono in 'huddles' (cerchi rotanti) riscaldandosi a turno al centro. Perdono metà peso corporeo. L'uovo schiude quando torna la madre che nutre il piccolo. Documentato magistralmente in 'March of the Penguins' (2005, Oscar al Miglior Documentario).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-pinguini-imperatori-fanno-fila-per-centinaia-di-km"
+    },
+    {
+      "slug": "i-polpi-hanno-tre-cuori-e-sangue-blu",
+      "titolo": "I polpi hanno tre cuori e sangue blu",
+      "categoria": "🐾 Animali",
+      "lead": "Due cuori pompano ai branchie, uno al corpo. Il sangue è blu perché usa rame invece di ferro per trasportare ossigeno.",
+      "deep": "L'emocianina (proteina del rame) è meno efficiente dell'emoglobina ma funziona meglio in acque fredde e povere di ossigeno. I polpi hanno anche 9 cervelli: uno centrale e uno per ogni braccio, capaci di decidere autonomamente. Il 60% dei loro neuroni è nei tentacoli. Sanno aprire barattoli, riconoscere volti umani, usare strumenti, risolvere labirinti e scappare da acquari chiusi. Vivono solo 1-5 anni: la morte è programmata dopo la riproduzione. Sono considerati tra gli animali più alieni della Terra.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-polpi-hanno-tre-cuori-e-sangue-blu"
+    },
+    {
+      "slug": "i-romani-usavano-l-urina-come-dentifricio",
+      "titolo": "I romani usavano l'urina come dentifricio",
+      "categoria": "📜 Storia",
+      "lead": "L'urina umana (ricca di ammoniaca) era venduta come sbiancante per i denti. La più pregiata arrivava dal Portogallo.",
+      "deep": "L'imperatore Vespasiano tassò il commercio dell'urina (raccolta nei 'vespasiani' pubblici, oggi eufemismo per orinatoi). Quando il figlio Tito si lamentò dell'origine, Vespasiano gli mise sotto il naso una moneta dicendo: 'Pecunia non olet' (il denaro non puzza), frase divenuta proverbiale. L'urina veniva usata anche dai tintori per fissare i colori e dai conciatori per ammorbidire la pelle. Contiene ammoniaca che effettivamente sbianca lo smalto, ma ne corrode la struttura.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-romani-usavano-l-urina-come-dentifricio"
+    },
+    {
+      "slug": "i-rothschild-sono-piu-ricchi-di-tutti-i-miliardari-moderni-combinati",
+      "titolo": "I Rothschild sono più ricchi di tutti i miliardari moderni combinati",
+      "categoria": "💰 Economia",
+      "lead": "Al picco del XIX secolo, la fortuna dei Rothschild era stimata allo 0,62% del PIL mondiale, equivalente oggi a ~500 miliardi di dollari.",
+      "deep": "La dinastia ebraico-tedesca, fondata da Mayer Amschel Rothschild (1744-1812) a Francoforte, finanziò governi durante le guerre napoleoniche. Nathan Rothschild usò piccioni viaggiatori per anticipare i risultati di Waterloo e fare fortuna in borsa. Finanziò il Canale di Suez per l'Inghilterra, fermò Bismarck, sostenne i Romanov. Oggi la famiglia (circa 400 discendenti documentati) gestisce 630 miliardi in asset bancari. La crescita esponenziale ha portato Forbes a non considerare la famiglia nel ranking dei miliardari (troppo dispersa).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-rothschild-sono-piu-ricchi-di-tutti-i-miliardari-moderni-combinati"
+    },
+    {
+      "slug": "i-trapianti-d-organo-possono-cambiare-la-personalita",
+      "titolo": "I trapianti d'organo possono cambiare la personalità",
+      "categoria": "⚕️ Medicina",
+      "lead": "'Cellular memory': alcuni pazienti trapiantati riportano cambiamenti di gusti, preferenze, persino ricordi del donatore.",
+      "deep": "Un fenomeno documentato dai medici Gary Schwartz e Linda Russek (1998). Una paziente di 8 anni trapiantata di cuore iniziò ad avere incubi di un omicidio: la polizia risolse grazie ai suoi ricordi il caso del donatore assassinato. La scienza è scettica ma i casi sono molti. Ipotesi: i neuroni del sistema nervoso enterico (intestinale) e del cuore ('cervello cardiaco', 40.000 neuroni) possono conservare memoria biochimica. Resta zona grigia tra neurofisiologia e psicologia post-trauma del trapianto.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-trapianti-d-organo-possono-cambiare-la-personalita"
+    },
+    {
+      "slug": "i-vichinghi-credevano-in-un-arcobaleno-ponte",
+      "titolo": "I vichinghi credevano in un arcobaleno-ponte",
+      "categoria": "🏛️ Mitologia",
+      "lead": "Bifrǫst era il ponte di fuoco e arcobaleno che collegava Midgard (Terra) ad Asgard (regno degli dei). Un giorno crollerà nel Ragnarǫk.",
+      "deep": "La mitologia norrena è straordinariamente complessa: 9 mondi connessi dall'albero cosmico Yggdrasil, dei destinati a morire (Ragnarǫk), e un pantheon diverso dai canoni mediterranei. Odino sacrificò un occhio per la saggezza e rimase appeso 9 giorni a Yggdrasil per imparare le rune. Thor, dio del tuono, è oggi più famoso grazie ai fumetti Marvel. Le saghe islandesi sono la fonte principale: scritte nel XIII secolo, dopo secoli di tradizione orale. Molti termini moderni derivano dai norreni: Thursday = Thor's day.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/i-vichinghi-credevano-in-un-arcobaleno-ponte"
+    },
+    {
+      "slug": "il-70-dell-ossigeno-viene-dagli-oceani",
+      "titolo": "Il 70% dell'ossigeno viene dagli oceani",
+      "categoria": "🌿 Natura",
+      "lead": "Non sono gli alberi a produrre la maggior parte dell'ossigeno terrestre, ma il fitoplancton marino. Il più prolifico: la Prochlorococcus.",
+      "deep": "La Prochlorococcus è il più piccolo fotosintetizzatore del pianeta (0,5-0,8 μm) ma anche il più abbondante: ce ne sono 3 ottilioni (3×10^27) negli oceani. Produce da sola il 5% dell'ossigeno terrestre. Il fitoplancton complessivamente copre il 50-80% dell'ossigeno. Questo dato ribalta il mito 'salva l'Amazzonia per respirare': in realtà l'Amazzonia consuma quasi tutto l'ossigeno che produce tramite respirazione ecosistemica. Gli oceani sono i veri 'polmoni blu'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-70-dell-ossigeno-viene-dagli-oceani"
+    },
+    {
+      "slug": "il-caffe-era-bandito-a-la-mecca",
+      "titolo": "Il caffè era bandito a La Mecca",
+      "categoria": "🍳 Cucina",
+      "lead": "Nel 1511 il governatore de La Mecca bandì il caffè perché stimolava 'pensieri sovversivi'. Fu imprigionato dal sultano.",
+      "deep": "Il caffè, scoperto in Etiopia nel IX secolo secondo la leggenda del pastore Kaldi, arrivò nel mondo arabo dove le 'qahveh khaneh' (caffetterie) divennero centri di discussione politica. Il governatore Khair Beg temeva le cospirazioni tra i bevitori di caffè. Nel 1675 anche Carlo II d'Inghilterra tentò di vietare i 'coffee houses' come covi di sedizione. I bevitori protestarono così violentemente che revocò la legge in 2 giorni. Oggi si bevono 2,25 miliardi di tazzine di caffè al giorno nel mondo.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-caffe-era-bandito-a-la-mecca"
+    },
+    {
+      "slug": "il-calcio-moderno-fu-inventato-dagli-studenti-inglesi-nel-1848",
+      "titolo": "Il calcio moderno fu inventato dagli studenti inglesi nel 1848",
+      "categoria": "⚽ Sport",
+      "lead": "Le 'Regole di Cambridge' del 1848 furono il primo tentativo di unificare le regole del football: prima ogni scuola aveva le sue.",
+      "deep": "Prima del 1848, ogni college inglese giocava secondo regole proprie: Eton calciava, Rugby portava la palla in mano. Gli studenti di Cambridge si riunirono per creare un codice condiviso, abolendo il gioco con le mani. Nel 1863 nacque la Football Association, che codificò definitivamente le regole. Il Brasile, che non inventò il calcio, lo perfezionò: ha vinto 5 Mondiali, più di chiunque altro. Ma il paese con più vittorie per abitante è l'Uruguay: 2 Mondiali con 3,5 milioni di abitanti.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-calcio-moderno-fu-inventato-dagli-studenti-inglesi-nel-1848"
+    },
+    {
+      "slug": "il-cervello-e-prevedibilmente-irrazionale",
+      "titolo": "Il cervello è prevedibilmente irrazionale",
+      "categoria": "🧠 Psicologia",
+      "lead": "Gli umani non sono 'a volte' irrazionali: lo sono sistematicamente. Lo ha dimostrato Daniel Kahneman con la teoria dei due sistemi di pensiero.",
+      "deep": "Kahneman (Nobel 2002) distinse 'Sistema 1' (veloce, intuitivo, emotivo) e 'Sistema 2' (lento, logico, faticoso). Il Sistema 1 domina il 95% delle decisioni e crea bias cognitivi: ancoraggio, effetto framing, avversione alle perdite (soffriamo il doppio per perdere 100€ rispetto al piacere di guadagnarne 100). Aziende e governi usano 'nudge' per sfruttare questi bias: un salvadanaio automatico di default aumenta i risparmi del 300% rispetto all'opt-in manuale.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-cervello-e-prevedibilmente-irrazionale"
+    },
+    {
+      "slug": "il-croissant-e-austriaco-non-francese",
+      "titolo": "Il croissant è austriaco, non francese",
+      "categoria": "🍳 Cucina",
+      "lead": "Il 'kipferl' austriaco ispirò il croissant per celebrare la vittoria di Vienna sui turchi nel 1683 (la sua forma è una falce turca).",
+      "deep": "Leopoldo I d'Austria, dopo aver respinto l'assedio ottomano del 1683, fece commissionare ai panettieri dolci a forma di mezzaluna (simbolo ottomano) da 'mangiare' simbolicamente. Maria Antonietta (austriaca) lo portò in Francia nel 1770 sposando Luigi XVI. Solo a fine '800 la versione francese con pasta sfoglia soppiantò l'originale a pasta brioche. Oggi la Francia consuma 1,5 milioni di croissant al giorno, ma legalmente il 'croissant au beurre' è protetto solo in Francia.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-croissant-e-austriaco-non-francese"
+    },
+    {
+      "slug": "il-cuore-di-una-balenottera-azzurra-pesa-come-un-auto",
+      "titolo": "Il cuore di una balenottera azzurra pesa come un'auto",
+      "categoria": "🐾 Animali",
+      "lead": "Il cuore della blue whale pesa 180 kg ed è grande come una Smart. I suoi vasi sanguigni sono abbastanza grandi da far passare un uomo.",
+      "deep": "La balenottera azzurra (33m, 200 tonnellate) è il più grande animale mai vissuto, più grande di qualsiasi dinosauro. Il suo cuore batte 8-10 volte al minuto (4-8 volte sott'acqua), ma può pompare 220 litri di sangue per battito. La sua lingua pesa 3,5 tonnellate (quanto un elefante). Il suo canto è più forte di un jet (188 dB) e viaggia per 1.000 km sott'acqua. Quasi estinto a inizio '900 (300.000 uccise per olio), oggi ne restano 10.000-25.000.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-cuore-di-una-balenottera-azzurra-pesa-come-un-auto"
+    },
+    {
+      "slug": "il-cuore-puo-battere-anche-fuori-dal-corpo",
+      "titolo": "Il cuore può battere anche fuori dal corpo",
+      "categoria": "⚕️ Medicina",
+      "lead": "Il cuore umano ha un sistema elettrico autonomo: continua a battere per ore se tenuto in soluzione nutritiva.",
+      "deep": "Il nodo senoatriale genera impulsi elettrici indipendenti dal cervello. Nei trapianti, il cuore viene conservato fuori dal corpo fino a 6 ore a 4°C, e nuove tecnologie di 'perfusione ex vivo' (come OCS Heart) lo mantengono battente e funzionante fino a 12 ore. Questo ha rivoluzionato i trapianti: oggi si possono valutare i cuori prima di impiantarli. Il cuore di un donatore morto (DCD) ora può essere riavviato con successo, aumentando del 30% gli organi disponibili.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-cuore-puo-battere-anche-fuori-dal-corpo"
+    },
+    {
+      "slug": "il-disco-piu-venduto-della-storia-non-e-dei-beatles",
+      "titolo": "Il disco più venduto della storia NON è dei Beatles",
+      "categoria": "🎵 Musica",
+      "lead": "È 'Thriller' di Michael Jackson (1982): 70 milioni di copie ufficiali, stimate fino a 100 milioni. Resta invincibile da 40+ anni.",
+      "deep": "Thriller cambiò l'industria musicale. Quincy Jones e Jackson lavorarono 8 mesi con budget record (750.000 dollari). Il video di 14 minuti diretto da John Landis fu il primo 'cinematografico', trasformando MTV. Il tape di video musicali di Thriller vendette 9 milioni di copie, record. Jackson divenne il primo musicista ad essere lanciato come entertainer globale. Nel 2009, dopo la sua morte, le vendite di Thriller balzarono a 130 milioni di streams. Le stime più alte arrivano a 105 milioni di copie fisiche totali.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-disco-piu-venduto-della-storia-non-e-dei-beatles"
+    },
+    {
+      "slug": "il-drago-non-e-europeo-e-universale",
+      "titolo": "Il drago non è europeo: è universale",
+      "categoria": "🏛️ Mitologia",
+      "lead": "Tutte le culture del mondo hanno draghi: cinesi, aztechi, egizi, norreni, australiani aborigeni. Nessun collegamento storico.",
+      "deep": "I dragoni cinesi (Long) portano fortuna e pioggia. Quetzalcoatl (azteco) era il serpente piumato della conoscenza. Apophis (egizio) incarnava il caos. Jormungandr (norreno) circondava il mondo. I Rainbow Serpents aborigeni creavano i fiumi. Perché ovunque? Teorie: (a) ricordi evolutivi di predatori rettili-avifauna, (b) fossili di dinosauri interpretati da civiltà antiche, (c) archetipo junghiano del caos primordiale. Carl Sagan ipotizzò nei 'Drammi dell'Eden' un'origine in ricordi genetici di coccodrilli preistorici.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-drago-non-e-europeo-e-universale"
+    },
+    {
+      "slug": "il-grido-di-munch-fu-graffiato-dall-autore",
+      "titolo": "Il 'Grido' di Munch fu graffiato dall'autore",
+      "categoria": "🎨 Arte",
+      "lead": "Munch graffiò 'Può essere stato dipinto solo da un pazzo!' nell'angolo del quadro. Era reazione ai critici che lo giudicavano mentalmente instabile.",
+      "deep": "L'iscrizione nascosta è stata confermata nel 2021 tramite analisi infrarosse del Museo Nazionale di Oslo. Munch soffriva di ansia, depressione e allucinazioni. 'Il Grido' (1893) rappresenta un attacco di panico vissuto al tramonto con 'il cielo rosso come sangue'. Il 'Grido' esiste in 4 versioni, di cui una in pastello venduta a 119,9 milioni di dollari nel 2012 (record per un'opera d'arte all'asta all'epoca). Il cielo rosso potrebbe essere ispirato all'eruzione del Krakatoa del 1883.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-grido-di-munch-fu-graffiato-dall-autore"
+    },
+    {
+      "slug": "il-miele-dei-faraoni-era-ancora-commestibile",
+      "titolo": "Il miele dei Faraoni era ancora commestibile",
+      "categoria": "📜 Storia",
+      "lead": "Archeologi hanno trovato vasi di miele sigillati nella tomba di Tutankhamon ancora perfettamente commestibili dopo 3300 anni.",
+      "deep": "Il miele è stato rinvenuto in perfette condizioni in molte tombe egizie. Gli Egizi lo consideravano sacro: era offerta agli dei, medicina (usato per curare ferite con ottimi risultati, le sue proprietà antibatteriche sono oggi scientificamente confermate), e simbolo di immortalità. Veniva depositato nelle tombe come alimento per l'aldilà. L'Organizzazione Mondiale della Sanità riconosce ufficialmente il miele come antimicrobico per ferite superficiali.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-miele-dei-faraoni-era-ancora-commestibile"
+    },
+    {
+      "slug": "il-miele-non-scade-mai",
+      "titolo": "Il miele non scade mai",
+      "categoria": "🌿 Natura",
+      "lead": "Archeologi hanno trovato vasi di miele di 3000 anni nelle tombe egizie ancora perfettamente commestibili.",
+      "deep": "Il miele è uno dei pochi alimenti praticamente eterni grazie a tre proprietà: bassissima umidità (17%), elevata acidità (pH 3-4.5) e presenza di perossido di idrogeno prodotto dalle api. Questi fattori impediscono qualsiasi crescita microbica. I greci lo usavano come conservante per la carne, e Alessandro Magno fu trasportato a Babilonia immerso nel miele per preservarne il corpo. L'unica nemica è l'acqua: se diluito, fermenta e si trasforma in idromele.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-miele-non-scade-mai"
+    },
+    {
+      "slug": "il-pezzo-di-carta-da-100-dollari-costa-13-1-centesimi",
+      "titolo": "Il pezzo di carta da 100 dollari costa 13,1 centesimi",
+      "categoria": "💰 Economia",
+      "lead": "La banconota da $100 costa 13 centesimi agli USA. Il guadagno del signoraggio: $99,87 per ogni banconota stampata.",
+      "deep": "Il 'signoraggio' è la differenza tra valore facciale e costo di produzione. Gli USA stampano 8,3 miliardi di banconote l'anno (la maggior parte per sostituire quelle usurate). La $100 è la più 'contraffatta' al mondo, con il 20% delle fake dollar circulation. Il valore è garantito solo dalla fiducia nel governo federale (fiat money) dal 1971, quando Nixon abolì il gold standard. Bitcoin nacque come 'signoraggio digitale' alternativo, ma la sua volatilità lo rende ancora impraticabile come valuta.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-pezzo-di-carta-da-100-dollari-costa-13-1-centesimi"
+    },
+    {
+      "slug": "il-primo-computer-bug-era-letteralmente-un-insetto",
+      "titolo": "Il primo computer bug era letteralmente un insetto",
+      "categoria": "💻 Tecnologia",
+      "lead": "Nel 1947 Grace Hopper trovò una falena intrappolata nel Harvard Mark II. La incollò nel logbook: 'First actual case of bug being found'.",
+      "deep": "Il termine 'bug' per difetti esisteva già (Edison lo usava nel 1878), ma l'incidente del 9 settembre 1947 lo rese leggendario nell'informatica. Il logbook è oggi esposto al Smithsonian. Grace Hopper inventò anche il primo compilatore e il concetto di linguaggio ad alto livello (COBOL). Ammiraglia della US Navy, è considerata madre dell'informatica moderna. Il termine 'debugging' (togliere insetti) è ancora in uso oggi.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-primo-computer-bug-era-letteralmente-un-insetto"
+    },
+    {
+      "slug": "il-primo-film-porno-e-del-1896",
+      "titolo": "Il primo film porno è del 1896",
+      "categoria": "🎬 Cinema",
+      "lead": "'Le Coucher de la Mariée' durava 7 minuti e mostrava una donna che si spogliava. Fu proiettato a Parigi due anni dopo i Lumière.",
+      "deep": "Il cinema aveva appena 2 anni. Albert Kirchner (alias Léar) diresse il film a Parigi con l'attrice Louise Willy. Nonostante la nudità fosse brevissima, scandalizzò la società ottocentesca. Il primo film erotico 'parlato' fu 'A Free Ride' (1915, USA). Alla fine dell'800 le 'kinetoscope arcades' offrivano già cortometraggi piccanti. Hollywood introdusse il 'Codice Hays' (1934-1968) bandendo nudi e temi sessuali, creando un mercato parallelo fiorente.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-primo-film-porno-e-del-1896"
+    },
+    {
+      "slug": "il-primo-pallone-da-basket-era-una-pesca",
+      "titolo": "Il primo pallone da basket era una pesca",
+      "categoria": "⚽ Sport",
+      "lead": "James Naismith inventò il basket nel 1891 usando cesti di pesca come canestri. Ogni volta bisognava recuperare la palla con una scala.",
+      "deep": "Naismith, insegnante di ginnastica canadese, cercava uno sport indoor per l'inverno del Massachusetts. Fissò due cesti di pesca a 3,05m (ancora l'altezza ufficiale). Le regole originali erano 13; la prima partita (21 dicembre 1891) vide 9 giocatori per squadra, finì 1-0. Nel 1894 arrivò il primo pallone specifico. Nel 1906 il retro dei canestri venne sostituito da tabelloni e le reti aperte eliminarono il problema del recupero palla. Oggi il basket è il 3° sport più seguito al mondo.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-primo-pallone-da-basket-era-una-pesca"
+    },
+    {
+      "slug": "il-primo-pentito-fu-tommaso-buscetta-padre-dei-maxiprocessi",
+      "titolo": "Il primo 'pentito' fu Tommaso Buscetta, padre dei maxiprocessi",
+      "categoria": "🕶️ Mafia",
+      "lead": "Buscetta rivelò nel 1984 a Falcone la struttura piramidale di Cosa Nostra. Le sue rivelazioni cambiarono per sempre la lotta alla mafia.",
+      "deep": "Tommaso Buscetta era un boss di alto rango entrato in conflitto con i Corleonesi di Totò Riina, che gli uccisero due figli, fratello, cognato e nipoti. Dopo l'estradizione dal Brasile nel 1984, raccontò a Giovanni Falcone la struttura gerarchica della Cupola: famiglie, mandamenti, commissione. Fu il primo a usare il termine 'Cosa Nostra' ufficialmente. Le sue testimonianze permisero i maxiprocessi di Palermo (1986-87) con 475 imputati e 360 condanne. Falcone lo considerava 'un professore di mafiologia'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-primo-pentito-fu-tommaso-buscetta-padre-dei-maxiprocessi"
+    },
+    {
+      "slug": "il-primo-spam-fu-inviato-nel-1978",
+      "titolo": "Il primo spam fu inviato nel 1978",
+      "categoria": "💻 Tecnologia",
+      "lead": "Gary Thuerk spedì un'email pubblicitaria a 393 persone sulla rete ARPANET: vendette computer per 13 milioni di dollari.",
+      "deep": "Thuerk, marketing manager di Digital Equipment Corporation, è considerato il padre dello spam. L'email promuoveva i nuovi DECSYSTEM-20. La reazione fu mista: molti si lamentarono, ma il ROI fu enorme. Oggi lo spam rappresenta oltre il 45% delle email mondiali (circa 122 miliardi al giorno), generato principalmente da botnet. I filtri antispam moderni usano machine learning bayesiano e analisi delle reputazioni IP per bloccarne il 99,9%.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-primo-spam-fu-inviato-nel-1978"
+    },
+    {
+      "slug": "il-rally-di-monte-carlo-esiste-dal-1911",
+      "titolo": "Il Rally di Monte Carlo esiste dal 1911",
+      "categoria": "🏎️ Motori",
+      "lead": "È il rally più antico del mondo: la prima edizione partì contemporaneamente da 14 città europee convergendo su Monte Carlo.",
+      "deep": "Creato dal principe Alberto I per rilanciare il turismo invernale di Monte Carlo, il rally combinò sfida tecnica e prestigio. Nei primi decenni i partecipanti dovevano fare migliaia di km da Berlino, Stoccolma, Glasgow. Le tappe alpine (Col de Turini, Stelvio) sono leggendarie. Nel 1966 l'edizione fu vinta prima da Mini e poi squalificata per fari 'illegali': ancora oggi contesa. Dal 1973 è parte del WRC. Sebastien Loeb (7 vittorie) e Ogier (9 vittorie) sono i piloti più vincenti. Il rally moderno usa pneumatici chiodati per gelo improvviso.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-rally-di-monte-carlo-esiste-dal-1911"
+    },
+    {
+      "slug": "il-suono-di-r2-d2-e-george-lucas-che-gioca-con-un-bambino",
+      "titolo": "Il suono di R2-D2 è George Lucas che gioca con un bambino",
+      "categoria": "🎬 Cinema",
+      "lead": "Ben Burtt creò il linguaggio di R2 mescolando la sua voce che imitava un bambino, sintetizzatori analogici e richiami di delfini.",
+      "deep": "Burtt è il 'papà' del sound design di Star Wars: il respiro di Darth Vader (una maschera subacquea), lo spadalaser (un tubo TV + un motore di proiettore), il Wookie (orso, tricheco, morsa, cammello). L'effetto ACE123 (cane abbaia) è in ogni film dagli anni '80. Ha vinto 4 Oscar. R2 parlava un linguaggio coerente ('astromech binary') che Anthony Daniels (C-3PO) imparò a 'capire' per recitare meglio. Oggi è insegnato al MIT come caso di 'sonic branding' perfetto.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-suono-di-r2-d2-e-george-lucas-che-gioca-con-un-bambino"
+    },
+    {
+      "slug": "il-tuo-corpo-e-piu-batterio-che-umano",
+      "titolo": "Il tuo corpo è più batterio che umano",
+      "categoria": "🔬 Scienza",
+      "lead": "Ospiti circa 38 trilioni di batteri: più del numero delle tue stesse cellule.",
+      "deep": "Il microbioma umano pesa fino a 2 kg e contiene 100 volte più geni del nostro genoma. Questi microbi regolano digestione, sistema immunitario, umore (attraverso l'asse intestino-cervello) e persino il rischio di obesità. La ricerca moderna ha mostrato che trapianti fecali possono curare infezioni resistenti, e composizioni specifiche del microbioma sono collegate ad autismo, depressione e malattie autoimmuni.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-tuo-corpo-e-piu-batterio-che-umano"
+    },
+    {
+      "slug": "il-tuo-stomaco-si-rigenera-ogni-3-4-giorni",
+      "titolo": "Il tuo stomaco si rigenera ogni 3-4 giorni",
+      "categoria": "⚕️ Medicina",
+      "lead": "Le cellule dello stomaco vengono distrutte dall'acido che producono. Devono essere sostituite ogni 3-4 giorni per non autodivorarti.",
+      "deep": "Lo stomaco produce HCl a pH 1-2, abbastanza aggressivo da dissolvere metalli. Una barriera di muco (rinnovata ogni 3-4 giorni) protegge la mucosa. Quando fallisce: ulcere. Fu rivoluzionato nel 1982 quando Barry Marshall e Robin Warren scoprirono che le ulcere sono causate dal batterio Helicobacter pylori (e non dallo stress). Marshall per convincere i critici bevve una coltura del batterio sviluppando ulcera intenzionalmente. Vinsero il Nobel 2005. Ogni cellula umana vive 7-10 anni in media: siamo un 'flusso' cellulare costante.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-tuo-stomaco-si-rigenera-ogni-3-4-giorni"
+    },
+    {
+      "slug": "il-vetro-e-in-realta-un-liquido-ultraviscoso",
+      "titolo": "Il vetro è in realtà un liquido ultraviscoso",
+      "categoria": "🔬 Scienza",
+      "lead": "Il vetro non è un solido: è un liquido amorfo che scorre lentissimamente. Le vetrate medievali sono più spesse in basso.",
+      "deep": "Tecnicamente il vetro è un 'solido amorfo': ha la rigidità di un solido ma la struttura molecolare disordinata di un liquido. A temperatura ambiente scorre a velocità infinitesimali — occorrerebbero miliardi di anni per vedere effetti macroscopici. Il 'flusso' delle vetrate delle cattedrali medievali è in realtà dovuto alla tecnica di produzione dell'epoca (vetro soffiato non uniforme), non al tempo. Ma vetri ultra-raffreddati mostrano effettivamente proprietà reologiche intermedie.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-vetro-e-in-realta-un-liquido-ultraviscoso"
+    },
+    {
+      "slug": "il-volo-piu-corto-al-mondo-dura-47-secondi",
+      "titolo": "Il volo più corto al mondo dura 47 secondi",
+      "categoria": "✈️ Viaggi",
+      "lead": "Westray-Papa Westray nelle Isole Orcadi (Scozia): 2,7 km, volo da record. Alcuni piloti l'hanno fatto in 47 secondi con vento favorevole.",
+      "deep": "Operato da Loganair dal 1967, collega due isole scozzesi con meno di 70 abitanti complessivi. Il biglietto costa ~30 sterline. Il tempo medio di volo è 1,5 minuti, ma il record (2015) è di 47 secondi. Lo usano scolari, pazienti e lavoratori. Paradosso: il volo programmato più corto del mondo in un paese dove il treno più lungo da fondo a capo (LondonEurostar) dura ~7 ore. I piloti lo usano anche come ultimo training per piste corte.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/il-volo-piu-corto-al-mondo-dura-47-secondi"
+    },
+    {
+      "slug": "in-africa-c-e-un-lago-rosa-che-uccide-quasi-tutti-gli-animali",
+      "titolo": "In Africa c'è un lago rosa che uccide quasi tutti gli animali",
+      "categoria": "🗺️ Geografia",
+      "lead": "Il Lake Natron in Tanzania è alcalino (pH 10,5) e a 60°C: calcifica e 'pietrifica' gli uccelli che tentano di atterrarci.",
+      "deep": "Colorato di rosa da microalghe alofile, il lago è uno dei luoghi più inospitali della Terra. Solo i fenicheri rosa (che lo chiamano casa) e pochi pesci si sono adattati. Gli animali morti vengono preservati come 'mummie minerali' per l'alta concentrazione di carbonato di sodio. Il fotografo Nick Brandt vi ha fatto un libro leggendario. Il colore deriva dai carotenoidi delle cianobatteri Spirulina. Il lago è sacro per la tribù masai e fonte del loro latte per cosmetica e sopravvivenza.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/in-africa-c-e-un-lago-rosa-che-uccide-quasi-tutti-gli-animali"
+    },
+    {
+      "slug": "in-giappone-esistono-piu-hotel-abbandonati-che-in-attivita",
+      "titolo": "In Giappone esistono più hotel abbandonati che in attività",
+      "categoria": "✈️ Viaggi",
+      "lead": "Bubble-era hotels vuoti (chiamati 'haikyo') punteggiano il paese. Alcuni sono tramutati in attrazioni di dark tourism.",
+      "deep": "La bolla speculativa giapponese degli anni '80 portò alla costruzione di migliaia di hotel resort. Dopo il crollo del 1991, molti fallirono. 'Haikyo' (廃墟 - rovine) è un sottoturismo in crescita. Gli esempi: 'Nara Dreamland' (parco Disneyland copia, chiuso 2006), 'Gunkanjima' (isola mineraria abbandonata, UNESCO), gli hotel di Hashima. Il Giappone ha anche 8 milioni di case vuote ('akiya'), alcune gratuite per chi vuole trasferirsi. Fenomeno legato al calo demografico e alla concentrazione urbana a Tokyo.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/in-giappone-esistono-piu-hotel-abbandonati-che-in-attivita"
+    },
+    {
+      "slug": "l-acqua-calda-puo-ghiacciare-prima-di-quella-fredda",
+      "titolo": "L'acqua calda può ghiacciare prima di quella fredda",
+      "categoria": "🔬 Scienza",
+      "lead": "In certe condizioni, l'acqua calda congela più velocemente di quella fredda: è l'effetto Mpemba.",
+      "deep": "Scoperto ufficialmente nel 1963 dallo studente tanzaniano Erasto Mpemba, questo fenomeno sfida l'intuizione termodinamica. Le spiegazioni proposte includono: evaporazione più intensa nell'acqua calda (riducendone la massa), minori gas disciolti, correnti convettive differenti e la struttura dei legami idrogeno che si riorganizzano. Ancora oggi gli scienziati dibattono sul meccanismo principale, ma l'effetto è replicabile e viene studiato per migliorare sistemi di refrigerazione industriale.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/l-acqua-calda-puo-ghiacciare-prima-di-quella-fredda"
+    },
+    {
+      "slug": "l-effetto-dunning-kruger-gli-incompetenti-si-credono-esperti",
+      "titolo": "L'effetto Dunning-Kruger: gli incompetenti si credono esperti",
+      "categoria": "🧠 Psicologia",
+      "lead": "Le persone meno competenti in un campo tendono a sopravvalutarsi. I veri esperti, al contrario, tendono a sottovalutare le proprie capacità.",
+      "deep": "Studio del 1999 di David Dunning e Justin Kruger alla Cornell, premio Ig Nobel 2000. La causa: per riconoscere la propria incompetenza servono le stesse capacità che mancano. La 'valle dell'umiltà' (dopo aver imparato abbastanza da capire quanto non sai) è un indicatore di vera competenza. Applicazioni: dibattiti politici, social media, lavoro. Bertrand Russell lo aveva anticipato: 'Il problema del mondo è che gli stupidi sono sempre sicuri di sé, e gli intelligenti pieni di dubbi'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/l-effetto-dunning-kruger-gli-incompetenti-si-credono-esperti"
+    },
+    {
+      "slug": "l-email-e-piu-vecchia-del-web-di-20-anni",
+      "titolo": "L'email è più vecchia del web di 20 anni",
+      "categoria": "💻 Tecnologia",
+      "lead": "La prima email fu inviata nel 1971 da Ray Tomlinson. Il World Wide Web nacque nel 1991 grazie a Tim Berners-Lee.",
+      "deep": "Tomlinson scelse la '@' dalla tastiera perché 'non compariva in nessun nome'. Il primo messaggio? 'QWERTYUIOP' (non lo ricordava nemmeno lui). Oggi si scambiano 333 miliardi di email al giorno. Berners-Lee creò invece il WWW al CERN per condividere documenti tra ricercatori; il primo sito (info.cern.ch) è ancora online. Il web è solo uno dei servizi di Internet (come email, FTP, SSH): spesso i due termini vengono confusi.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/l-email-e-piu-vecchia-del-web-di-20-anni"
+    },
+    {
+      "slug": "l-italia-ha-piu-unesco-di-qualsiasi-altro-paese-al-mondo",
+      "titolo": "L'Italia ha più UNESCO di qualsiasi altro paese al mondo",
+      "categoria": "🗺️ Geografia",
+      "lead": "60 siti UNESCO (dato 2024). Seconda è la Cina (59), terza la Germania (54). Francia ha 52.",
+      "deep": "Dall'ultima Cena di Leonardo al Centro Storico di Firenze, dai Sassi di Matera a Pompei, dagli Scavi di Siracusa alle Dolomiti. L'Italia aggiunge siti quasi ogni anno: 2024 ha visto l'inclusione del 'Paesaggio delle Langhe-Roero-Monferrato' già patrimonio dal 2014, della Via Appia 'Regina Viarum' in 2024. Il più famoso visitato è il Colosseo (7,5 milioni di turisti/anno). L'Italia ha anche 12 siti UNESCO nel Patrimonio Immateriale (opera lirica, pizza napoletana, Commedia dell'Arte, ecc.).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/l-italia-ha-piu-unesco-di-qualsiasi-altro-paese-al-mondo"
+    },
+    {
+      "slug": "la-500-originale-fu-progettata-per-stare-in-un-ascensore",
+      "titolo": "La 500 originale fu progettata per stare in un ascensore",
+      "categoria": "🚗 Macchine",
+      "lead": "Dante Giacosa nel 1957 la disegnò piccola abbastanza (3m) da entrare in un ascensore di palazzo italiano, per risolvere il problema del parcheggio.",
+      "deep": "La Fiat Nuova 500 (1957) aveva motore bicilindrico raffreddato ad aria montato posteriormente, 13 CV, 85 km/h. Costava 490.000 lire (~9 mesi di stipendio operaio). In 18 anni ne furono vendute 3,8 milioni. Progettata come 'utilitaria' per motorizzare l'Italia post-bellica. Giacosa progettò anche Topolino, 600 e 127. La nuova 500 del 2007 è un restyling nostalgico, prodotta anche elettrica (500e). La Topolino del 2023 è elettrica, 45 km/h, guidabile senza patente dai 14 anni. In Italia ne sono state vendute 12.000 nel primo anno.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-500-originale-fu-progettata-per-stare-in-un-ascensore"
+    },
+    {
+      "slug": "la-camorra-e-piu-antica-di-cosa-nostra",
+      "titolo": "La Camorra è più antica di Cosa Nostra",
+      "categoria": "🕶️ Mafia",
+      "lead": "Le origini documentate risalgono al 1400 a Napoli, quindi pre-unitaria. La mafia siciliana è documentata solo dal 1860.",
+      "deep": "La parola 'Camorra' deriverebbe da 'gamurra' (vestito corto dei malviventi spagnoli) o dall'arabo 'kumar' (gioco d'azzardo). Nasce nelle carceri borboniche come 'Bella Società Riformata', con statuti e rituali. Dopo l'Unità d'Italia i camorristi parteciparono persino alle elezioni. Oggi la Camorra è una delle organizzazioni criminali più ricche del mondo (stimato giro d'affari 100+ miliardi). Differenza chiave con Cosa Nostra: struttura orizzontale (clan in competizione) invece che piramidale.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-camorra-e-piu-antica-di-cosa-nostra"
+    },
+    {
+      "slug": "la-canzone-piu-ascoltata-al-mondo-e-happy-birthday",
+      "titolo": "La 'Canzone più ascoltata al mondo' è 'Happy Birthday'",
+      "categoria": "🎵 Musica",
+      "lead": "La registrazione Spotify mostra che 'Happy Birthday' è cantata/ascoltata più di ogni altra canzone al mondo, ogni giorno.",
+      "deep": "Composta dalle sorelle Hill nel 1893 come 'Good Morning to All', divenne 'Happy Birthday to You' nel 1912. Warner/Chappell ne deteneva il copyright e incassava 2 milioni di dollari all'anno licenziandola a film e TV fino al 2016, quando un tribunale la dichiarò di dominio pubblico. Tradotta in ogni lingua, è cantata ~3 miliardi di volte all'anno nel mondo. Alternative in altri paesi: 'Las Mañanitas' (Messico), 'Joyeux Anniversaire' (Francia), 'Tanti Auguri a Te' (Italia).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-canzone-piu-ascoltata-al-mondo-e-happy-birthday"
+    },
+    {
+      "slug": "la-crisi-dei-tulipani-fu-la-prima-bolla-finanziaria",
+      "titolo": "La crisi dei tulipani fu la prima bolla finanziaria",
+      "categoria": "💰 Economia",
+      "lead": "Nel 1637, ad Amsterdam, un singolo bulbo di tulipano valeva più di una casa. Poi il mercato crollò in una settimana.",
+      "deep": "La 'Tulipomania' olandese del 1634-37 fu il primo caso documentato di bolla speculativa. I tulipani, rari e esotici, divennero status symbol. Si crearono mercati a termine su bulbi che non esistevano ancora. Un 'Semper Augustus' fu venduto per 10.000 fiorini (15 volte lo stipendio annuo di un artigiano). Quando un'asta ad Haarlem non trovò compratori, il panico fece crollare i prezzi del 99%. Lezione applicata ancora oggi a bitcoin, NFT e meme stock: le bolle hanno tutte gli stessi 4 stadi (Hyman Minsky): stealth, awareness, mania, blow-off.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-crisi-dei-tulipani-fu-la-prima-bolla-finanziaria"
+    },
+    {
+      "slug": "la-gioconda-fu-quasi-dimenticata-fino-al-furto-del-1911",
+      "titolo": "La Gioconda fu quasi dimenticata fino al furto del 1911",
+      "categoria": "🎨 Arte",
+      "lead": "Prima del furto, la Monna Lisa era un dipinto minore del Louvre. Il clamore mediatico la rese l'opera d'arte più famosa al mondo.",
+      "deep": "Il 21 agosto 1911 un operaio italiano, Vincenzo Peruggia, rubò il quadro nascondendolo sotto il camice. Voleva restituirlo all'Italia (nazionalismo). Per 2 anni la tela mancante fu celebrità assoluta; Kafka, Rilke e Picasso vennero interrogati. Nel 1913 Peruggia tentò di venderla agli Uffizi. Recuperata, la Monna Lisa tornò a Parigi da icona globale. Oggi è coperta da vetro antiproiettile e riceve 20.000 visitatori al giorno. Leonardo la portò con sé in Francia e vi lavorò fino alla morte (1519), senza mai consegnarla al committente.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-gioconda-fu-quasi-dimenticata-fino-al-furto-del-1911"
+    },
+    {
+      "slug": "la-ndrangheta-e-la-mafia-piu-ricca-del-mondo",
+      "titolo": "La 'Ndrangheta è la mafia più ricca del mondo",
+      "categoria": "🕶️ Mafia",
+      "lead": "Fattura circa 53 miliardi di euro l'anno: più di McDonald's e Deutsche Bank messe insieme.",
+      "deep": "Secondo il rapporto Demoskopika 2021, la 'Ndrangheta calabrese controlla l'80% del traffico di cocaina in Europa. Sfrutta la struttura familiare (le 'ndrine sono gruppi di parentela, non si entra senza sangue) che la rende impenetrabile dai pentiti. È presente in 32 paesi (persino Canada e Australia). Il cuore operativo è San Luca, paese di 4.000 abitanti in Aspromonte. Scoperta al mondo dopo la Strage di Duisburg (2007) in Germania dove furono uccisi 6 italiani in una faida interna.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-ndrangheta-e-la-mafia-piu-ricca-del-mondo"
+    },
+    {
+      "slug": "la-nutella-nacque-come-ripiego-bellico",
+      "titolo": "La Nutella nacque come ripiego bellico",
+      "categoria": "🍳 Cucina",
+      "lead": "Nel 1946 Pietro Ferrero, non potendo comprare cacao a causa del razionamento, lo mescolò con nocciole piemontesi creando la Giandujot, antenata della Nutella.",
+      "deep": "Il blocco commerciale del dopoguerra rese il cacao proibitivo. Ferrero ebbe l'intuizione di usare le nocciole 'Tonda Gentile delle Langhe', abbondanti in Piemonte. Il risultato, inizialmente un pane di cioccolato da tagliare a fette, divenne spalmabile nel 1951 come 'Supercrema' e nel 1964 fu ribattezzato Nutella. Oggi Ferrero usa il 25% delle nocciole mondiali: 365.000 tonnellate l'anno. Un vaso viene prodotto ogni 2,5 secondi.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-nutella-nacque-come-ripiego-bellico"
+    },
+    {
+      "slug": "la-penicillina-fu-scoperta-per-un-errore-di-pulizia",
+      "titolo": "La penicillina fu scoperta per un errore di pulizia",
+      "categoria": "⚕️ Medicina",
+      "lead": "Alexander Fleming andò in vacanza nel 1928 lasciando una coltura batterica sporca. Al ritorno, trovò muffa che uccideva batteri.",
+      "deep": "Fleming stava lavorando sullo Stafilococco al St. Mary's Hospital di Londra. Tornando dalle ferie il 3 settembre 1928, notò una piastra contaminata da Penicillium notatum con aloni privi di batteri intorno alla muffa. Capì il potenziale ma non riuscì a purificare la penicillina. Howard Florey ed Ernst Chain riuscirono nel 1941; tutti e tre vinsero il Nobel 1945. La penicillina ha salvato oltre 200 milioni di vite. Il disordine di Fleming è diventato proverbiale tra i ricercatori.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-penicillina-fu-scoperta-per-un-errore-di-pulizia"
+    },
+    {
+      "slug": "la-prima-ferrari-stradale-nacque-quasi-per-caso",
+      "titolo": "La prima Ferrari stradale nacque quasi per caso",
+      "categoria": "🚗 Macchine",
+      "lead": "Enzo Ferrari odiava le auto stradali. Costruì la 166 Inter (1948) solo per finanziare le gare. Oggi vale milioni.",
+      "deep": "Enzo Ferrari diceva: 'Costruisco auto per vincere, non per essere comode'. La 166 Inter fu il primo modello stradale Ferrari, progettato perché i ricchi clienti chiedevano versioni 'civili' delle racing. Prodotta in soli 38 esemplari, ha motore V12 di 1995cc (ecco il '166', che sta per la cilindrata per cilindro). Una 166 MM Barchetta vale oggi oltre 5 milioni di euro. Ferrari oggi produce circa 13.000 auto l'anno intenzionalmente meno della domanda, per mantenere esclusività. Unica azienda al mondo che ferma produzioni per evitare di vendere troppo.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-prima-ferrari-stradale-nacque-quasi-per-caso"
+    },
+    {
+      "slug": "la-prima-guerra-mondiale-fini-per-un-errore-di-traduzione",
+      "titolo": "La Prima Guerra Mondiale finì per un errore di traduzione",
+      "categoria": "⚔️ Guerre",
+      "lead": "L'ultimatum austriaco alla Serbia del 1914 fu tradotto male: la Serbia accettò 9 punti su 10, ma l'Austria dichiarò comunque guerra.",
+      "deep": "Il 23 luglio 1914, dopo l'attentato a Sarajevo, l'Austria inviò un ultimatum umiliante alla Serbia con 10 richieste. La Serbia accettò tutte tranne una (permettere investigatori austriaci sul proprio territorio). Alcuni storici ritengono che il rifiuto fosse dovuto anche a traduzioni imprecise tra le cancellerie. L'Austria dichiarò guerra il 28 luglio innescando la reazione a catena delle alleanze. Morirono 17 milioni di persone in 4 anni. La Grande Guerra fu anche la prima con carri armati, gas tossici e aerei da combattimento.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-prima-guerra-mondiale-fini-per-un-errore-di-traduzione"
+    },
+    {
+      "slug": "la-russia-confina-con-la-corea-del-nord",
+      "titolo": "La Russia confina con la Corea del Nord",
+      "categoria": "✈️ Viaggi",
+      "lead": "Russia e Corea del Nord condividono 17 km di confine terrestre: uno dei confini più sottili e controllati del mondo.",
+      "deep": "Il confine segue il fiume Tumen ed è attraversato da un'unica ferrovia 'Amicizia' aperta nel 1959. La Russia ha 14 paesi confinanti, record mondiale. La Cina ne ha anch'essa 14. Esistono confini bizzarri: l'enclave italiana di Campione d'Italia in Svizzera, Baarle-Hertog (Belgio in Olanda), il punto tri-confine Brasile-Argentina-Paraguay (una città con tre fusi orari culturali). Il confine più lungo del mondo è USA-Canada (8891 km), completamente non militarizzato.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-russia-confina-con-la-corea-del-nord"
+    },
+    {
+      "slug": "la-seconda-guerra-mondiale-tecnicamente-continuo-fino-al-2006",
+      "titolo": "La Seconda Guerra Mondiale tecnicamente continuò fino al 2006",
+      "categoria": "📜 Storia",
+      "lead": "L'ultimo soldato giapponese si arrese nel 1974, ma una piccola isola restò ufficialmente in guerra con la Germania fino al 2006.",
+      "deep": "Hiroo Onoda combatté nelle Filippine fino al 1974, quando il suo ex ufficiale andò personalmente a ordinargli di deporre le armi. Inoltre, l'isola olandese di Berlengas-Schiermonnikoog firmò solo nel 2006 un trattato formale di pace con la Germania: la dichiarazione originale era stata dimenticata. Gli accordi di pace formali, distinti dagli armistizi, sono complessi: tecnicamente Russia e Giappone non hanno mai firmato un trattato di pace per la Seconda Guerra Mondiale.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-seconda-guerra-mondiale-tecnicamente-continuo-fino-al-2006"
+    },
+    {
+      "slug": "la-tesla-roadster-inviata-nello-spazio-e-ancora-in-viaggio",
+      "titolo": "La Tesla Roadster inviata nello spazio è ancora in viaggio",
+      "categoria": "🚗 Macchine",
+      "lead": "Nel 2018 SpaceX lanciò una Tesla Roadster con 'Starman' al volante verso Marte. Ha già superato l'orbita di Marte.",
+      "deep": "Elon Musk inviò la sua Tesla Roadster rossa personale come carico del primo lancio del Falcon Heavy (6 febbraio 2018). A bordo: un manichino chiamato 'Starman' in tuta SpaceX, il cruscotto con scritto 'Don't Panic' (omaggio a Guida Galattica), una copia della trilogia di Asimov in memoria di silicio. L'orbita è eliocentrica: passa vicino a Marte e alla Terra in cicli lunghi. Nel 2025 si stima abbia percorso oltre 4 miliardi di km. Musk sostiene che se ci fossero alieni evoluti, potrebbero già pensare che la Terra esporti 'automobili spaziali'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-tesla-roadster-inviata-nello-spazio-e-ancora-in-viaggio"
+    },
+    {
+      "slug": "la-vespa-e-nata-da-un-elicottero",
+      "titolo": "La Vespa è nata da un elicottero",
+      "categoria": "🏍️ Moto",
+      "lead": "Corradino D'Ascanio, padre della Vespa (1946), era un ingegnere aeronautico. Odiava le moto tradizionali: voleva qualcosa di 'pulito e pratico'.",
+      "deep": "Piaggio nel dopoguerra cercava un prodotto popolare. Enrico Piaggio chiese a D'Ascanio (costruttore del primo elicottero italiano) di progettare un mezzo a 2 ruote. D'Ascanio applicò principi aeronautici: carrozzeria portante monoscocca, motore laterale come i motori a elica, cambio al manubrio come i comandi elicottero. Piaggio la vide e disse: 'Sembra una vespa!' (per vita stretta). Nacque il nome. In 75 anni ne sono state vendute 19 milioni in 130 paesi. Simbolo di stile italiano, protagonista di 'Vacanze Romane' con Audrey Hepburn. Piazzale Piaggio a Pontedera, stabilimento storico, è ancora attivo.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-vespa-e-nata-da-un-elicottero"
+    },
+    {
+      "slug": "la-voce-di-neil-armstrong-non-disse-davvero-un-uomo",
+      "titolo": "La voce di Neil Armstrong non disse davvero 'un uomo'",
+      "categoria": "🚀 Spazio",
+      "lead": "La frase 'un piccolo passo per l'uomo' manca dell'articolo 'a'. Armstrong sostenne di averlo detto, ma non è nelle registrazioni.",
+      "deep": "La frase intesa era: 'That's one small step for a man, one giant leap for mankind' (un uomo vs umanità — senza 'a' è ridondante). Armstrong giurò di averlo pronunciato, ma l'analisi audio del 1969 non lo rivela. Nel 2006 un ingegnere australiano sostenne di aver trovato l'articolo in analisi acustiche avanzate: controverso. Armstrong morì nel 2012 senza risoluzione. La frase, comunque, rimane uno dei momenti più memorabili della storia umana, ascoltata in diretta da 600 milioni di persone.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/la-voce-di-neil-armstrong-non-disse-davvero-un-uomo"
+    },
+    {
+      "slug": "lamborghini-nacque-per-ripicca-contro-ferrari",
+      "titolo": "Lamborghini nacque per ripicca contro Ferrari",
+      "categoria": "🚗 Macchine",
+      "lead": "Ferruccio Lamborghini reclamò a Ferrari per una frizione difettosa. Enzo lo liquidò dicendogli: 'Pensa a fare trattori'. Lui iniziò a fare supercar.",
+      "deep": "Ferruccio Lamborghini era già un miliardario grazie ai trattori Lamborghini (ancora oggi tra i leader mondiali). Appassionato di auto sportive, comprò una Ferrari 250 GT che aveva problemi di frizione. Andò di persona a Maranello a lamentarsi. Enzo Ferrari gli disse sprezzantemente: 'Tornatene a fare trattori'. Ferruccio, offeso, fondò Automobili Lamborghini nel 1963. La prima 350 GT sfidò direttamente le Ferrari. La Miura (1966) creò il genere 'supercar'. Oggi Lamborghini è del Gruppo Volkswagen. Il logo toro rappresenta Ferruccio (segno Toro) e la sua passione per le corride.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/lamborghini-nacque-per-ripicca-contro-ferrari"
+    },
+    {
+      "slug": "le-banane-sono-radioattive",
+      "titolo": "Le banane sono radioattive",
+      "categoria": "🍳 Cucina",
+      "lead": "Contengono potassio-40, un isotopo radioattivo. Mangiarne 100 al giorno equivale alla dose di radiazione di una radiografia dentale.",
+      "deep": "L'unità informale 'BED' (Banana Equivalent Dose) è usata dai fisici per rendere comprensibili le dosi radioattive: 1 banana ≈ 0,1 μSv. Una radiografia toracica = 100 banane. Un volo aereo trans-Pacifico = 400 banane. L'eruzione di Chernobyl: miliardi di banane. Ironicamente, Brasile e gli oceani sono più radioattivi per unità di massa. Il corpo umano stesso emette 8.000 decadimenti al secondo dal potassio-40 naturale interno.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/le-banane-sono-radioattive"
+    },
+    {
+      "slug": "le-carote-erano-viola-non-arancioni",
+      "titolo": "Le carote erano viola, non arancioni",
+      "categoria": "🍳 Cucina",
+      "lead": "Le carote originali erano viola, gialle o bianche. La varietà arancione fu creata dagli olandesi nel XVII secolo per onorare Guglielmo d'Orange.",
+      "deep": "Le prime carote coltivate in Afghanistan ~900 d.C. erano viola e gialle. I selezionatori olandesi incrociarono varietà mutanti per creare un ibrido arancione dolce, meno amaro e più ricco di betacarotene. Divenne simbolo patriottico della Casa d'Orange. Oggi stanno tornando di moda le carote viola 'heirloom' per il loro contenuto di antociani, potenti antiossidanti. L'Italia coltiva ancora la rara 'carota di Polignano' viola, presidio Slow Food.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/le-carote-erano-viola-non-arancioni"
+    },
+    {
+      "slug": "le-olimpiadi-antiche-erano-nude",
+      "titolo": "Le Olimpiadi antiche erano nude",
+      "categoria": "⚽ Sport",
+      "lead": "Gli atleti greci gareggiavano completamente nudi per onorare gli dei. La parola 'ginnastica' deriva da 'gymnos' (nudo).",
+      "deep": "Dal 720 a.C. la nudità divenne regola dopo che Orsippo di Megara, perdendo involontariamente il perizoma, vinse la corsa. Le donne sposate non potevano assistere (pena morte), le vergini sì. Pausania raccontò di una madre che si travestì per vedere il figlio vincere: da allora anche gli allenatori dovettero essere nudi. Le Olimpiadi durarono 1169 anni (776 a.C. - 393 d.C.) prima che l'imperatore Teodosio le abolisse come 'pagane'. Rinacquero nel 1896 ad Atene con Pierre de Coubertin.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/le-olimpiadi-antiche-erano-nude"
+    },
+    {
+      "slug": "le-piante-urlano-in-ultrasuoni",
+      "titolo": "Le piante urlano in ultrasuoni",
+      "categoria": "🌿 Natura",
+      "lead": "Sotto stress (siccità, tagli), le piante emettono suoni ad alta frequenza: un geniale pianto vegetale, impercettibile all'orecchio umano.",
+      "deep": "Uno studio del Tel Aviv University (Cell, 2023) ha registrato pomodori e tabacco che emettono 'click' ad alta frequenza (20-100 kHz) quando sotto stress idrico o fisico. Una pianta non irrigata emette 30-40 click/ora. Le piante sane sono quasi silenziose. Insetti, topi e pipistrelli possono probabilmente percepirli. Non sono vocalizzazioni coscienti ma cavitazione nei vasi xilematici. Aprono la via a agricoltura guidata dall'AI che 'ascolta' le colture.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/le-piante-urlano-in-ultrasuoni"
+    },
+    {
+      "slug": "michelangelo-scolpi-il-david-da-un-blocco-scartato",
+      "titolo": "Michelangelo scolpì il David da un blocco scartato",
+      "categoria": "🎨 Arte",
+      "lead": "Il blocco di marmo di Carrara era stato abbandonato per 40 anni da due scultori precedenti. Michelangelo lo chiamò 'il gigante'.",
+      "deep": "Il marmo, scavato nel 1464, era considerato 'sbagliato' dal Duomo di Firenze. Nel 1501 Michelangelo, 26enne, lo ricevette come sfida. Lavorò 3 anni in segreto dietro una recinzione. Il David (5,17m, 6 tonnellate) fu un capolavoro prospettico: la testa è volutamente sovradimensionata perché pensato per essere visto dal basso. Originariamente doveva stare sul Duomo; i fiorentini lo vollero in Piazza della Signoria come simbolo di libertà contro Golia/Firenze tirannica. Vi rimase 369 anni prima dell'attuale copia.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/michelangelo-scolpi-il-david-da-un-blocco-scartato"
+    },
+    {
+      "slug": "monet-dipinse-le-ninfee-mentre-diventava-cieco",
+      "titolo": "Monet dipinse Le Ninfee mentre diventava cieco",
+      "categoria": "🎨 Arte",
+      "lead": "Negli ultimi vent'anni Monet soffrì di cataratta grave: le sue ninfee divennero sempre più astratte e rossastre perché percepiva così il mondo.",
+      "deep": "Dopo l'operazione nel 1923 (tecnica rudimentale), Monet riacquistò la visione dei blu e dei viola: rimase scioccato nel vedere che alcune sue tele erano dominate dal rosso, e ne distrusse molte. I suoi ultimi capolavori delle Ninfee, oggi esposti all'Orangerie di Parigi, mostrano come percezione alterata e genio creativo possano fondersi. Studi del MIT hanno simulato digitalmente la sua vista, permettendo di 'vedere' i dipinti come li vedeva lui: un'esperienza commovente.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/monet-dipinse-le-ninfee-mentre-diventava-cieco"
+    },
+    {
+      "slug": "mozart-scrisse-la-sua-prima-sinfonia-a-8-anni",
+      "titolo": "Mozart scrisse la sua prima sinfonia a 8 anni",
+      "categoria": "🎵 Musica",
+      "lead": "A 8 anni Mozart aveva già composto la Sinfonia n.1 in Mi bemolle maggiore. A 14 trascrisse a memoria il Miserere di Allegri, segreto del Vaticano.",
+      "deep": "Il Miserere era cantato solo nella Cappella Sistina; copiarlo era scomunica. Mozart lo ascoltò una volta e lo riscrisse perfettamente dopo due ascolti. Il Papa, invece di punirlo, gli conferì l'Ordine dello Speron d'Oro. Mozart compose oltre 600 opere in 35 anni di vita, incluse 41 sinfonie, 27 concerti per piano e 22 opere liriche. Morì a 35 anni, probabilmente di febbre reumatica, lasciando incompiuto il suo Requiem. La sua musica attiva più aree cerebrali di qualsiasi altra: il fenomeno 'effetto Mozart'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/mozart-scrisse-la-sua-prima-sinfonia-a-8-anni"
+    },
+    {
+      "slug": "mv-agusta-ha-dominato-il-motomondiale-per-17-anni",
+      "titolo": "MV Agusta ha dominato il motomondiale per 17 anni",
+      "categoria": "🏍️ Moto",
+      "lead": "Dal 1952 al 1974 ha vinto 38 titoli mondiali costruttori (record assoluto) e 37 piloti. Giacomo Agostini ne vinse 13 con MV.",
+      "deep": "Fondata nel 1945 a Schiranna (Varese) dal conte Domenico Agusta per riconvertire la fabbrica di aerei (MV = Meccanica Verghera) nel dopoguerra. Le moto erano capolavori artigianali: rosso e argento, dettagli estremi, prezzi proibitivi. Nel 1977 chiuse la partecipazione alle gare, nel 1980 la produzione. Rifondata da Castiglioni (Cagiva) nel 1992. Oggi è una delle moto più esclusive al mondo, prodotta in piccolissime serie. La F4 è considerata la moto più bella mai costruita (MoMA di New York). Attualmente Pierer Mobility (KTM) è azionista di maggioranza.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/mv-agusta-ha-dominato-il-motomondiale-per-17-anni"
+    },
+    {
+      "slug": "napoleone-non-era-basso",
+      "titolo": "Napoleone non era basso",
+      "categoria": "📜 Storia",
+      "lead": "Era alto 1,69m, media francese dell'epoca. Il mito nacque da un errore di conversione tra pollici francesi e inglesi.",
+      "deep": "I pollici francesi erano più lunghi di quelli inglesi. Napoleone, misurato in 'pieds' francesi (5 pieds 2 pouces = 168cm), fu convertito erroneamente nei giornali inglesi come 5'2\" (157cm). La propaganda britannica di Gillray e Cruikshank sfruttò il malinteso creando il 'piccolo caporale' caricaturale. Il suo soprannome 'le petit caporal' era affettuoso, non descrittivo. Oggi la 'Sindrome di Napoleone' (piccoli aggressivi) è un mito psicologico scientificamente infondato.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/napoleone-non-era-basso"
+    },
+    {
+      "slug": "napoleone-perse-in-russia-per-il-freddo-ma-anche-per-i-bottoni",
+      "titolo": "Napoleone perse in Russia per il freddo... ma anche per i bottoni",
+      "categoria": "⚔️ Guerre",
+      "lead": "I bottoni delle divise francesi erano di stagno. A -30°C lo stagno si sbriciola (peste stagnina). I soldati rimasero letteralmente senza vestiti.",
+      "deep": "La 'peste stagnina' è una trasformazione allotropica dello stagno: sotto i 13°C cambia struttura cristallina e diventa fragile come polvere. A -30°C dell'inverno russo 1812, i bottoni delle Grande Armée francese si disintegrarono, lasciando migliaia di soldati senza divise. Su 600.000 invasori, solo 40.000 tornarono vivi. La teoria dei bottoni è affascinante ma controversa: alcuni storici la ridimensionano rispetto alla logistica, fame e guerriglia russa. Questo episodio ispirò il libro 'I bottoni di Napoleone' (Le Couteur/Burreson) sulla chimica che ha cambiato la storia.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/napoleone-perse-in-russia-per-il-freddo-ma-anche-per-i-bottoni"
+    },
+    {
+      "slug": "nel-1814-londra-fu-sommersa-da-birra",
+      "titolo": "Nel 1814 Londra fu sommersa da birra",
+      "categoria": "📜 Storia",
+      "lead": "Scoppiò una cisterna di birra al Meux's Brewery: 1,5 milioni di litri invasero le strade, uccidendo 8 persone.",
+      "deep": "Il 'London Beer Flood' del 17 ottobre 1814 distrusse due case nel quartiere povero di St. Giles. L'onda di birra bionda alta oltre 4 metri sommerse donne che stavano facendo il funerale di un bambino. Il proprietario fu assolto: 'atto di Dio'. Un aneddoto (probabilmente falso) vuole che alcuni sopravvissuti morirono poi di alcolismo cercando di bere la birra dalle cantine allagate. Oggi una targa a Tottenham Court Road ricorda il disastro.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/nel-1814-londra-fu-sommersa-da-birra"
+    },
+    {
+      "slug": "oxford-e-piu-antica-degli-aztechi",
+      "titolo": "Oxford è più antica degli Aztechi",
+      "categoria": "📜 Storia",
+      "lead": "L'Università di Oxford teneva lezioni nel 1096. L'Impero Azteco nacque nel 1428, oltre 300 anni dopo.",
+      "deep": "Oxford è una delle università più antiche del mondo occidentale ancora attive. Quando i primi professori discutevano di teologia scolastica, il popolo Mexica era ancora una tribù seminomade. Tenochtitlán, la straordinaria capitale azteca costruita su un lago, venne fondata nel 1325, con Oxford che già sfornava teologi da oltre due secoli. Ci ricorda che la 'storia' non è lineare: civiltà molto distanti sono fiorite in epoche sovrapposte in modi sorprendenti.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/oxford-e-piu-antica-degli-aztechi"
+    },
+    {
+      "slug": "siamo-fatti-di-polvere-di-stelle",
+      "titolo": "Siamo fatti di polvere di stelle",
+      "categoria": "🚀 Spazio",
+      "lead": "Ogni atomo pesante del tuo corpo (ferro, calcio, ossigeno) è stato forgiato nel cuore di una stella esplosa miliardi di anni fa.",
+      "deep": "Il Big Bang creò solo idrogeno, elio e tracce di litio. Tutti gli altri elementi (carbonio del DNA, calcio delle ossa, ferro del sangue, iodio della tiroide) si formarono per fusione nucleare nelle stelle. Elementi più pesanti del ferro nascono solo in eventi cataclismici: supernove ed collisioni di stelle di neutroni. L'oro del tuo anello venne creato in una collisione stellare ~5 miliardi di anni fa. Carl Sagan disse: 'Siamo un modo per il cosmo di conoscere se stesso'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/siamo-fatti-di-polvere-di-stelle"
+    },
+    {
+      "slug": "socrate-non-scrisse-mai-nulla",
+      "titolo": "Socrate non scrisse mai nulla",
+      "categoria": "💭 Filosofia",
+      "lead": "Tutto ciò che sappiamo del pensiero di Socrate lo conosciamo tramite i suoi allievi, soprattutto Platone. Lui stesso sosteneva che la scrittura indebolisse la memoria.",
+      "deep": "Nel 'Fedro', Platone fa dire a Socrate che la scrittura è un 'farmaco' ingannevole: dà l'illusione della conoscenza senza vera comprensione. Oggi gli studiosi parlano di 'problema socratico': distinguere il Socrate storico da quello letterario platonico è quasi impossibile. Ironicamente, l'uomo che preferiva il dialogo orale è diventato il filosofo più influente della storia occidentale attraverso i testi scritti. Studi recenti sulla memoria confermano: memorizziamo il 10% di ciò che leggiamo ma il 70% di ciò che discutiamo.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/socrate-non-scrisse-mai-nulla"
+    },
+    {
+      "slug": "sorridere-ti-rende-piu-felice-anche-se-e-finto",
+      "titolo": "Sorridere ti rende più felice (anche se è finto)",
+      "categoria": "🧠 Psicologia",
+      "lead": "Il feedback facciale: mantenere un sorriso attiva gli stessi neurotrasmettitori della gioia reale. Anche tenere una matita in bocca funziona.",
+      "deep": "Teoria del facial feedback (Paul Ekman, 1992): i muscoli del viso inviano al cervello segnali chimici che influenzano l'emozione. Uno studio del 1988 fece tenere a partecipanti una matita in bocca (forzando un sorriso involontario) mentre guardavano cartoni: li trovarono più divertenti. Repliche più recenti hanno ridimensionato l'effetto ma confermato una debole correlazione. Conseguenze: il Botox (che paralizza la fronte) riduce la capacità di provare tristezza/rabbia. Smile therapy è usata clinicamente contro la depressione.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/sorridere-ti-rende-piu-felice-anche-se-e-finto"
+    },
+    {
+      "slug": "su-saturno-potrebbero-piovere-diamanti-come-su-giove",
+      "titolo": "Su Saturno potrebbero piovere diamanti come su Giove",
+      "categoria": "🚀 Spazio",
+      "lead": "Le pressioni estreme dei giganti gassosi trasformano il metano atmosferico in cristalli di diamante che precipitano verso il nucleo.",
+      "deep": "Secondo simulazioni Caltech/Wisconsin (2013), su Saturno potrebbero piovere fino a 1000 tonnellate di diamanti all'anno. Il processo: fulmini scompongono il metano in carbonio, che compattandosi a pressioni di milioni di atmosfere si cristallizza. Un fenomeno simile avviene su Giove, Urano e Nettuno. Se colonizzeremo mai i giganti gassosi (ipoteticamente via aerostati), potremmo 'raccogliere' diamanti cadenti. Nel frattempo la Terra dispone di 'fontane' di carbonio sotto i vulcani che fanno risalire diamanti dal mantello.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/su-saturno-potrebbero-piovere-diamanti-come-su-giove"
+    },
+    {
+      "slug": "sylvester-stallone-vendette-il-suo-cane-per-poter-scrivere-rocky",
+      "titolo": "Sylvester Stallone vendette il suo cane per poter scrivere Rocky",
+      "categoria": "🎬 Cinema",
+      "lead": "Senza soldi e rifiutato da tutti gli studios, Stallone vendette il suo cane per 25 dollari. Dopo il successo di Rocky, lo ricomprò per 15.000.",
+      "deep": "Nel 1975 Stallone era al verde. Ispirato dalla vittoria di Chuck Wepner contro Ali, scrisse Rocky in 3 giorni e mezzo. Gli studios offrirono 325.000 dollari per il copione ma solo se cedeva il ruolo a Redford o Burt Reynolds. Rifiutò e dovette vendere il cane Butkus. Quando United Artists accettò (125.000 dollari + recitare lui), Stallone tornò dal nuovo proprietario e pagò 15.000 dollari per riavere il cane. Butkus recitò poi nel film stesso, inquadrato con Stallone che si allena.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/sylvester-stallone-vendette-il-suo-cane-per-poter-scrivere-rocky"
+    },
+    {
+      "slug": "tolkien-creo-il-quenya-elfico-prima-della-storia-del-signore-degli-ane",
+      "titolo": "Tolkien creò il Quenya (elfico) prima della storia del Signore degli Anelli",
+      "categoria": "📖 Letteratura",
+      "lead": "Tolkien era filologo: costruì prima le lingue elfiche, poi inventò un mondo e una storia per giustificarle.",
+      "deep": "Lavorò a Quenya (alto elfico) e Sindarin per 50 anni. Disse: 'Le storie furono create per fornire un mondo alle lingue'. Era professore di anglosassone a Oxford. Il Silmarillion, genealogie elfiche complete, è più lungo del Signore degli Anelli. Al suo funerale nel 1973, fu letto un passaggio in Sindarin. Esistono oggi dizionari elfici accademici, persone che si sposano in Quenya, e gruppi di linguisti che ancora espandono le grammatiche. Tolkien inventò anche il Khuzdul (nanico), Adunaic e la 'Black Speech' di Mordor.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/tolkien-creo-il-quenya-elfico-prima-della-storia-del-signore-degli-ane"
+    },
+    {
+      "slug": "toto-riina-fu-arrestato-dopo-23-anni-di-latitanza",
+      "titolo": "Totò Riina fu arrestato dopo 23 anni di latitanza",
+      "categoria": "🕶️ Mafia",
+      "lead": "Il 15 gennaio 1993 Riina fu catturato a Palermo in pieno giorno. Era latitante dal 1969.",
+      "deep": "Salvatore Riina, detto 'u' curtu' per la bassa statura, era il capo indiscusso dei Corleonesi e ideatore della strategia stragista (Falcone, Borsellino, via dei Georgofili). Fu arrestato dai Carabinieri del ROS guidati dal capitano Ultimo (Sergio De Caprio) mentre guidava tranquillamente la sua auto. Viveva con la famiglia a Palermo sotto falsa identità. Il suo appartamento non fu perquisito per 18 giorni: le istituzioni hanno ancora domande senza risposta su quel vuoto. Morì in carcere nel 2017 a 87 anni.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/toto-riina-fu-arrestato-dopo-23-anni-di-latitanza"
+    },
+    {
+      "slug": "toy-story-fu-quasi-perso-completamente",
+      "titolo": "Toy Story fu quasi perso completamente",
+      "categoria": "🎬 Cinema",
+      "lead": "Nel 1998, un comando errato cancellò il 90% dei file di Toy Story 2. Solo la copia di backup di una dipendente in maternità salvò il film.",
+      "deep": "Durante un normale backup, qualcuno eseguì 'rm -rf' sulla root del server Pixar. In 20 secondi sparirono due anni di lavoro. I backup erano corrotti. La supervisor Galyn Susman aveva però una copia completa a casa per lavorare con il figlio neonato: fu trasportata come una reliquia alla Pixar. Il film, comunque, fu riscritto e ridisegnato largamente dopo. Oggi Pixar ha sistemi di backup ridondanti multipli distribuiti. La storia è raccontata nel documentario 'The Pixar Story'.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/toy-story-fu-quasi-perso-completamente"
+    },
+    {
+      "slug": "un-giorno-su-venere-dura-piu-di-un-anno",
+      "titolo": "Un giorno su Venere dura più di un anno",
+      "categoria": "🚀 Spazio",
+      "lead": "Venere ruota così lentamente che un giorno venusiano (243 giorni terrestri) è più lungo del suo anno (225 giorni).",
+      "deep": "Venere è l'unico pianeta del Sistema Solare che ruota in senso orario (retrogrado). Una teoria suggerisce che un impatto colossale nel passato rovesciò completamente il pianeta. La sua atmosfera di anidride carbonica crea un effetto serra estremo: 462°C in superficie, abbastanza da fondere il piombo. La pressione equivale a trovarsi a 900 metri sott'acqua. Nonostante ciò, alcune proposte scientifiche ipotizzano colonie galleggianti a 50 km di altitudine, dove pressione e temperatura sono quasi terrestri.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/un-giorno-su-venere-dura-piu-di-un-anno"
+    },
+    {
+      "slug": "un-re-britannico-annullo-il-calcio",
+      "titolo": "Un re britannico annullò il calcio",
+      "categoria": "⚽ Sport",
+      "lead": "Nel 1314 Edoardo II proibì il calcio a Londra per 'preservare la pace del re'. La pena: prigione.",
+      "deep": "Il calcio medievale era un caos violento: squadre di centinaia di persone si contendevano la palla attraversando interi villaggi, con numerosi morti. Diversi re inglesi (Edoardo II, III, Riccardo II, Enrico IV, V) emisero editti contro il 'foteball'. Giacomo I lo vietò in Scozia definendolo 'adatto solo a rompere gambe'. Nel 1540 Enrico VIII contribuì però alla sua sopravvivenza facendo costruire il primo campo di calcio documentato. Il rugby nacque nel 1823 quando William Webb Ellis, in una partita di football, prese la palla in mano.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/un-re-britannico-annullo-il-calcio"
+    },
+    {
+      "slug": "una-giornata-su-mercurio-dura-2-anni-mercuriani",
+      "titolo": "Una giornata su Mercurio dura 2 anni mercuriani",
+      "categoria": "🚀 Spazio",
+      "lead": "Mercurio ruota così lentamente rispetto alla sua rivoluzione che il Sole compie due orbite solari prima che il pianeta abbia un giorno completo.",
+      "deep": "Un giorno solare mercuriano (176 giorni terrestri) è pari a 2 anni mercuriani (88 giorni × 2). L'effetto è dovuto alla risonanza orbitale 3:2 con il Sole: Mercurio ruota 3 volte su se stesso ogni 2 orbite. Stando sulla superficie, si vedrebbe il Sole sorgere, fermarsi a metà cielo, indietreggiare, ripartire, poi tramontare. Le temperature oscillano da 430°C (giorno) a -180°C (notte). La Terra potrebbe rientrare nell'orbita di Mercurio.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/una-giornata-su-mercurio-dura-2-anni-mercuriani"
+    },
+    {
+      "slug": "valentino-rossi-ha-vinto-9-titoli-in-3-diverse-categorie",
+      "titolo": "Valentino Rossi ha vinto 9 titoli in 3 diverse categorie",
+      "categoria": "🏎️ Motori",
+      "lead": "125cc (1997), 250cc (1999), 500cc (2001), MotoGP (2002-2005, 2008-2009). Totale: 9 titoli mondiali in 26 anni di carriera.",
+      "deep": "Valentino Rossi, il Dottore, ha rivoluzionato il motomondiale portando lo spettacolo mediatico a livelli mai visti. Ha vinto con 3 costruttori diversi (Aprilia, Honda, Yamaha). La sua rivalità con Marc Márquez a Sepang 2015 è entrata nella storia. È il pilota con più podi nella storia della MotoGP (199). Ha creato l'Accademy a Tavullia (VR46 Riders Academy) formando Morbidelli, Bagnaia, Bezzecchi. Il suo casco è cambiato 98 volte in carriera, ciascuno con design diverso. Si è ritirato nel 2021 all'età di 42 anni, correndo ora in GT e Endurance.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/valentino-rossi-ha-vinto-9-titoli-in-3-diverse-categorie"
+    },
+    {
+      "slug": "van-gogh-vendette-un-solo-quadro-in-vita",
+      "titolo": "Van Gogh vendette UN solo quadro in vita",
+      "categoria": "🎨 Arte",
+      "lead": "In 37 anni di vita vendette ufficialmente solo 'La vigna rossa' per 400 franchi (nel 1890). Oggi i suoi dipinti superano i 100 milioni.",
+      "deep": "Van Gogh dipinse oltre 2.100 opere in 10 anni di attività. Viveva grazie al sostegno economico del fratello Theo, mercante d'arte, a cui scrisse oltre 900 lettere. Dopo il suicidio nel 1890, la vedova di Theo (Jo Bonger) dedicò la vita a promuoverne l'opera, organizzando mostre e pubblicando le lettere: senza di lei, Van Gogh sarebbe rimasto ignoto. Oggi il suo 'Ritratto del Dottor Gachet' è uno dei quadri più costosi al mondo (152 milioni di dollari, 1990).",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/van-gogh-vendette-un-solo-quadro-in-vita"
+    },
+    {
+      "slug": "vedi-meglio-i-pericoli-in-visione-periferica",
+      "titolo": "Vedi meglio i pericoli in visione periferica",
+      "categoria": "🧠 Psicologia",
+      "lead": "Il cervello processa il movimento nella periferia visiva prima di 'riconoscerlo'. Per questo 'senti' qualcuno alle spalle prima di vederlo.",
+      "deep": "La retina periferica è ricca di cellule a bastoncello (rilevano movimento e basse luci), mentre il centro (fovea) ha coni (colore, dettagli). Il cervello archeologicamente evoluto rileva pericoli (predatori) anche prima che la coscienza li elabori. Ecco perché ci voltiamo 'senza motivo' — avevamo già visto. Nella guida: i rabdomanti stradali usano questa capacità. L'orologio peripherale è anche strategico: i segnali stradali ai lati sono spesso percepiti prima di essere 'letti' consciamente.",
+      "url": "https://www.blackstardigitalstudio.com/curiosita/c/vedi-meglio-i-pericoli-in-visione-periferica"
+    }
+  ]
+}

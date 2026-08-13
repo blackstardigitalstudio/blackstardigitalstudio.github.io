@@ -136,6 +136,26 @@ def verifica(user_id, token):
                   f"&access_token={token}")
 
 
+def gia_pubblicato_oggi(token):
+    """Chiede a Instagram quando e' uscito l'ultimo post.
+    Serve perche' l'orologio di GitHub e' inaffidabile: proviamo piu' volte al
+    giorno, e chi arriva quando il post c'e' gia' non fa niente."""
+    try:
+        d = chiama(f"{API}/me/media?fields=timestamp&limit=1&access_token={token}")
+    except Exception as e:
+        print(f"Non riesco a controllare l'ultimo post ({e}): per prudenza non pubblico.")
+        return True                      # nel dubbio non si pubblica due volte
+    dati = d.get("data") or []
+    if not dati:
+        return False
+    quando = dati[0].get("timestamp", "")[:10]      # 2026-08-13T21:07:00+0000 -> 2026-08-13
+    oggi = time.strftime("%Y-%m-%d", time.gmtime())
+    if quando == oggi:
+        print(f"C'e' gia' un post di oggi ({quando}). Non ne pubblico un altro.")
+        return True
+    return False
+
+
 def rinnova_se_serve(env):
     """I token Instagram scadono dopo 60 giorni. Ogni volta che sono passati
     piu' di 30 giorni dall'ultimo rinnovo, ne chiediamo uno nuovo e riscriviamo
@@ -184,6 +204,7 @@ def rinnova_se_serve(env):
 
 def main():
     prova = "--prova" in sys.argv
+    se_serve = "--se-serve" in sys.argv     # pubblica solo se oggi non e' ancora uscito niente
     env = leggi_env()
     user_id, token = env.get("IG_USER_ID"), env.get("IG_TOKEN")
 
@@ -203,6 +224,9 @@ def main():
 
     print(f"Collegato a @{chi.get('username')} — {chi.get('followers_count', '?')} follower, "
           f"{chi.get('media_count', '?')} post")
+
+    if se_serve and not prova and gia_pubblicato_oggi(token):
+        return
 
     p = prossimo()
     if not p:

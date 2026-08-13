@@ -1,10 +1,20 @@
 name: Instagram - un post al giorno
 
 # Gira nel cloud di GitHub: il computer di Matteo puo' restare spento.
-# 19:00 UTC = 20:00 a Las Palmas, 21:00 in Italia e Spagna (l'ora in cui la gente scorre).
+#
+# L'orologio di GitHub non e' puntuale: quando c'e' traffico ritarda o salta,
+# soprattutto alle ore tonde. Percio':
+#   1) evitiamo i minuti :00, che sono i piu' affollati;
+#   2) ci proviamo TRE volte a distanza di un'ora e mezza;
+#   3) prima di pubblicare si chiede a Instagram se un post di oggi c'e' gia'.
+# Cosi' esce sempre e sola una volta, anche se i primi tentativi saltano.
+#
+# 19:07 UTC = 20:07 a Las Palmas, 21:07 in Italia e Spagna.
 on:
   schedule:
-    - cron: '0 19 * * *'
+    - cron: '7 19 * * *'
+    - cron: '37 20 * * *'
+    - cron: '17 22 * * *'
   workflow_dispatch:        # per lanciarlo a mano quando serve
     inputs:
       prova:
@@ -42,7 +52,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: python pubblica.py ${{ inputs.prova && '--prova' || '' }}
+        run: python pubblica.py --se-serve ${{ inputs.prova && '--prova' || '' }}
 
       - name: Segna cosa e' uscito
         run: |

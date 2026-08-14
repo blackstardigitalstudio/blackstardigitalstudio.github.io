@@ -270,7 +270,7 @@ def main():
         os.replace(f_, os.path.join(FATTI, os.path.basename(f_)))
 
     registra({"quando": time.strftime("%Y-%m-%d %H:%M"), "file": os.path.basename(png),
-              "post_id": post_id, "immagine": url_img})
+              "tipo": tipo, "post_id": post_id, "media": url_media})
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+Toy Story fu quasi perso completamente
+
+Nel 1998, un comando errato cancellò il 90% dei file di Toy Story 2. Solo la copia di backup di una dipendente in maternità salvò il film.
+
+Durante un normale backup, qualcuno eseguì 'rm -rf' sulla root del server Pixar. In 20 secondi sparirono due anni di lavoro. I backup erano corrotti. La supervisor Galyn Susman aveva però una copia completa a casa per lavorare con il figlio neonato: fu trasportata come una reliquia alla Pixar. Il film, comunque, fu riscritto e ridisegnato largamente dopo. Oggi Pixar ha sistemi di backup ridondanti
+
+#curiosita #losapeviche #cinema

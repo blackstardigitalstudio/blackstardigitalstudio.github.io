@@ -1,0 +1,7 @@
+Il primo computer bug era letteralmente un insetto
+
+Nel 1947 Grace Hopper trovò una falena intrappolata nel Harvard Mark II. La incollò nel logbook: 'First actual case of bug being found'.
+
+Il termine 'bug' per difetti esisteva già (Edison lo usava nel 1878), ma l'incidente del 9 settembre 1947 lo rese leggendario nell'informatica. Il logbook è oggi esposto al Smithsonian. Grace Hopper inventò anche il primo compilatore e il concetto di linguaggio ad alto livello (COBOL). Ammiraglia della US Navy, è considerata madre dell'informatica moderna. Il termine 'debugging' (togliere insetti)
+
+#curiosita #losapeviche #tecnologia

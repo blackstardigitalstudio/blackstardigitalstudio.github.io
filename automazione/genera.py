@@ -161,6 +161,11 @@ def didascalia(c, con_invito):
 
     parti = [c["titolo"], "", c["lead"], "", deep]
 
+    # L'invio in DM e' il segnale piu' forte per l'algoritmo di Instagram
+    # (dichiarazione di Adam Mosseri). Non chiediamo un favore: suggeriamo
+    # una cosa utile per l'altra persona — che e' anche il motivo per cui funziona.
+    parti += ["", "Se conosci qualcuno che non lo sa, mandagliela."]
+
     if con_invito:
         parti += ["", "—",
                   "Ne ho raccolte piu' di cento cosi', in un'app che ho fatto io. "

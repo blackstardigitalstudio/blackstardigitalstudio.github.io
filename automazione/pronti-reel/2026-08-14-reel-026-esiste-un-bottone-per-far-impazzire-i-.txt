@@ -1,0 +1,7 @@
+Esiste un bottone per far impazzire i cellulari
+
+I numeri con troppi caratteri speciali possono crashare qualsiasi smartphone. Nel 2018 un messaggio in telugu bloccava gli iPhone.
+
+Le 'crash bombs' sfruttano vulnerabilità di rendering dei caratteri Unicode. Il 'Telugu Bug' di iOS 11 (2018) faceva crashare qualsiasi app che mostrasse il carattere 'జ్ఞా'. Nel 2020 su Android il messaggio 'Ꙭ' (occhio di Cirillo) poteva bloccare Instagram. Gli sviluppatori usano 'fuzzing' — inondare app con input casuali — per trovare questi bug prima dei malintenzionati. Anche il WiFi ha vulner
+
+#curiosita #losapeviche #tecnologia

@@ -1,0 +1,7 @@
+C'è un numero primo più grande di tutti gli altri
+
+No! Euclide dimostrò 2300 anni fa che i primi sono infiniti. La dimostrazione è elegante e ancora insegnata oggi.
+
+Euclide, negli 'Elementi' (libro IX, proposizione 20, ~300 a.C.): assumiamo che esista un numero primo più grande, chiamiamolo P. Moltiplica tutti i primi fino a P e aggiungi 1: (2×3×5×7×...×P)+1. Questo numero N non è divisibile per nessun primo fino a P (resto sempre 1). Quindi o N è primo, oppure è divisibile per un primo maggiore di P. Contraddizione. I primi sono infiniti. Il più grande attua
+
+#curiosita #losapeviche #matematica

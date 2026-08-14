@@ -60,14 +60,14 @@ def chiama(url, dati=None):
         raise RuntimeError(f"Instagram ha risposto {e.code}: {msg}")
 
 
-def prossimo():
-    if not os.path.isdir(PRONTI):
+def prossimo(cartella=None, estensione=".png"):
+    cartella = cartella or PRONTI
+    if not os.path.isdir(cartella):
         return None
-    png = sorted(f for f in os.listdir(PRONTI) if f.endswith(".png"))
-    for p in png:
-        t = os.path.join(PRONTI, p[:-4] + ".txt")
+    for p in sorted(f for f in os.listdir(cartella) if f.endswith(estensione)):
+        t = os.path.join(cartella, p[:-len(estensione)] + ".txt")
         if os.path.exists(t):
-            return os.path.join(PRONTI, p), t
+            return os.path.join(cartella, p), t
     return None
 
 
@@ -110,21 +110,29 @@ def carica_su_github(png):
     return f"https://raw.githubusercontent.com/{REPO}/main/{urllib.parse.quote(percorso)}"
 
 
-def pubblica_su_instagram(user_id, token, url_img, didascalia):
-    passo1 = chiama(f"{API}/{user_id}/media",
-                    {"image_url": url_img, "caption": didascalia, "access_token": token})
+def pubblica_su_instagram(user_id, token, url_media, didascalia, tipo="IMAGE"):
+    campi = {"caption": didascalia, "access_token": token}
+    if tipo == "REELS":
+        campi.update({"media_type": "REELS", "video_url": url_media})
+    else:
+        campi["image_url"] = url_media
+
+    passo1 = chiama(f"{API}/{user_id}/media", campi)
     contenitore = passo1.get("id")
     if not contenitore:
-        raise RuntimeError(f"Instagram non ha creato il post: {passo1}")
+        raise RuntimeError(f"Instagram non ha creato il contenuto: {passo1}")
 
-    # Instagram vuole qualche secondo per scaricare l'immagine
-    for _ in range(12):
-        stato = chiama(f"{API}/{contenitore}?fields=status_code&access_token={token}")
+    # Instagram deve scaricare il file: per un video ci mette molto di piu'
+    tentativi = 60 if tipo == "REELS" else 12
+    for _ in range(tentativi):
+        stato = chiama(f"{API}/{contenitore}?fields=status_code,status&access_token={token}")
         if stato.get("status_code") == "FINISHED":
             break
         if stato.get("status_code") == "ERROR":
-            raise RuntimeError(f"Instagram ha scartato l'immagine: {stato}")
+            raise RuntimeError(f"Instagram ha scartato il file: {stato}")
         time.sleep(5)
+    else:
+        raise RuntimeError("Instagram ci sta mettendo troppo a preparare il contenuto.")
 
     passo2 = chiama(f"{API}/{user_id}/media_publish",
                     {"creation_id": contenitore, "access_token": token})
@@ -136,23 +144,23 @@ def verifica(user_id, token):
                   f"&access_token={token}")
 
 
-def gia_pubblicato_oggi(token):
-    """Chiede a Instagram quando e' uscito l'ultimo post.
+def gia_pubblicato_oggi(token, tipo="IMAGE"):
+    """Chiede a Instagram cosa e' uscito oggi, distinguendo foto e video.
     Serve perche' l'orologio di GitHub e' inaffidabile: proviamo piu' volte al
-    giorno, e chi arriva quando il post c'e' gia' non fa niente."""
+    giorno, e chi arriva quando il contenuto c'e' gia' non fa niente.
+    Post e reel sono cose diverse: un reel gia' uscito non blocca il post."""
     try:
-        d = chiama(f"{API}/me/media?fields=timestamp&limit=1&access_token={token}")
+        d = chiama(f"{API}/me/media?fields=timestamp,media_type&limit=12&access_token={token}")
     except Exception as e:
-        print(f"Non riesco a controllare l'ultimo post ({e}): per prudenza non pubblico.")
+        print(f"Non riesco a controllare cosa e' uscito ({e}): per prudenza non pubblico.")
         return True                      # nel dubbio non si pubblica due volte
-    dati = d.get("data") or []
-    if not dati:
-        return False
-    quando = dati[0].get("timestamp", "")[:10]      # 2026-08-13T21:07:00+0000 -> 2026-08-13
     oggi = time.strftime("%Y-%m-%d", time.gmtime())
-    if quando == oggi:
-        print(f"C'e' gia' un post di oggi ({quando}). Non ne pubblico un altro.")
-        return True
+    cercato = {"REELS": ("VIDEO", "REELS")}.get(tipo, ("IMAGE", "CAROUSEL_ALBUM"))
+    for m in d.get("data") or []:
+        if m.get("timestamp", "")[:10] == oggi and m.get("media_type") in cercato:
+            nome = "reel" if tipo == "REELS" else "post"
+            print(f"C'e' gia' un {nome} di oggi. Non ne pubblico un altro.")
+            return True
     return False
 
 
@@ -205,6 +213,10 @@ def rinnova_se_serve(env):
 def main():
     prova = "--prova" in sys.argv
     se_serve = "--se-serve" in sys.argv     # pubblica solo se oggi non e' ancora uscito niente
+    reel = "--reel" in sys.argv             # pubblica un video invece di un'immagine
+    tipo = "REELS" if reel else "IMAGE"
+    cartella = os.path.join(QUI, "pronti-reel") if reel else PRONTI
+    estensione = ".mp4" if reel else ".png"
     env = leggi_env()
     user_id, token = env.get("IG_USER_ID"), env.get("IG_TOKEN")
 
@@ -225,19 +237,20 @@ def main():
     print(f"Collegato a @{chi.get('username')} — {chi.get('followers_count', '?')} follower, "
           f"{chi.get('media_count', '?')} post")
 
-    if se_serve and not prova and gia_pubblicato_oggi(token):
+    if se_serve and not prova and gia_pubblicato_oggi(token, tipo):
         return
 
-    p = prossimo()
+    p = prossimo(cartella, estensione)
     if not p:
-        print("Non c'e' niente di pronto da pubblicare. Lancia prima genera.py")
+        cosa = "reel" if reel else "post"
+        print(f"Non c'e' nessun {cosa} pronto in {cartella}.")
         sys.exit(0)
 
     png, txt = p
     with open(txt, encoding="utf-8") as f:
         didascalia = f.read().strip()
 
-    print(f"\nProssimo: {os.path.basename(png)}")
+    print(f"\nProssimo {'reel' if reel else 'post'}: {os.path.basename(png)}")
     print("-" * 60)
     print(didascalia[:300] + ("..." if len(didascalia) > 300 else ""))
     print("-" * 60)
@@ -246,11 +259,11 @@ def main():
         print("\nPROVA: le credenziali vanno e il contenuto e' pronto. Non ho pubblicato niente.")
         return
 
-    url_img = carica_su_github(png)
-    print(f"Immagine online: {url_img}")
+    url_media = carica_su_github(png)
+    print(f"File online: {url_media}")
 
-    post_id = pubblica_su_instagram(user_id, token, url_img, didascalia)
-    print(f"PUBBLICATO — id post: {post_id}")
+    post_id = pubblica_su_instagram(user_id, token, url_media, didascalia, tipo)
+    print(f"PUBBLICATO — id: {post_id}")
 
     os.makedirs(FATTI, exist_ok=True)
     for f_ in (png, txt):

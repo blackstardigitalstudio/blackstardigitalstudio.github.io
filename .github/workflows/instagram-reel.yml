@@ -1,0 +1,114 @@
+name: Instagram - un reel al giorno
+
+# I reel hanno la voce di Matteo, che si genera solo sul suo computer.
+# Percio' qui non si genera niente: si pescano dalla coda gia' pronta
+# (automazione/pronti-reel) e si pubblicano. Quando la coda finisce,
+# questo lavoro non fa nulla e i post normali continuano lo stesso.
+#
+# Orari sfalsati e mai sull'ora tonda, come per i post: l'orologio di
+# GitHub ritarda quando c'e' traffico.
+# 11:07 UTC = 12:07 a Las Palmas, 13:07 in Italia e Spagna.
+on:
+  schedule:
+    - cron: '7 11 * * *'
+    - cron: '37 12 * * *'
+    - cron: '17 14 * * *'
+  workflow_dispatch:
+    inputs:
+      prova:
+        description: 'Solo prova (controlla tutto ma NON pubblica)'
+        type: boolean
+        default: true
+
+concurrency:
+  group: instagram-reel
+  cancel-in-progress: false
+
+permissions:
+  issues: write
+  contents: write
+
+jobs:
+  pubblica-reel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Quanti reel ci sono in coda
+        id: coda
+        working-directory: automazione
+        run: |
+          n=$(ls pronti-reel/*.mp4 2>/dev/null | wc -l)
+          echo "quanti=$n" >> $GITHUB_OUTPUT
+          echo "In coda: $n reel"
+
+      - name: Pubblica il prossimo reel
+        if: steps.coda.outputs.quanti != '0'
+        working-directory: automazione
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: python pubblica.py --reel --se-serve ${{ inputs.prova && '--prova' || '' }}
+
+      - name: Avvisa se la coda sta finendo
+        if: steps.coda.outputs.quanti == '2'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const titolo = 'La coda dei reel sta finendo';
+            const aperte = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'instagram'
+            });
+            if (aperte.data.some(i => i.title === titolo)) return;
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: titolo, labels: ['instagram'],
+              body: [
+                'Restano due reel in coda: fra due giorni il profilo pubblica solo i post.',
+                '',
+                'Per rifare la scorta, sul computer di Matteo:',
+                '```',
+                'cd D:\\marketing\\03-CONTENUTI\\generatore',
+                'voce\\venv-cb\\Scripts\\python.exe scorta_reel.py 12',
+                '```',
+                'poi caricare i nuovi file in `automazione/pronti-reel/`.'
+              ].join('\n')
+            });
+
+      - name: Se la pubblicazione fallisce, lascia un avviso
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const oggi = new Date().toISOString().slice(0, 10);
+            const titolo = `Il reel del ${oggi} non e' uscito`;
+            const aperte = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'instagram'
+            });
+            if (aperte.data.some(i => i.title === titolo)) return;
+            await github.rest.issues.create({
+              owner: context.repo.owner, repo: context.repo.repo,
+              title: titolo, labels: ['instagram'],
+              body: `La pubblicazione del reel non e' riuscita.\n\nDettaglio: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n_I post con immagine continuano comunque a uscire._`
+            });
+
+      - name: Segna cosa e' uscito
+        if: always()
+        run: |
+          git config user.name "blackstar-bot"
+          git config user.email "blackstardigitalstudio@gmail.com"
+          git add -A automazione/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Niente da salvare."
+          else
+            git commit -m "reel del giorno [skip ci]"
+            git pull --rebase --autostash -q
+            git push
+          fi

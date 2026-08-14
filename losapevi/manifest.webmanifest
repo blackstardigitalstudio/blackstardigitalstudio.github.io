@@ -1,7 +1,6 @@
 {
   "name": "Lo Sapevi che?",
   "short_name": "Lo Sapevi che?",
-  "description": "Curiosità sorprendenti, una nuova ogni giorno.",
   "start_url": "/losapevi/",
   "scope": "/losapevi/",
   "display": "standalone",

@@ -8,6 +8,7 @@ Made in Italy
 import json, os, random, sys, textwrap
 from datetime import date
 from PIL import Image, ImageDraw, ImageFont
+from filtro import pulisci
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 FONTE = os.path.join(QUI, "fonte", "curiosita.json")
@@ -28,7 +29,7 @@ F_NORMALE = os.path.join(FONT_DIR, "segoeui.ttf")
 F_SEMI    = os.path.join(FONT_DIR, "seguisb.ttf")
 
 PROFILO = "@matteoblackstark"
-APP_URL = "https://blackstardigitalstudio.github.io/app/"
+APP_URL = "https://www.blackstardigitalstudio.com/app"
 
 
 def font(percorso, dim):
@@ -177,7 +178,7 @@ def main():
         sys.exit(1)
 
     with open(FONTE, encoding="utf-8") as f:
-        dati = json.load(f)["curiosita"]
+        dati = pulisci(json.load(f)["curiosita"])
 
     quanti = int(sys.argv[1]) if len(sys.argv) > 1 else 1
     os.makedirs(PRONTI, exist_ok=True)

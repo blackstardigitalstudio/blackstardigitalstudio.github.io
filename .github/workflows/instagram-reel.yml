@@ -1,18 +1,28 @@
-name: Instagram - un reel al giorno
+name: Instagram - due reel al giorno
 
-# I reel hanno la voce di Matteo, che si genera solo sul suo computer.
-# Percio' qui non si genera niente: si pescano dalla coda gia' pronta
-# (automazione/pronti-reel) e si pubblicano. Quando la coda finisce,
-# questo lavoro non fa nulla e i post normali continuano lo stesso.
+# I reel hanno la voce di Matteo, che si genera solo sul suo computer:
+# qui non si genera niente, si pesca dalla coda gia' pronta e si pubblica.
 #
-# Orari sfalsati e mai sull'ora tonda, come per i post: l'orologio di
-# GitHub ritarda quando c'e' traffico.
-# 11:07 UTC = 12:07 a Las Palmas, 13:07 in Italia e Spagna.
+# DUE reel al giorno, deciso sui dati del 15/08/2026: un reel raggiunge in
+# media 19 persone, un post 3. I reel escono dal giro dei follower, i post no.
+#
+# GLI ORARI SONO IN PROVA. Non li abbiamo scelti coi dati (non ne avevamo):
+# ogni fascia viene provata a rotazione, un giorno su tre, cosi' dopo qualche
+# settimana si vede quale rende davvero. Lo script controlla se e' il suo turno.
+#
+#   primo reel:    08:00 · 13:00 · 17:00  (ora italiana)
+#   secondo reel:  19:00 · 21:00 · 23:00
+#
+# Gli orari in UTC sono due ore indietro (ora legale) e mai sull'ora tonda,
+# perche' l'orologio di GitHub ritarda quando c'e' traffico.
 on:
   schedule:
-    - cron: '7 11 * * *'
-    - cron: '37 12 * * *'
-    - cron: '17 14 * * *'
+    - cron: '7 6 * * *'      # 08:07 IT  -> turno 0
+    - cron: '7 11 * * *'     # 13:07 IT  -> turno 1
+    - cron: '7 15 * * *'     # 17:07 IT  -> turno 2
+    - cron: '23 17 * * *'    # 19:23 IT  -> turno 0, secondo
+    - cron: '23 19 * * *'    # 21:23 IT  -> turno 1, secondo
+    - cron: '23 21 * * *'    # 23:23 IT  -> turno 2, secondo
   workflow_dispatch:
     inputs:
       prova:
@@ -38,6 +48,20 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Capisci quale fascia e' questa
+        id: fascia
+        run: |
+          ORA="${{ github.event.schedule }}"
+          case "$ORA" in
+            "7 6 * * *")   echo "turno=0" >> $GITHUB_OUTPUT; echo "secondo=" >> $GITHUB_OUTPUT ;;
+            "7 11 * * *")  echo "turno=1" >> $GITHUB_OUTPUT; echo "secondo=" >> $GITHUB_OUTPUT ;;
+            "7 15 * * *")  echo "turno=2" >> $GITHUB_OUTPUT; echo "secondo=" >> $GITHUB_OUTPUT ;;
+            "23 17 * * *") echo "turno=0" >> $GITHUB_OUTPUT; echo "secondo=--secondo" >> $GITHUB_OUTPUT ;;
+            "23 19 * * *") echo "turno=1" >> $GITHUB_OUTPUT; echo "secondo=--secondo" >> $GITHUB_OUTPUT ;;
+            "23 21 * * *") echo "turno=2" >> $GITHUB_OUTPUT; echo "secondo=--secondo" >> $GITHUB_OUTPUT ;;
+            *)             echo "turno=" >> $GITHUB_OUTPUT; echo "secondo=" >> $GITHUB_OUTPUT ;;
+          esac
+
       - name: Quanti reel ci sono in coda
         id: coda
         working-directory: automazione
@@ -53,10 +77,15 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: python pubblica.py --reel --se-serve ${{ inputs.prova && '--prova' || '' }}
+        run: |
+          TURNO=""
+          if [ -n "${{ steps.fascia.outputs.turno }}" ]; then
+            TURNO="--turno ${{ steps.fascia.outputs.turno }}"
+          fi
+          python pubblica.py --reel --se-serve $TURNO ${{ steps.fascia.outputs.secondo }} ${{ inputs.prova && '--prova' || '' }}
 
       - name: Avvisa se la coda sta finendo
-        if: steps.coda.outputs.quanti == '2'
+        if: steps.coda.outputs.quanti == '4'
         uses: actions/github-script@v7
         with:
           script: |
@@ -70,14 +99,14 @@ jobs:
               owner: context.repo.owner, repo: context.repo.repo,
               title: titolo, labels: ['instagram'],
               body: [
-                'Restano due reel in coda: fra due giorni il profilo pubblica solo i post.',
+                'Restano quattro reel: con due al giorno finiscono in due giorni.',
                 '',
                 'Per rifare la scorta, sul computer di Matteo:',
                 '```',
                 'cd D:\\marketing\\03-CONTENUTI\\generatore',
-                'voce\\venv-cb\\Scripts\\python.exe scorta_reel.py 12',
+                'voce\\venv-cb\\Scripts\\python.exe scorta_reel.py 30',
                 '```',
-                'poi caricare i nuovi file in `automazione/pronti-reel/`.'
+                'poi caricare i file in `automazione/pronti-reel/`.'
               ].join('\n')
             });
 
@@ -87,7 +116,7 @@ jobs:
         with:
           script: |
             const oggi = new Date().toISOString().slice(0, 10);
-            const titolo = `Il reel del ${oggi} non e' uscito`;
+            const titolo = `Un reel del ${oggi} non e' uscito`;
             const aperte = await github.rest.issues.listForRepo({
               owner: context.repo.owner, repo: context.repo.repo,
               state: 'open', labels: 'instagram'
@@ -96,7 +125,7 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner, repo: context.repo.repo,
               title: titolo, labels: ['instagram'],
-              body: `La pubblicazione del reel non e' riuscita.\n\nDettaglio: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n_I post con immagine continuano comunque a uscire._`
+              body: `La pubblicazione non e' riuscita.\n\nDettaglio: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
             });
 
       - name: Segna cosa e' uscito

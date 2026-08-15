@@ -148,7 +148,7 @@ def verifica(user_id, token):
                   f"&access_token={token}")
 
 
-def gia_pubblicato_oggi(token, tipo="IMAGE"):
+def gia_pubblicato_oggi(token, tipo="IMAGE", quanti_max=1):
     """Chiede a Instagram cosa e' uscito oggi, distinguendo foto e video.
     Serve perche' l'orologio di GitHub e' inaffidabile: proviamo piu' volte al
     giorno, e chi arriva quando il contenuto c'e' gia' non fa niente.
@@ -160,11 +160,12 @@ def gia_pubblicato_oggi(token, tipo="IMAGE"):
         return True                      # nel dubbio non si pubblica due volte
     oggi = time.strftime("%Y-%m-%d", time.gmtime())
     cercato = {"REELS": ("VIDEO", "REELS")}.get(tipo, ("IMAGE", "CAROUSEL_ALBUM"))
-    for m in d.get("data") or []:
-        if m.get("timestamp", "")[:10] == oggi and m.get("media_type") in cercato:
-            nome = "reel" if tipo == "REELS" else "post"
-            print(f"C'e' gia' un {nome} di oggi. Non ne pubblico un altro.")
-            return True
+    usciti = sum(1 for m in (d.get("data") or [])
+                 if m.get("timestamp", "")[:10] == oggi and m.get("media_type") in cercato)
+    if usciti >= quanti_max:
+        nome = "reel" if tipo == "REELS" else "post"
+        print(f"Oggi sono gia' usciti {usciti} {nome} (il massimo e' {quanti_max}). Mi fermo.")
+        return True
     return False
 
 
@@ -214,11 +215,39 @@ def rinnova_se_serve(env):
 
 # --- avvio -------------------------------------------------------------------
 
+def giorni_dal_1970():
+    return int(time.time() // 86400)
+
+
+def e_il_mio_turno(argomenti):
+    """Gli orari non li abbiamo scelti coi dati (non ne avevamo): li stiamo
+    misurando. Ogni fascia oraria viene provata a rotazione, cosi' dopo qualche
+    settimana si vede quale rende davvero, invece di indovinare.
+
+      --turno 0/1/2  -> tocca a questa fascia solo un giorno su tre
+      --ogni2        -> solo a giorni alterni (per i post)
+    """
+    g = giorni_dal_1970()
+    if "--ogni2" in argomenti and g % 2 != 0:
+        print("Oggi non tocca a questo contenuto (esce a giorni alterni).")
+        return False
+    if "--turno" in argomenti:
+        n = int(argomenti[argomenti.index("--turno") + 1])
+        if g % 3 != n:
+            print(f"Non e' il turno di questa fascia oraria (oggi tocca alla {g % 3}).")
+            return False
+    return True
+
+
 def main():
     prova = "--prova" in sys.argv
     se_serve = "--se-serve" in sys.argv     # pubblica solo se oggi non e' ancora uscito niente
     reel = "--reel" in sys.argv             # pubblica un video invece di un'immagine
+    secondo = "--secondo" in sys.argv       # il secondo reel della giornata
     tipo = "REELS" if reel else "IMAGE"
+
+    if not prova and not e_il_mio_turno(sys.argv):
+        return
     cartella = os.path.join(QUI, "pronti-reel") if reel else PRONTI
     estensione = ".mp4" if reel else ".png"
     env = leggi_env()
@@ -241,7 +270,10 @@ def main():
     print(f"Collegato a @{chi.get('username')} — {chi.get('followers_count', '?')} follower, "
           f"{chi.get('media_count', '?')} post")
 
-    if se_serve and not prova and gia_pubblicato_oggi(token, tipo):
+    # due reel al giorno, un post ogni due giorni (deciso il 15/08/2026 sui dati:
+    # i reel raggiungono 19 persone in media, i post 3)
+    massimo = 2 if (reel and secondo) else 1
+    if se_serve and not prova and gia_pubblicato_oggi(token, tipo, massimo):
         return
 
     p = prossimo(cartella, estensione)

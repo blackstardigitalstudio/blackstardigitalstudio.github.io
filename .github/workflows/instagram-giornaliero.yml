@@ -1,4 +1,4 @@
-name: Instagram - un post al giorno
+name: Instagram - un post ogni due giorni
 
 # Gira nel cloud di GitHub: il computer di Matteo puo' restare spento.
 #
@@ -12,9 +12,8 @@ name: Instagram - un post al giorno
 # 19:07 UTC = 20:07 a Las Palmas, 21:07 in Italia e Spagna.
 on:
   schedule:
-    - cron: '7 19 * * *'
-    - cron: '37 20 * * *'
-    - cron: '17 22 * * *'
+    - cron: '7 16 * * *'
+    - cron: '37 17 * * *'
   workflow_dispatch:        # per lanciarlo a mano quando serve
     inputs:
       prova:
@@ -53,7 +52,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-        run: python pubblica.py --se-serve ${{ inputs.prova && '--prova' || '' }}
+        run: python pubblica.py --se-serve --ogni2 ${{ inputs.prova && '--prova' || '' }}
 
       - name: Se qualcosa si rompe, lascia un avviso
         if: failure()

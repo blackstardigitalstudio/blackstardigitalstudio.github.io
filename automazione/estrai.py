@@ -23,6 +23,14 @@ def campo(testo, pattern):
     return pulisci(m.group(1)) if m else ""
 
 
+def immagine(htm):
+    """La foto che Matteo ha gia' scelto per ogni curiosita' sul sito."""
+    m = re.search(r'<img class="hero" src="([^"]+)"', htm)
+    if not m:
+        m = re.search(r'property="og:image" content="([^"]+)"', htm)
+    return html.unescape(m.group(1)) if m else ""
+
+
 def leggi_curiosita(htm, slug):
     titolo = campo(htm, r'<h1>(.*?)</h1>')
     if not titolo:
@@ -34,6 +42,7 @@ def leggi_curiosita(htm, slug):
         "lead": campo(htm, r'<p class="lead">(.*?)</p>'),
         "deep": campo(htm, r'<div class="deep">(.*?)</div>'),
         "url": "https://www.blackstardigitalstudio.com/curiosita/c/" + slug,
+        "immagine": immagine(htm),
     }
 
 

@@ -5,7 +5,7 @@ Non pubblica niente: si limita a mettere il file pronto nella cartella "pronti".
 Sistema NUOVO e SEPARATO: non tocca nessun sistema dei clienti.
 Made in Italy
 """
-import json, os, random, sys, textwrap
+import json, os, random, re, sys, textwrap
 from datetime import date
 from PIL import Image, ImageDraw, ImageFont
 from filtro import pulisci
@@ -40,8 +40,18 @@ def font(percorso, dim):
 
 
 def senza_emoji(t):
-    """Le emoji non si disegnano con i font di sistema: via dall'immagine."""
-    return "".join(c for c in t if ord(c) < 0x2190).strip()
+    """Tiene solo i caratteri che i font di sistema sanno disegnare.
+    Senza questo, rune, greco, cirillico ed emoji finiscono nell'immagine
+    come quadratini vuoti (le rune vichinghe di Bluetooth, per dirne una)."""
+    tenuti = []
+    for ch in t:
+        if ord(ch) < 0x0250 or ch in "\u20ac\u2018\u2019\u201c\u201d\u2013\u2014\u2026":
+            tenuti.append(ch)
+    ripulito = "".join(tenuti)
+    ripulito = re.sub(r"\s+([,.;:!?])", r"\1", ripulito)   # spazi rimasti prima della punteggiatura
+    ripulito = re.sub(r"\s+e\s*([.,])", r"\1", ripulito)   # "le rune  e ." -> "le rune."
+    ripulito = re.sub(r"\s{2,}", " ", ripulito)
+    return ripulito.strip()
 
 
 def storico():
@@ -79,10 +89,23 @@ def spezza(d, testo, f, larghezza_px):
     return righe
 
 
-def disegna_righe(d, righe, f, y, colore, interlinea):
+EVIDENZA = (255, 200, 87)      # giallo caldo: l'occhio ha bisogno di un punto
+                               # dove atterrare, se no legge tutto o niente
+
+
+def disegna_righe(d, righe, f, y, colore, interlinea, accendi=False):
+    from genera_reel import da_accendere
     for r in righe:
         w = d.textlength(r, font=f)
-        d.text(((L - w) / 2, y), r, font=f, fill=colore)
+        x = (L - w) / 2
+        if not accendi:
+            d.text((x, y), r, font=f, fill=colore)
+        else:
+            for parola in r.split(" "):
+                pezzo = parola + " "
+                d.text((x, y), pezzo, font=f,
+                       fill=EVIDENZA if da_accendere(parola) else colore)
+                x += d.textlength(pezzo, font=f)
         y += f.size + interlinea
     return y
 
@@ -127,13 +150,13 @@ def crea_immagine(c, percorso):
     d.text(((L - w) / 2, y), kick, font=f_kick, fill=ACCENTO)
     y += h_kick
 
-    y = disegna_righe(d, righe_tit, f_tit, y, TESTO, IL_TIT)
+    y = disegna_righe(d, righe_tit, f_tit, y, TESTO, IL_TIT, accendi=True)
 
     if righe_lead:
         y += 34
         d.line([(L / 2 - 44, y), (L / 2 + 44, y)], fill=ACCENTO, width=3)
         y += 30
-        disegna_righe(d, righe_lead, f_lead, y, TESTO_2, IL_LEAD)
+        disegna_righe(d, righe_lead, f_lead, y, TESTO_2, IL_LEAD, accendi=True)
 
     # piede: categoria a sinistra, profilo a destra
     cat = senza_emoji(c["categoria"]).upper()

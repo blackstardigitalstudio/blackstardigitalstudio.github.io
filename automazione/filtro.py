@@ -21,9 +21,9 @@ DELICATO = re.compile(
     r"porno\w*|erotic\w*|prostitu\w*|bordell\w*|"
     r"orgasm\w*|masturb\w*|ampless\w*|coit\w*|genital\w*|"
     r"suicid\w*|impicc\w*|autolesion\w*|anoress\w*|bulimi\w*|"
-    r"cocain\w*|eroina|oppiace\w*|stupefacent\w*|hashish|marijuana|"
+    r"cocain\w*|oppiace\w*|stupefacent\w*|hashish|marijuana|"
     r"stupr\w*|violenza sessuale|pedofil\w*|molest\w*|"
-    r"decapit\w*|squartat\w*|sventrat\w*|mutilaz\w*"
+    r"squartat\w*|sventrat\w*"
     r")\b",
     re.IGNORECASE,
 )

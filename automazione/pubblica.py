@@ -113,7 +113,11 @@ def carica_su_github(png):
 def pubblica_su_instagram(user_id, token, url_media, didascalia, tipo="IMAGE"):
     campi = {"caption": didascalia, "access_token": token}
     if tipo == "REELS":
-        campi.update({"media_type": "REELS", "video_url": url_media})
+        # thumb_offset: da quale istante prendere la copertina. Senza questo
+        # Instagram usa il primo fotogramma, e basta un filo di dissolvenza
+        # per ritrovarsi tutte le copertine nere nella griglia del profilo.
+        campi.update({"media_type": "REELS", "video_url": url_media,
+                      "thumb_offset": "800"})
     else:
         campi["image_url"] = url_media
 

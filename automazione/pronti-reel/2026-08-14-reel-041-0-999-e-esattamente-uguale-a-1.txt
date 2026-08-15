@@ -1,7 +1,0 @@
-0,999... è esattamente uguale a 1
-
-Non 'quasi' 1. Sono matematicamente identici. La dimostrazione: se x = 0,999..., allora 10x = 9,999..., quindi 10x - x = 9, da cui x = 1.
-
-Questo fatto sconvolge chiunque ma è elementare. Dimostrazione alternativa: 1/3 = 0,333... Moltiplicando per 3: 3/3 = 0,999... ma 3/3 = 1. Quindi 0,999... = 1. I numeri reali hanno rappresentazioni decimali multiple: 1 = 1,000... = 0,999... L'errore intuitivo deriva dal pensare al decimale come 'si avvicina a 1' invece che ESSERE 1. In teoria dei numeri, questo illustra che i decimali sono notazio
-
-#curiosita #losapeviche #matematica

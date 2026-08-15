@@ -132,10 +132,12 @@ def scarica_foto(c):
     return percorso if os.path.exists(percorso) else None
 
 
-def sfondo_con_foto(c):
+def sfondo_con_foto(c, larghezza=None, altezza=None):
     """Foto a tutto schermo + velo scuro. Senza il velo il testo sparisce
-    dentro l'immagine; col velo la foto si vede ma il testo comanda."""
-    base = Image.new("RGB", (L, A), SFONDO)
+    dentro l'immagine; col velo la foto si vede ma il testo comanda.
+    Le misure si possono passare: i reel sono 1080x1920, i post 1080x1350."""
+    L_, A_ = larghezza or L, altezza or A
+    base = Image.new("RGB", (L_, A_), SFONDO)
     percorso = scarica_foto(c)
     if not percorso:
         return base
@@ -144,13 +146,13 @@ def sfondo_con_foto(c):
     except Exception:
         return base
 
-    # riempie tutto il verticale senza deformare (ritaglia il di piu')
-    scala = max(L / foto.width, A / foto.height)
+    # riempie tutto senza deformare (ritaglia il di piu')
+    scala = max(L_ / foto.width, A_ / foto.height)
     foto = foto.resize((int(foto.width * scala) + 1, int(foto.height * scala) + 1),
                        Image.LANCZOS)
-    sx = (foto.width - L) // 2
-    sy = int((foto.height - A) * 0.35)          # taglia piu' dal basso: i soggetti stanno in alto
-    base.paste(foto.crop((sx, sy, sx + L, sy + A)), (0, 0))
+    sx = (foto.width - L_) // 2
+    sy = int((foto.height - A_) * 0.35)         # taglia piu' dal basso: i soggetti stanno in alto
+    base.paste(foto.crop((sx, sy, sx + L_, sy + A_)), (0, 0))
 
     # Sfocatura + velo uniforme. Tre motivi, tutti pratici:
     #  - il testo resta la cosa piu' nitida dello schermo, quindi comanda lui
@@ -158,7 +160,7 @@ def sfondo_con_foto(c):
     #  - le foto del sito sono generiche (per Riina c'erano delle bolle d'olio):
     #    sfocate diventano atmosfera e colore, e la stonatura non si nota
     base = base.filter(ImageFilter.GaussianBlur(radius=14))
-    velo = Image.new("RGBA", (L, A), (13, 11, 19, 178))
+    velo = Image.new("RGBA", (L_, A_), (13, 11, 19, 178))
     return Image.alpha_composite(base.convert("RGBA"), velo).convert("RGB")
 
 

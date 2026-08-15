@@ -111,7 +111,11 @@ def disegna_righe(d, righe, f, y, colore, interlinea, accendi=False):
 
 
 def crea_immagine(c, percorso):
-    img = Image.new("RGB", (L, A), SFONDO)
+    # La foto che Matteo ha gia' scelto per quella curiosita', sfocata e velata:
+    # da' colore e profondita' senza rubare la scena al testo. (Era gia' nei reel,
+    # mancava nei post — segnalato da Matteo il 15/08/2026.)
+    from genera_reel import sfondo_con_foto
+    img = sfondo_con_foto(c, L, A)
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, L, 10], fill=ACCENTO)          # barra d'accento in alto
 

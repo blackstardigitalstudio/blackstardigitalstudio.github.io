@@ -9,7 +9,7 @@ da videomaker alle prime armi: il movimento serve solo a tenere fermo il pollice
 Non pubblica niente: mette il file pronto in "pronti-reel".
 Made in Italy
 """
-import json, os, random, re, subprocess, sys, tempfile
+import json, os, random, re, subprocess, sys, tempfile, time
 from datetime import date
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
@@ -113,26 +113,43 @@ def righe_centrate(d, righe, f, y, colore, interlinea, accendi=False):
 FOTO = os.path.join(QUI, "foto")
 
 
-def scarica_foto(c):
+def scarica_foto(c, tentativi=3):
     """La foto che Matteo ha gia' scelto per quella curiosita' sul sito.
-    Si scarica una volta e resta in cache: la seconda volta e' istantanea."""
+    Si scarica una volta e resta in cache: la seconda volta e' istantanea.
+
+    Ci prova piu' volte prima di arrendersi: se la rete fa i capricci un attimo,
+    prima il video usciva col fondo nero e nessuno se ne accorgeva. Adesso,
+    se proprio non ce la fa, chi chiama lo viene a sapere e salta la curiosita'.
+    """
     url = c.get("immagine")
     if not url:
         return None
     os.makedirs(FOTO, exist_ok=True)
     percorso = os.path.join(FOTO, c["slug"][:60] + ".jpg")
-    if not os.path.exists(percorso):
+
+    if os.path.exists(percorso) and os.path.getsize(percorso) > 8000:
+        return percorso
+
+    import urllib.request
+    for n in range(tentativi):
         try:
-            import urllib.request
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=25) as r, open(percorso, "wb") as f:
-                f.write(r.read())
-        except Exception:
-            return None
-    return percorso if os.path.exists(percorso) else None
+            with urllib.request.urlopen(req, timeout=30) as r:
+                dati = r.read()
+            if len(dati) < 8000:          # troppo piccola: non e' una foto vera
+                raise ValueError("immagine troppo piccola")
+            with open(percorso, "wb") as f:
+                f.write(dati)
+            return percorso
+        except Exception as e:
+            if n == tentativi - 1:
+                print(f"      foto non scaricata dopo {tentativi} tentativi: {str(e)[:60]}")
+            else:
+                time.sleep(2 + n * 2)
+    return None
 
 
-def sfondo_con_foto(c, larghezza=None, altezza=None):
+def sfondo_con_foto(c, larghezza=None, altezza=None, obbligatoria=False):
     """Foto a tutto schermo + velo scuro. Senza il velo il testo sparisce
     dentro l'immagine; col velo la foto si vede ma il testo comanda.
     Le misure si possono passare: i reel sono 1080x1920, i post 1080x1350."""
@@ -140,6 +157,10 @@ def sfondo_con_foto(c, larghezza=None, altezza=None):
     base = Image.new("RGB", (L_, A_), SFONDO)
     percorso = scarica_foto(c)
     if not percorso:
+        if obbligatoria:
+            # Meglio saltare la curiosita' che sfornare un video col fondo nero:
+            # e' successo il 15/08/2026 e i video sono usciti cosi' senza avvisare.
+            raise RuntimeError("foto non disponibile")
         return base
     try:
         foto = Image.open(percorso).convert("RGB")
@@ -165,7 +186,7 @@ def sfondo_con_foto(c, larghezza=None, altezza=None):
 
 
 def fotogramma(c, con_spiegazione, percorso):
-    img = sfondo_con_foto(c)
+    img = sfondo_con_foto(c, obbligatoria=True)
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, L, 12], fill=ACCENTO)
 

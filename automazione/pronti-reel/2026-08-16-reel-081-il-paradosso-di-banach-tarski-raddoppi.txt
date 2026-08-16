@@ -1,0 +1,7 @@
+Il Paradosso di Banach-Tarski: raddoppiare una sfera solida?
+
+Lo sapevi che? In matematica esiste un paradosso, quello di Banach-Tarski, secondo cui una sfera solida può essere scomposta in un numero finito di pezzi e poi riassemblata per formarne DUE identiche all'originale?
+
+Questo incredibile risultato, dimostrato nel 1924 dai matematici Stefan Banach e Alfred Tarski, è profondamente controintuitivo perché contraddice la nostra esperienza fisica di conservazione del volume. La 'scomposizione' non è però quella a cui siamo abituati nel mondo reale: i pezzi sono insiemi non misurabili in senso lebesgueiano e hanno una struttura così complessa da essere irrealizzabili f
+
+#curiosita #losapeviche #matematica

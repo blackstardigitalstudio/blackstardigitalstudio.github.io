@@ -1,0 +1,7 @@
+Lo sapevi che? La matematica può 'duplicare' una sfera?
+
+Lo sapevi che, in matematica pura, è teoricamente possibile prendere una sfera, tagliarla in un numero finito di pezzi e poi riassemblare questi pezzi per formare due sfere identiche all'originale?
+
+Questo incredibile risultato è noto come il Paradosso di Banach-Tarski. Fu dimostrato nel 1924 dai matematici Stefan Banach e Alfred Tarski, e non è una 'magia' fisica, ma una rigorosa dimostrazione della teoria degli insiemi. Il 'trucco' risiede nell'utilizzo di pezzi che non possono avere un volume misurabile in senso classico (insiemi non misurabili), permettendo di manipolare infiniti punti in
+
+#curiosita #losapeviche #matematica

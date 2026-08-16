@@ -1,0 +1,7 @@
+Il Paradosso di Banach-Tarski: Raddoppiare una Palla Solida!
+
+Immagina di poter dividere una palla solida in pochi pezzi e, senza aggiungerne né rimuoverne, riassemblarli per ottenere DUE palle identiche all'originale! Sembra un trucco di magia, ma è un teorema matematico noto come Paradosso di Banach-Tarski.
+
+Questo straordinario paradosso, dimostrato nel 1924 dagli matematici polacchi Stefan Banach e Alfred Tarski, afferma che una palla solida nello spazio tridimensionale può essere scomposta in un numero finito di 'pezzi' (sottoinsiemi) e riassemblata per formare due copie identiche della palla originale. La chiave sta nel fatto che questi pezzi non sono solidi nel senso comune, ma insiemi di punti c
+
+#curiosita #losapeviche #matematica

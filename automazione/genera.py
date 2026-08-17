@@ -182,9 +182,9 @@ ETICHETTE = {
 
 def didascalia(c, con_invito):
     cat = senza_emoji(c["categoria"])
+    # Niente taglio: la curiosita' piu' lunga e' 1307 caratteri, Instagram ne
+    # accetta 2200. La notizia esce sempre intera.
     deep = c["deep"]
-    if len(deep) > 420:
-        deep = deep[:417].rsplit(" ", 1)[0] + "..."
 
     parti = [c["titolo"], "", c["lead"], "", deep]
 

@@ -34,14 +34,17 @@ STORICO = os.path.join(QUI, "storico-reel.json")
 def didascalia_reel(c):
     """Il testo che accompagna il reel.
 
-    Il taglio deve rispettare le parole: prima tagliavo a 400 caratteri secchi
-    e le didascalie finivano a meta' parola ("...emettevano un fischio, segnal").
-    Trovato da Matteo il 17/08/2026 guardando il post pubblicato.
+    Esce SEMPRE per intero. Prima tagliavo, e le didascalie finivano a meta'
+    parola ("...emettevano un fischio, segnal"). Poi ho misurato: la curiosita'
+    piu' lunga e' 1307 caratteri contro i 2200 che Instagram accetta.
+    Il taglio non serviva a niente: serviva solo a rompere le frasi.
+    (Trovato da Matteo il 17/08/2026 guardando il post pubblicato.)
     """
     from genera_reel import senza_emoji
+    # NESSUN taglio: la curiosita' piu' lunga dell'archivio e' 1307 caratteri
+    # e Instagram ne accetta 2200. Tagliare non serviva a niente, e il taglio
+    # e' proprio cio' che mandava online le notizie a meta' frase.
     deep = c["deep"]
-    if len(deep) > 500:
-        deep = deep[:497].rsplit(" ", 1)[0].rstrip(" ,;:") + "..."
     cat = senza_emoji(c["categoria"]).lower()
     return "\n".join([
         c["titolo"], "", c["lead"], "", deep, "",
@@ -88,11 +91,8 @@ def main():
                 monta_parlato(f1, f2, f3, wav, random.choice(brani) if brani else None,
                               os.path.join(PRONTI, nome + ".mp4"), d)
 
-            deep = c["deep"][:400]
-            cat = senza_emoji(c["categoria"]).lower()
             with open(os.path.join(PRONTI, nome + ".txt"), "w", encoding="utf-8") as f:
-                f.write("\n".join([c["titolo"], "", c["lead"], "", deep, "",
-                                   f"#curiosita #losapeviche #{cat}"]))
+                f.write(didascalia_reel(c))
             print(f"        {d:.1f}s  ok")
         except Exception as e:
             print(f"        saltato: {str(e)[:120]}")

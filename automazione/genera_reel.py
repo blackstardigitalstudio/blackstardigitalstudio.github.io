@@ -361,13 +361,12 @@ def main():
             if brano:
                 print(f"      musica: {os.path.basename(brano)}")
 
-        deep = c["deep"]
-        if len(deep) > 420:
-            deep = deep[:417].rsplit(" ", 1)[0] + "..."
         cat = senza_emoji(c["categoria"]).lower()
         with open(os.path.join(PRONTI, nome + ".txt"), "w", encoding="utf-8") as f:
-            f.write("\n".join([c["titolo"], "", c["lead"], "", deep, "",
-                               f"#curiosita #losapeviche #{cat} #imparasuinstagram"]))
+            f.write("\n".join([
+                c["titolo"], "", c["lead"], "", c["deep"], "",
+                "Se conosci qualcuno che non lo sa, mandagliela.", "",
+                f"#curiosita #losapeviche #{cat} #imparasuinstagram"]))
         print(f"[{s['conta']:03d}] {nome}.mp4")
 
     with open(STORICO, "w", encoding="utf-8") as f:

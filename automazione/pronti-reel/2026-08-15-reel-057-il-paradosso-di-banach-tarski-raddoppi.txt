@@ -2,7 +2,7 @@ Il Paradosso di Banach-Tarski: Raddoppiare una Palla con la Matematica
 
 Lo sapevi che? È matematicamente possibile tagliare una sfera in un numero finito di pezzi e poi ricomporli per ottenere due sfere identiche a quella originale, semplicemente ruotando e traslando i pezzi, senza deformarli o stirarli.
 
-Questo stupefacente risultato, noto come Paradosso di Banach-Tarski, fu dimostrato nel 1924 dagli matematici Stefan Banach e Alfred Tarski. Sebbene sembri sfidare il buon senso e la conservazione del volume, il paradosso non è applicabile nel mondo fisico a causa della natura "non misurabile" dei pezzi coinvolti; non si tratta di solidi con volumi definibili nel senso usuale. La sua dimostrazione si basa sull'assioma della scelta e sulla geometria non euclidea, evidenziando le profonde...
+Questo stupefacente risultato, noto come Paradosso di Banach-Tarski, fu dimostrato nel 1924 dagli matematici Stefan Banach e Alfred Tarski. Sebbene sembri sfidare il buon senso e la conservazione del volume, il paradosso non è applicabile nel mondo fisico a causa della natura "non misurabile" dei pezzi coinvolti; non si tratta di solidi con volumi definibili nel senso usuale. La sua dimostrazione si basa sull'assioma della scelta e sulla geometria non euclidea, evidenziando le profonde differenze tra gli oggetti matematici ideali e la nostra percezione fisica della realtà. È un esempio lampante di come la matematica pura possa portare a conclusioni che sfidano la nostra intuizione più radicata.
 
 Se conosci qualcuno che non lo sa, mandagliela.
 

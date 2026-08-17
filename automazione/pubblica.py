@@ -61,13 +61,43 @@ def chiama(url, dati=None):
 
 
 def prossimo(cartella=None, estensione=".png"):
+    """Prende il prossimo contenuto pronto, ma solo se passa il collaudo.
+    Quello che non passa viene messo da parte: un difetto pubblicato non si
+    corregge piu', mentre uno scartato costa solo il contenuto successivo."""
     cartella = cartella or PRONTI
     if not os.path.isdir(cartella):
         return None
+
+    try:
+        from collaudo import controlla_video, controlla_testo
+    except Exception:
+        controlla_video = controlla_testo = None
+
     for p in sorted(f for f in os.listdir(cartella) if f.endswith(estensione)):
-        t = os.path.join(cartella, p[:-len(estensione)] + ".txt")
-        if os.path.exists(t):
-            return os.path.join(cartella, p), t
+        media = os.path.join(cartella, p)
+        testo = os.path.join(cartella, p[:-len(estensione)] + ".txt")
+        if not os.path.exists(testo):
+            continue
+
+        problemi = []
+        if controlla_testo:
+            try:
+                problemi += controlla_testo(testo)
+                if estensione == ".mp4":
+                    problemi += controlla_video(media)
+            except Exception as e:
+                print(f"(collaudo non eseguito: {str(e)[:60]})")
+
+        if problemi:
+            print(f"Scarto {p}: {problemi[0]}")
+            scarti = os.path.join(QUI, "bocciati")
+            os.makedirs(scarti, exist_ok=True)
+            for f in (media, testo):
+                if os.path.exists(f):
+                    os.replace(f, os.path.join(scarti, os.path.basename(f)))
+            continue
+
+        return media, testo
     return None
 
 

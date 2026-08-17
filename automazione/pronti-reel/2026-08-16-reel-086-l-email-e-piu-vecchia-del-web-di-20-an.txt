@@ -2,6 +2,8 @@ L'email è più vecchia del web di 20 anni
 
 La prima email fu inviata nel 1971 da Ray Tomlinson. Il World Wide Web nacque nel 1991 grazie a Tim Berners-Lee.
 
-Tomlinson scelse la '@' dalla tastiera perché 'non compariva in nessun nome'. Il primo messaggio? 'QWERTYUIOP' (non lo ricordava nemmeno lui). Oggi si scambiano 333 miliardi di email al giorno. Berners-Lee creò invece il WWW al CERN per condividere documenti tra ricercatori; il primo sito (info.cern.ch) è ancora online. Il web è solo uno dei servizi di Internet (come email, FTP, SSH): spesso i due
+Tomlinson scelse la '@' dalla tastiera perché 'non compariva in nessun nome'. Il primo messaggio? 'QWERTYUIOP' (non lo ricordava nemmeno lui). Oggi si scambiano 333 miliardi di email al giorno. Berners-Lee creò invece il WWW al CERN per condividere documenti tra ricercatori; il primo sito (info.cern.ch) è ancora online. Il web è solo uno dei servizi di Internet (come email, FTP, SSH): spesso i due termini vengono confusi.
+
+Se conosci qualcuno che non lo sa, mandagliela.
 
 #curiosita #losapeviche #tecnologia

@@ -111,63 +111,74 @@ def disegna_righe(d, righe, f, y, colore, interlinea, accendi=False):
 
 
 def crea_immagine(c, percorso):
-    # La foto che Matteo ha gia' scelto per quella curiosita', sfocata e velata:
-    # da' colore e profondita' senza rubare la scena al testo. (Era gia' nei reel,
-    # mancava nei post — segnalato da Matteo il 15/08/2026.)
-    from genera_reel import sfondo_con_foto
+    """Stile TARGA, adattato al formato del feed (4:5).
+
+    Stessa logica dei reel: foto che si vede (velo 16%), testo sulla fascia
+    scura in basso, targa arancione piena come colpo di colore. Prima il velo
+    era al 70% e nel feed il post spariva.
+    """
+    from genera_reel import sfondo_con_foto, da_accendere
     img = sfondo_con_foto(c, L, A)
     d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, L, 10], fill=ACCENTO)          # barra d'accento in alto
 
     titolo = senza_emoji(c["titolo"])
     lead = senza_emoji(c["lead"])
-    utile = L - MARGINE * 2                            # larghezza di lavoro
+    utile = L - MARGINE * 2
 
-    # Il titolo e' quello che deve fermare il pollice: parte grande e scende
-    # solo quanto basta per stare in cinque righe.
-    for dim in (86, 78, 70, 62, 56, 50):
+    for dim in (84, 76, 68, 60, 54, 48):
         f_tit = font(F_BOLD, dim)
         righe_tit = spezza(d, titolo, f_tit, utile)
-        if len(righe_tit) <= 5:
+        if len(righe_tit) <= 4:
             break
 
-    f_kick = font(F_SEMI, 30)
-    f_lead = font(F_NORMALE, 36)
+    f_kick = font(F_BOLD, 40)
+    f_lead = font(F_NORMALE, 34)
     f_pie = font(F_SEMI, 28)
+    IL_T, IL_L = 12, 10
 
-    IL_TIT, IL_LEAD = 14, 12
-    righe_lead = spezza(d, lead, f_lead, utile - 60)[:4] if lead else []
-    if lead and len(spezza(d, lead, f_lead, utile - 60)) > 4:
-        righe_lead[-1] = righe_lead[-1].rstrip(" ,.;") + "..."
+    righe_lead = spezza(d, lead, f_lead, utile - 20)[:3]
 
-    # Altezze vere, per centrare davvero il blocco fra testata e piede
-    h_kick = f_kick.size + 46
-    h_tit = len(righe_tit) * (f_tit.size + IL_TIT)
-    h_lead = (34 + 30 + len(righe_lead) * (f_lead.size + IL_LEAD)) if righe_lead else 0
-    h_tot = h_kick + h_tit + h_lead
+    h_tit = len(righe_tit) * (f_tit.size + IL_T)
+    h_lead = 30 + len(righe_lead) * (f_lead.size + IL_L)
+    alto_fascia = A - (86 + h_tit + h_lead + 150)
 
-    ALTO, BASSO = 150, 200                             # aria in testa e sopra il piede
-    y = ALTO + max(0, ((A - ALTO - BASSO) - h_tot) / 2)
+    d.rectangle([0, alto_fascia, L, A], fill=(16, 13, 22))
+    d.rectangle([0, alto_fascia, L, alto_fascia + 10], fill=ACCENTO)
 
-    kick = "LO  SAPEVI  CHE..."
+    kick = "LO SAPEVI CHE ?"
     w = d.textlength(kick, font=f_kick)
-    d.text(((L - w) / 2, y), kick, font=f_kick, fill=ACCENTO)
-    y += h_kick
+    y_kick = alto_fascia - 108
+    d.rounded_rectangle([MARGINE - 28, y_kick - 20, MARGINE + w + 28, y_kick + f_kick.size + 20],
+                        radius=99, fill=ACCENTO)
+    d.text((MARGINE, y_kick), kick, font=f_kick, fill=SFONDO)
 
-    y = disegna_righe(d, righe_tit, f_tit, y, TESTO, IL_TIT, accendi=True)
+    y = alto_fascia + 62
+    for r in righe_tit:
+        x = MARGINE
+        for parola in r.split(" "):
+            pezzo = parola + " "
+            d.text((x, y), pezzo, font=f_tit,
+                   fill=EVIDENZA if da_accendere(parola) else TESTO)
+            x += d.textlength(pezzo, font=f_tit)
+        y += f_tit.size + IL_T
 
     if righe_lead:
-        y += 34
-        d.line([(L / 2 - 44, y), (L / 2 + 44, y)], fill=ACCENTO, width=3)
-        y += 30
-        disegna_righe(d, righe_lead, f_lead, y, TESTO_2, IL_LEAD, accendi=True)
+        y += 22
+        d.rectangle([MARGINE, y, MARGINE + 76, y + 4], fill=ACCENTO)
+        y += 24
+        for r in righe_lead:
+            x = MARGINE
+            for parola in r.split(" "):
+                pezzo = parola + " "
+                d.text((x, y), pezzo, font=f_lead,
+                       fill=EVIDENZA if da_accendere(parola) else TESTO_2)
+                x += d.textlength(pezzo, font=f_lead)
+            y += f_lead.size + IL_L
 
-    # piede: categoria a sinistra, profilo a destra
     cat = senza_emoji(c["categoria"]).upper()
-    d.line([(MARGINE, A - 136), (L - MARGINE, A - 136)], fill=(46, 41, 58), width=2)
-    d.text((MARGINE, A - 104), cat, font=f_pie, fill=TESTO_2)
+    d.text((MARGINE, A - 78), cat, font=f_pie, fill=(120, 112, 100))
     w = d.textlength(PROFILO, font=f_pie)
-    d.text((L - MARGINE - w, A - 104), PROFILO, font=f_pie, fill=ACCENTO)
+    d.text((L - MARGINE - w, A - 78), PROFILO, font=f_pie, fill=ACCENTO)
 
     img.save(percorso, "PNG", optimize=True)
 

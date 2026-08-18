@@ -175,72 +175,95 @@ def sfondo_con_foto(c, larghezza=None, altezza=None, obbligatoria=False):
     sy = int((foto.height - A_) * 0.35)         # taglia piu' dal basso: i soggetti stanno in alto
     base.paste(foto.crop((sx, sy, sx + L_, sy + A_)), (0, 0))
 
-    # Sfocatura + velo uniforme. Tre motivi, tutti pratici:
-    #  - il testo resta la cosa piu' nitida dello schermo, quindi comanda lui
-    #  - niente fasce nette di velo, che si vedevano come strisce
-    #  - le foto del sito sono generiche (per Riina c'erano delle bolle d'olio):
-    #    sfocate diventano atmosfera e colore, e la stonatura non si nota
-    base = base.filter(ImageFilter.GaussianBlur(radius=14))
-    velo = Image.new("RGBA", (L_, A_), (13, 11, 19, 178))
+    # Velo LEGGERO (16%) e quasi niente sfocatura: scelta di Matteo il
+    # 17/08/2026 dopo aver visto la scala. Prima era al 70% e le immagini
+    # sparivano nel feed — scure e uniformi in mezzo a foto luminose.
+    # Il testo resta leggibile perche' sta sulla fascia scura in basso,
+    # non sopra la foto.
+    base = base.filter(ImageFilter.GaussianBlur(radius=2))
+    velo = Image.new("RGBA", (L_, A_), (13, 11, 19, 40))
     return Image.alpha_composite(base.convert("RGBA"), velo).convert("RGB")
 
 
 def fotogramma(c, con_spiegazione, percorso):
+    """Stile TARGA (scelto da Matteo il 17/08/2026).
+
+    La foto si vede davvero: velo al 16%, quasi niente sfocatura. Il testo
+    NON sta sopra la foto — sta su una fascia scura in basso, cosi' resta
+    leggibile comunque. Sopra la fascia, la targa arancione piena: nel feed,
+    in mezzo a foto luminose, quel blocco di colore e' il colpo d'occhio.
+
+    La fascia ha altezza FISSA (calcolata sul titolo + spiegazione) anche
+    quando la spiegazione non c'e': cosi' nella dissolvenza fra i due
+    fotogrammi il titolo non si sposta, appare solo il testo in piu'.
+    """
     img = sfondo_con_foto(c, obbligatoria=True)
     d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, L, 12], fill=ACCENTO)
 
     titolo = senza_emoji(c["titolo"])
     lead = senza_emoji(c["lead"])
     utile = L - MARGINE * 2
 
-    for dim in (104, 94, 84, 74, 66, 58):
+    # il titolo parte grande e scende solo quanto serve per stare in 4 righe
+    for dim in (98, 88, 78, 70, 62, 56):
         f_tit = font(F_BOLD, dim)
         righe_tit = spezza(d, titolo, f_tit, utile)
-        if len(righe_tit) <= 5:
+        if len(righe_tit) <= 4:
             break
 
-    f_kick = font(F_BOLD, 58)          # la targa si legge anche in miniatura
-    f_lead = font(F_NORMALE, 42)
+    f_kick = font(F_BOLD, 46)
+    f_lead = font(F_NORMALE, 40)
     f_pie = font(F_SEMI, 32)
+    IL_T, IL_L = 14, 12
 
-    IL_T, IL_L = 16, 14
-    righe_lead = spezza(d, lead, f_lead, utile - 40)[:5] if (lead and con_spiegazione) else []
+    righe_lead_tutte = spezza(d, lead, f_lead, utile - 20)[:4]
+    righe_lead = righe_lead_tutte if con_spiegazione else []
+
+    # altezza della fascia: sempre quella del caso pieno, cosi' i due
+    # fotogrammi combaciano e nella dissolvenza niente salta
     h_tit = len(righe_tit) * (f_tit.size + IL_T)
-    h_lead = (44 + 36 + len(righe_lead) * (f_lead.size + IL_L)) if righe_lead else 0
+    h_lead = 36 + len(righe_lead_tutte) * (f_lead.size + IL_L)
+    alto_fascia = A - (110 + h_tit + h_lead + 190)
 
-    # TRE FASCE, ognuna con un compito solo:
-    #   alto   -> la targa della serie: deve leggersi anche quando il reel e'
-    #             largo 150 pixel nella griglia del profilo
-    #   centro -> la curiosita': e' il contenuto, comanda lei
-    #   basso  -> categoria e nome
-    # Stando in fasce diverse, targa e titolo non si rubano la scena a vicenda.
-    kick = "LO  SAPEVI  CHE ?"
+    d.rectangle([0, alto_fascia, L, A], fill=(16, 13, 22))
+    d.rectangle([0, alto_fascia, L, alto_fascia + 12], fill=ACCENTO)
+
+    # la targa della serie, appoggiata sopra la fascia
+    kick = "LO SAPEVI CHE ?"
     w = d.textlength(kick, font=f_kick)
-    px, py = 46, 26
-    y_kick = 205
-    x0 = (L - w) / 2 - px
-    d.rounded_rectangle([x0, y_kick - py, x0 + w + px * 2, y_kick + f_kick.size + py],
+    y_kick = alto_fascia - 128
+    d.rounded_rectangle([MARGINE - 32, y_kick - 24, MARGINE + w + 32, y_kick + f_kick.size + 24],
                         radius=99, fill=ACCENTO)
-    d.text(((L - w) / 2, y_kick), kick, font=f_kick, fill=SFONDO)
+    d.text((MARGINE, y_kick), kick, font=f_kick, fill=SFONDO)
 
-    # Il blocco del testo resta ancorato allo stesso punto in entrambi i
-    # fotogrammi: nella dissolvenza il titolo non salta, appare solo la spiegazione.
-    y = 600
-
-    y = righe_centrate(d, righe_tit, f_tit, y, TESTO, IL_T, accendi=True)
+    # testo dentro la fascia, allineato a sinistra: niente simmetria centrale
+    y = alto_fascia + 78
+    for r in righe_tit:
+        x = MARGINE
+        for parola in r.split(" "):
+            pezzo = parola + " "
+            d.text((x, y), pezzo, font=f_tit,
+                   fill=EVIDENZA if da_accendere(parola) else TESTO)
+            x += d.textlength(pezzo, font=f_tit)
+        y += f_tit.size + IL_T
 
     if righe_lead:
-        y += 44
-        d.line([(L / 2 - 50, y), (L / 2 + 50, y)], fill=ACCENTO, width=4)
-        y += 36
-        righe_centrate(d, righe_lead, f_lead, y, TESTO_2, IL_L, accendi=True)
+        y += 26
+        d.rectangle([MARGINE, y, MARGINE + 90, y + 5], fill=ACCENTO)
+        y += 28
+        for r in righe_lead:
+            x = MARGINE
+            for parola in r.split(" "):
+                pezzo = parola + " "
+                d.text((x, y), pezzo, font=f_lead,
+                       fill=EVIDENZA if da_accendere(parola) else TESTO_2)
+                x += d.textlength(pezzo, font=f_lead)
+            y += f_lead.size + IL_L
 
     cat = senza_emoji(c["categoria"]).upper()
-    d.line([(MARGINE, A - 190), (L - MARGINE, A - 190)], fill=(46, 41, 58), width=2)
-    d.text((MARGINE, A - 150), cat, font=f_pie, fill=TESTO_2)
+    d.text((MARGINE, A - 96), cat, font=f_pie, fill=(120, 112, 100))
     w = d.textlength(PROFILO, font=f_pie)
-    d.text((L - MARGINE - w, A - 150), PROFILO, font=f_pie, fill=ACCENTO)
+    d.text((L - MARGINE - w, A - 96), PROFILO, font=f_pie, fill=ACCENTO)
 
     img.save(percorso, "PNG")
 

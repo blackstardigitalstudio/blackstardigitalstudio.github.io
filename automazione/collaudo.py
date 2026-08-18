@@ -58,12 +58,16 @@ def controlla_video(percorso):
         if sum(st.mean) / 3 < 12:
             problemi.append("la copertina e' nera")
 
-    # 2. lo sfondo deve avere la foto: guardo una striscia in basso dove non
-    #    c'e' mai testo. Fondo piatto = variazione quasi zero.
-    f = fotogramma(percorso, 15, "1080:260:0:1500")
+    # 2. lo sfondo deve avere la foto. Non misuro la "variazione" (una lavagna
+    #    o un cielo sono uniformi ma sono foto vere: cosi' bocciavo reel buoni).
+    #    Confronto invece la meta' alta col colore del fondo vuoto: se e' quello,
+    #    la foto non c'e'.
+    VUOTO = (22, 19, 31)
+    f = fotogramma(percorso, 15, "1080:800:0:80")
     if f:
         st = ImageStat.Stat(Image.open(f).convert("RGB"))
-        if sum(st.stddev) / 3 <= 6:
+        distanza = sum(abs(m - v) for m, v in zip(st.mean, VUOTO)) / 3
+        if distanza < 14 and sum(st.stddev) / 3 < 10:
             problemi.append("manca la foto di sfondo")
 
     # 3. deve avere l'audio
@@ -92,10 +96,9 @@ def controlla_testo(percorso):
     if corpo and corpo[-1] not in ".!?…" and not corpo.endswith("..."):
         problemi.append(f"finisce a meta': \"...{corpo[-40:]}\"")
 
-    # caratteri che i font non sanno disegnare
-    strani = {ch for ch in t if ord(ch) > 0x2100 and ch not in "‘’“”–—…"}
-    if strani:
-        problemi.append(f"caratteri illeggibili: {''.join(list(strani)[:5])}")
+    # Nella didascalia i caratteri speciali vanno bene: Instagram gestisce
+    # tutto l'Unicode. Il problema erano le IMMAGINI, dove il font di sistema
+    # non sa disegnarli e lascia dei quadratini — e li' ci pensa senza_emoji().
 
     if "#" not in t:
         problemi.append("senza etichette")
@@ -125,7 +128,9 @@ def collauda(cartella, estensione, sposta=False):
             bocciati += 1
             print(f"  BOCCIATO  {n[:56]}")
             for p in problemi:
-                print(f"            - {p}")
+                # la console di Windows non sa stampare certi caratteri:
+                # li sostituisco solo per la stampa, non nel contenuto
+                print("            - " + p.encode("ascii", "replace").decode())
             if sposta:
                 os.makedirs(BOCCIATI, exist_ok=True)
                 for f in (percorso, testo):

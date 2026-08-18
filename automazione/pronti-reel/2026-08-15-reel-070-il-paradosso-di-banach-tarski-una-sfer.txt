@@ -1,9 +1,0 @@
-Il Paradosso di Banach-Tarski: Una Sfera Diventa Due Senza Materiale Extra?
-
-Lo sapevi che è matematicamente possibile tagliare una singola sfera in un numero finito di pezzi e riassemblarli per formare due sfere identiche a quella originale, senza aggiungere o rimuovere materiale?
-
-Questo incredibile risultato è noto come il Paradosso di Banach-Tarski, formulato dai matematici Stefan Banach e Alfred Tarski nel 1924. Il 'paradosso' non è una contraddizione logica, ma un risultato così controintuitivo da sembrare impossibile nel mondo fisico. La sua dimostrazione si basa pesantemente sull'Assioma della Scelta, un principio fondamentale della teoria degli insiemi che, sebbene accettato dalla maggior parte dei matematici, porta a conseguenze non costruttive come questa. Immagina che i "pezzi" non siano oggetti solidi, ma insiemi di punti infinitamente complessi e non misurabili, impossibili da creare fisicamente, il che spiega perché non possiamo replicare l'impresa con un'arancia.
-
-Se conosci qualcuno che non lo sa, mandagliela.
-
-#curiosita #losapeviche #matematica

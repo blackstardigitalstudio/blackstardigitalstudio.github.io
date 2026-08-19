@@ -1,9 +1,0 @@
-Il Cavallo Vapore: una misura più... 'umile' di quanto credi!
-
-Lo sapevi che? L'unità di misura "cavallo vapore" (CV o hp), usata per la potenza dei motori, è stata definita da James Watt basandosi su quanto un cavallo da miniera potesse sollevare, ma è una stima inferiore alla reale capacità di lavoro di un cavallo moderno?
-
-James Watt, l'inventore scozzese, introdusse il concetto di "cavallo vapore" alla fine del XVIII secolo per confrontare la potenza delle sue macchine a vapore con quella dei cavalli impiegati nelle miniere. Definì 1 hp come la potenza necessaria per sollevare 33.000 libbre per un piede in un minuto. Questa misura era strategicamente un po' sottostimata per rendere le sue macchine a vapore più appetibili, suggerendo che un singolo motore potesse sostituire più animali. Studi moderni mostrano che un cavallo reale può generare picchi di potenza ben superiori a un cavallo vapore standard per brevi periodi, e circa 0.7-0.8 hp in modo continuativo, dimostrando che la "potenza di un cavallo" è in realtà maggiore di quanto inizialmente calcolato.
-
-Se conosci qualcuno che non lo sa, mandagliela.
-
-#curiosita #losapeviche #motori

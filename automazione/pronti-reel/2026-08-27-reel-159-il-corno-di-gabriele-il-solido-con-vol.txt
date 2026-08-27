@@ -1,9 +1,0 @@
-Il Corno di Gabriele: Il Solido con Volume Finito e Superficie Infinita!
-
-Immagina un oggetto geometrico che, pur avendo un volume finito e quindi riempibile con una quantità limitata di liquido, possiede una superficie esterna talmente vasta da essere considerata infinita. Sembra un paradosso, ma esiste davvero in matematica!
-
-Questo sorprendente solido di rivoluzione, noto come "Corno di Gabriele" (o Tromba di Torricelli), fu scoperto dal matematico e fisico italiano Evangelista Torricelli nel XVII secolo. Viene generato ruotando la curva y = 1/x (per x ≥ 1) attorno all'asse delle ascisse. La sua peculiarità sfida l'intuizione comune, mostrando come le nozioni di volume e area possano comportarsi in modi inaspettati nel regno dell'infinito, grazie alle proprietà degli integrali impropri che ne definiscono le dimensioni.
-
-Se conosci qualcuno che non lo sa, mandagliela.
-
-#curiosita #losapeviche #matematica

@@ -1,9 +1,0 @@
-La "normalità" dei numeri: un enigma matematico quasi universale
-
-Lo sapevi che? Sebbene quasi tutti i numeri reali siano "normali" – ovvero, le loro cifre si distribuiscono in modo perfettamente casuale e uniforme – non siamo ancora riusciti a dimostrarlo per numeri celebri come pi greco o la radice quadrata di due!
-
-Il concetto di numero normale fu introdotto dal matematico francese Émile Borel nel 1909. La "normalità" implica che in qualsiasi base numerica, ogni sequenza finita di cifre appare con la stessa frequenza asintotica. È un risultato sorprendente della teoria della misura che "quasi tutti" i numeri reali (nel senso della misura di Lebesgue) possiedono questa proprietà. Tuttavia, nonostante ciò, non esiste ad oggi alcuna dimostrazione che confermi la normalità di costanti matematiche fondamentali come π, e, √2, o log(2), rendendo la loro vera natura un affascinante mistero irrisolto, pur essendo universalmente congetturato che lo siano.
-
-Se conosci qualcuno che non lo sa, mandagliela.
-
-#curiosita #losapeviche #matematica

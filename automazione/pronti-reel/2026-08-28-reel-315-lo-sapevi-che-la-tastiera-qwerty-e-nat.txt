@@ -1,0 +1,9 @@
+La tastiera QWERTY è nata per rallentarti, non per farti andare veloce?
+
+La disposizione dei tasti QWERTY, così familiare oggi, fu originariamente progettata per rallentare i dattilografi? L'obiettivo era prevenire gli inceppamenti nelle prime macchine da scrivere meccaniche.
+
+All'epoca delle prime macchine da scrivere meccaniche, ideate da Christopher Latham Sholes nel 1872, se si digitavano troppo velocemente lettere adiacenti, i martelletti metallici tendevano a incrociarsi e bloccarsi. La disposizione QWERTY fu una soluzione ingegnosa per separare le combinazioni di lettere più comuni (come 'TH' o 'ST'), riducendo la frequenza di questi fastidiosi inceppamenti. Sebbene con l'avvento dell'elettronica il problema sia scomparso, il layout QWERTY era già così radicato da diventare uno standard globale. Esistono layout alternativi, come il Dvorak, progettati per maggiore efficienza e velocità di digitazione, ma nessuno ha mai sostituito la pervasività del QWERTY.
+
+Se conosci qualcuno che non lo sa, mandagliela.
+
+#curiosita #losapeviche #tecnologia

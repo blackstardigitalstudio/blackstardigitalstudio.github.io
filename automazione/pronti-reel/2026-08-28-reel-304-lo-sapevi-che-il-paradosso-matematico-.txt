@@ -1,9 +1,0 @@
-Il paradosso matematico che "sdoppia" le sfere!
-
-Esiste un risultato matematico sorprendente chiamato Paradosso di Banach-Tarski, secondo cui una sfera solida può essere scomposta in un numero finito di "pezzi" e poi riassemblata per formare *due* sfere identiche a quella originale, utilizzando solo movimenti rigidi (traslazioni e rotazioni).
-
-Sebbene suoni impossibile e sia irrealizzabile nel mondo fisico (i "pezzi" sono insiemi non misurabili, non oggetti tangibili), questo paradosso è matematicamente provato. Si basa in modo cruciale sull'Assioma della Scelta, un principio fondamentale della teoria degli insiemi. Il Paradosso di Banach-Tarski evidenzia come le nostre intuizioni sul volume e lo spazio possano divergere nell'ambito dell'astrazione matematica, specialmente quando si ha a che fare con l'infinito, dimostrando le peculiarità della matematica pura rispetto alla nostra esperienza quotidiana.
-
-Se conosci qualcuno che non lo sa, mandagliela.
-
-#curiosita #losapeviche #matematica

@@ -1,9 +1,0 @@
-Legge di Benford: Il Segreto delle Prime Cifre!
-
-In molti insiemi di dati reali, come le dimensioni delle popolazioni o i valori in fatture, il numero '1' appare come prima cifra quasi il 30% delle volte? È un fenomeno matematico sorprendente che sfida la nostra intuizione di casualità.
-
-Questa singolare distribuzione, nota come Legge di Benford o Legge della Prima Cifra, fu osservata per la prima volta dall'astronomo Simon Newcomb nel 1881 e poi riscoperta e ampiamente studiata dal fisico Frank Benford nel 1938. Contrariamente a quanto si potrebbe pensare, le cifre iniziali non sono distribuite uniformemente (ovvero, ogni cifra da 1 a 9 non appare il 11.1% delle volte), ma seguono una scala logaritmica. La legge trova applicazione pratica nella rilevazione di frodi contabili e fiscali, poiché i dati manipolati manualmente spesso non rispettano questa distribuzione naturale, offrendo un potente strumento di analisi forense.
-
-Se conosci qualcuno che non lo sa, mandagliela.
-
-#curiosita #losapeviche #matematica
